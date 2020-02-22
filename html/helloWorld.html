@@ -12,7 +12,7 @@
         <ul>
             <li>Milk</li>
             <li>Fish</li>
-            <li>lasagna</li>
+            <li>Lasagna</li>
         </ul>
     <!-- création d'une liste ordonnée-->
     <p>Top 3 things cats hate:</p>
@@ -21,13 +21,18 @@
             <li> Meat </li>
             <li> Dog </li>
         </ol>
-
     <!-- Création d'une zone de texte, le "placeholder" permet d'indiquer à
     l'utilisateur ce qu'il doit entrer dans la zone. -->    
     <form action = "/submit-cat-photo">
-        <input type ="text" placeholder = "cat photo url">
+        <input type ="text" placeholder = "cat photo url" required>
+        <button type ="submit"> submit </button>
+        <label for ="indoor">
+            <input id = "indoor" type = "radio" name = "indoor-outdoor">Indoor
+        </label>
+        <label for = "outdoor">
+            <input id = "outdoor" type = "radio" name = "indoor-outdoor">Outdoor
+        </label>
     </form>
-
 
 </main>
 
