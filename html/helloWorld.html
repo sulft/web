@@ -29,7 +29,7 @@
         <br>
         <!-- création de bulle à choix unique -->
         <label for = "indoor">
-            <input id = "indoor" type = "radio" name = "indoor-outdoor" value ="indoor">Indoor
+            <input id = "indoor" type = "radio" name = "indoor-outdoor" value ="indoor" checked>Indoor
         </label>
         <label for = "outdoor">
             <input id = "outdoor" type = "radio" name = "indoor-outdoor" value ="outdoor">Outdoor
@@ -37,7 +37,7 @@
 
         <!-- création de bulle à choix multiple -->
         <label for = "love">
-            <input id = "love" type = "checkbox" name = "personality" value ="love"> Love
+            <input id = "love" type = "checkbox" name = "personality" value ="love" checked> Love
         </label>
         <label for = "faith">
             <input id = "faith" type = "checkbox" name = "personality" value ="faith"> Faith
@@ -45,6 +45,9 @@
         <label for = "sadness">
             <input id = "sadness" type = "checkbox" name = "personality" value ="sadness"> Sadness
         </label>
+
+        <!-- le "checked permet de cocher le label de la case correspondante pour les radio 
+         et les checkbox-->
 
 
     </form>
