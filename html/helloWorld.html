@@ -26,12 +26,27 @@
     <form action = "/submit-cat-photo">
         <input type ="text" placeholder = "cat photo url" required>
         <button type ="submit"> submit </button>
-        <label for ="indoor">
+        <br>
+        <!-- création de bulle à choix unique -->
+        <label>
             <input id = "indoor" type = "radio" name = "indoor-outdoor">Indoor
         </label>
         <label for = "outdoor">
             <input id = "outdoor" type = "radio" name = "indoor-outdoor">Outdoor
+        </label><br>
+
+        <!-- création de bulle à choix multiple -->
+        <label for = "love">
+            <input id = "love" type = "checkbox" name = "personality"> Love
         </label>
+        <label for = "faith">
+            <input id = "faith" type = "checkbox" name = "personality"> Faith
+        </label>
+        <label for = "sadness">
+            <input id = "sadness" type = "checkbox" name = "personality"> Sadness
+        </label>
+
+
     </form>
 
 </main>
