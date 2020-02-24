@@ -1,37 +1,61 @@
-<!DOCTYPE HTML>
+<DOCTYPE html>
 
-<main> 
-    <h1> Test titre 1 </h1>
-    <h2> Test titre 2 </h2>
-    <p> Ceci est un <a href = "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal" target ="_blank"> lien</a></p>
-    <img src= "https://blog-fr.orson.io/wp-content/uploads/2017/06/9-4.jpg" alt = "image simple">
+<!-- Revue des différentes notions-->
 
-    <ul>
-        <li> mot 1 </li>
-        <li> mot 2 </li>
-        <li> mot 3 </li>
-        <li> mot 4 </li>
-    </ul>
+<html>
+    <main>
+        <head> <title> Les chiens </title></head>
+        <body>
+            <a href="#footer">Aller en bas de page</a>
+            <h1> Les beaux chiens </h1>
+            <h2> Les caractères </h2>
+            <p>Les chiens sont des animaux possédant d'incroyables qualités </p>
+            <img src ="https://cdn.pixabay.com/photo/2019/08/19/07/45/pets-4415649_960_720.jpg" alt ="un beau chien">
+            <ol>
+                <li>Fidèle</li>
+                <li>Vigilant</li>
+                <li>Courageux</li>
+            </ol>
+            <p> il existe de très belle races de <a href = "https://lemagduchien.ouest-france.fr/dossier-255-top-10-beaux-chiens-monde.html" target ="_blank"> chiens</a></p>
 
-    <ol>
-        <li> mot 5 </li>
-        <li> mot 6 </li>
-        <li> mot 7 </li>        
-    </ol>
+            <h2> Les plus belles races </h2>
+            <ul>
+                <li> Samoyède </li>
+                <li> Husky </li>
+                <li> Labrador </li>
+            </ul>
 
-    <form action ="/submit-cat-photo"> 
-        <input type = "text" placeholder = "entrer une lettre" required>
-        <button type = "submit"> Envoyer </button>
-        
-        <label for = "cas 1">
-            <input id = "cas 1" type = "radio" name = "cas"> cas 1
-        </label>
-        <label for = "cas 2">
-            <input id = "cas 2" type = "radio" name = "cas"> cas 2
-        </label>
-    </form>
+            <form action = "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">
+                <input type = "text" placeholder = "Qu'en pensez-vous ?" required>
+                <button type ="submit"> Envoyé </button>
+                <br><br>
+                
+                <div>
+                <p>Quel sont les qualités des chiens ?</p>
+                <label for = "Fidèle">
+                    <input id = "Fidèle" type = "checkbox" value ="fidèle" name ="caractères"> Fidèle                    
+                </label>
+                <label for = "Vigilant">
+                    <input id = "Vigilant" type = "checkbox" value ="Vigilant" name ="caractères"> Vigilant
+                </label>
+                <label for = "Arrogant">
+                    <input id = "Arrogant" type = "checkbox" value = "Arrogant" name = "Caractères"> Arrogant 
+                </label>
+                <br><br>
+                </div>
 
-
-
-
-</main>
+                <div>
+                    <p> Quel est la plus belle race de chien ? </p>
+                    <label>
+                        <input type = "radio" value = "Husky" name ="race"> Husky
+                    </label>
+                    <label>
+                        <input type = "radio" value = "Bulldog" name = "race" checked> Bulldog
+                    </label>
+                    <br><br>
+                </div>
+            </form>
+            <footer id ="footer"> Bas de page </footer>
+        </body>
+    </main>
+</html>
