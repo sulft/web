@@ -7,12 +7,7 @@
     <title>Le chat</title> 
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
     rel = "stylesheet" type = "text/css">
-</head>
 
-<body>
-    <!-- dans le cas de la déclaration d'une classe couleur, il ne faudra pas oublier le "."-->
-    <!-- font-size permet de manipuler la taille de mes écritures -->
-    <!-- font-family  permet de manipuler le type de mes d'écriture de mes caractères. -->
     <style>
         .red-text{
             color : red;
@@ -26,13 +21,25 @@
             font-size:16; 
             font-family:monospace;
         }
+        .smaller-image{
+            width:100px;
+        }
+
+        .thick-green-border{
+            border-width:10px;
+            border-color:green;
+            border-style:solid;
+        }
     </style>
+</head>
 
-
+<body>
     <h2 class = "red-text"> CatPhotoApp </h2>
     <p>Click here to view more <a href ="#"> cat photos </a></p>
 
-    <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+    <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" 
+        class ="smaller-image thick-green-border" 
+        alt="A cute orange cat lying on its back."></a>
     
     <!-- création d'une liste non ordonnée-->
     <div>
