@@ -22,12 +22,12 @@
 
             <div>
                 <form name ="login" action="process-form.php" method="post"> <!-- it's good practice to give name to form -->
-                    Username:<input name="username" type="text" >
+                    Username:<input name="username" type="text" size="10" required>
                     <br>
-                    Password:<input name="password" type="password">
+                    Password:<input name="password" type="password" size="10" required>
                     <br>
-                    <input name="vehicle" type="checkbox" value="vélo" checked> J'ai une voiture
-                    <input name="vehicle" type="checkbox" value="voiture"> J'ai un vélo
+                    <input name="vehicle" type="radio" value="vélo" checked>J'ai une voiture
+                    <input name="vehicle" type="radio" value="voiture">J'ai un vélo
                     <br>
                     <select name="cars">
                         <option value="renault">Renault</option>
