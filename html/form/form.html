@@ -21,12 +21,22 @@
                 pouvons faire en créant un <strong>formulaire</strong> : </p>
 
             <div>
-                <form name ="login" action="process-form.php"> <!-- it's good practice to give name to form -->
+                <form name ="login" action="process-form.php" method="post"> <!-- it's good practice to give name to form -->
                     Username:<input name="username" type="text" >
                     <br>
-                    Password:<input name="password" type="password" >
+                    Password:<input name="password" type="password">
+                    <br>
+                    <select name="cars">
+                        <option value="renault">Renault</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="audi">Audi</option>
+                    </select>
                     <br>
                     <input type="submit">
+                    <br><br>
+                    Comments :
+                    <br>
+                    <TEXTAREA name="commentaire" rows=15 cols=30></TEXTAREA>
                 </form>
             </div>
 
