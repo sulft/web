@@ -8,38 +8,71 @@
         table, td, th {border: 1px solid black;}
     </style>
 </head>
-<h1>Mon tableau</h1>
 <body>
+    <h1>Mon tableau</h1>
     <table>
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Voiture</th>
+                <th>Pays</th>
+            </tr>
+        </thead>
+            
         <tfoot>
             <tr>
                 <td colspan="3">Mon tableau de 2019-20</td>
             </tr>
         </tfoot>
 
+        <tbody>
+            <tr>
+                <td>Banane</td>
+                <td>Peugeot</td>
+                <td>France</td>
+            </tr>
+
+            <tr>
+                <td>Pomme</td>
+                <td>Renault</td>
+                <td>Canada</td>
+            </tr>
+
+
+            <tr>
+                <td>Kiwi</td>
+                <td>Toyota</td>
+                <td>Angleterre</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Mon nouveau tableau</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Prix</th>
+                <th>Taxe</th>
+                <th>Article</th>
+            </tr>
+        </thead>
+
         <tr>
-            <th>Fruit</th>
-            <th>Voiture</th>
-            <th>Pays</th>
-        </tr>
-        <tr>
-            <td>Banane</td>
-            <td>Peugeot</td>
-            <td>France</td>
+            <td>2,35$</td>
+            <td>0,3$</td>
+            <td rowspan="2">banane</td>
         </tr>
 
         <tr>
-            <td>Pomme</td>
-            <td>Renault</td>
-            <td>Canada</td>
+            <td>2,35$</td>
+            <td>0,3$</td>
         </tr>
 
         <tr>
-            <td>Kiwi</td>
-            <td>Toyota</td>
-            <td>Angleterre</td>
+            <td>5,00$</td>
+            <td>0,8$</td>
+            <td>tomate</td>
         </tr>
     </table>
 </body>
-
 </html>
