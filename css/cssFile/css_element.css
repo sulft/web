@@ -1,0 +1,11 @@
+/* Some CSS element */
+
+    /* tag selector */
+    body {background-color:whitesmoke}
+    p {color:black}
+
+    /* class selector */
+    .modifh3{color:green; font-size:24px; background-color:orange; text-align:center} 
+
+    /* ID selector */
+    h1, h2{color:red}
