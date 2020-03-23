@@ -3,6 +3,7 @@
     /* tag selector */
     body {background-color:whitesmoke;}
     p {color:black; text-align:justify; text-indent:20px}
+    p .italic {font-style:italic; font-weight:bold}
 
     /* class selector */
     .modifh3{color:green; font-size:24px; background-color:orange; text-align:center} 
