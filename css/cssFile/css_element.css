@@ -4,11 +4,13 @@
     body {background-color:whitesmoke; font-family:monospace, serif,sans-serif,serif}
     p {color:black; text-align:justify; text-indent:20px}
     p .italic {font-style:italic; font-weight:bold}
+    h1, h2{color:red; text-transform:capitalize}
+
+    a {color:green}
+
 
     /* class selector */
     .modifh3{color:green; font-size:24px; background-color:orange; text-align:center} 
 
     /* ID selector */
-    h1, h2{color:red; text-transform:capitalize}
-
-    a {color:green}
+    #id_selector {font-size:3vw}
