@@ -8,6 +8,6 @@
     .modifh3{color:green; font-size:24px; background-color:orange; text-align:center} 
 
     /* ID selector */
-    h1, h2{color:red}
+    h1, h2{color:red; text-transform:capitalize}
 
     a {color:green}
