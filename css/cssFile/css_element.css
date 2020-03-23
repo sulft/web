@@ -1,7 +1,7 @@
 /* Some CSS element */
 
     /* tag selector */
-    body {background-color:whitesmoke;}
+    body {background-color:whitesmoke; font-family:monospace, serif,sans-serif,serif}
     p {color:black; text-align:justify; text-indent:20px}
     p .italic {font-style:italic; font-weight:bold}
 
