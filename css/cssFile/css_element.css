@@ -10,7 +10,8 @@
 
 
     /* class selector */
-    .modifh3{font-size:24px; background-color:orange; text-align:center} 
+    h3{font-size:24px; background-color:orange; text-align:center} 
 
     /* ID selector */
+    #monDoc{max-width:1000px ;min-width:300px}
     #id_selector {font-size:3vw}
