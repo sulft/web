@@ -1,16 +1,16 @@
 /* Some CSS element */
 
     /* tag selector */
-    body {color:black;  background-color:whitesmoke; font-family:"Roboto Condensed", serif,sans-serif,serif}
+    body {color:black;  background-color:#d6f9f1; font-family:"Roboto Condensed", serif,sans-serif,serif}
     p {text-align:justify; text-indent:20px}
     p .italic {font-style:italic; font-weight:bold}
-    h1, h2{color:red; text-transform:capitalize}
+    h1, h2, h3{color:red; text-transform:capitalize}
+    h3 {background-color:#d0c1c1; max-width:300px}
 
     a {color:green}
 
 
     /* class selector */
-    h3{font-size:24px; background-color:orange; text-align:center} 
 
     /* ID selector */
     #monDoc{max-width:1000px ;min-width:300px}
