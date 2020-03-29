@@ -1,7 +1,14 @@
 /* Some CSS element */
 
     /* tag selector */
-    body {color:black;  background-color:#d6f9f1; font-family:"Roboto Condensed", serif,sans-serif,serif}
+    body {
+        color:black;  
+        /*background-color:#d6f9f1;*/
+        background-image:url("image-background/white-square.jpg");
+        background-attachment:fixed;
+        background-position:top right;
+        background-repeat:repeat-y;
+        font-family:"Roboto Condensed", serif,sans-serif,serif}
     p {text-align:justify; text-indent:20px}
     p .italic {font-style:italic; font-weight:bold}
     h1, h2, h3{color:red; text-transform:capitalize}
