@@ -6,11 +6,24 @@
         /*background-color:#d6f9f1;*/
         background: #FFF url("image-background/white-square.jpg") repeat-x top left fixed; 
         background-size:cover;
-        font-family:"Roboto Condensed", serif,sans-serif,serif}
-    p {text-align:justify; text-indent:20px}
-    p .italic {font-style:italic; font-weight:bold}
-    h1, h2, h3{color:red; text-transform:capitalize}
-    h3 {background-color:#7b75751a; max-width:300px}
+        font-family:sans-serif,serif}
+
+    p {
+        text-align:justify; 
+        text-indent:20px
+    }
+    p .italic {
+        font-style:italic; 
+        font-weight:bold
+    }
+    h1, h2, h3{
+        color:red; 
+        text-transform:capitalize
+    }
+    h3 {
+        background-color:#7b75751a; 
+        max-width:300px
+    }
 
     a {color:green}
 
@@ -18,5 +31,12 @@
     /* class selector */
 
     /* ID selector */
-    #monDoc{max-width:1000px ;min-width:300px}
+    #monDoc{
+        max-width:1000px;
+        min-width:300px; 
+        margin-left:250px; 
+        margin-right:50px;
+        margin-top:50px;
+    }
+
     #id_selector {font-size:3vw}
