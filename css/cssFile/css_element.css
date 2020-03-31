@@ -17,6 +17,7 @@
         font-weight:bold
     }
     h1, h2, h3{
+        padding-left:10px;
         color:red; 
         text-transform:capitalize
     }
@@ -34,9 +35,11 @@
     #monDoc{
         max-width:1000px;
         min-width:300px; 
+
         margin-left:250px; 
         margin-right:50px;
         margin-top:50px;
+
         border-left-style:solid;
         border-width:2px
     }
