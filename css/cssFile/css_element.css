@@ -37,6 +37,8 @@
         margin-left:250px; 
         margin-right:50px;
         margin-top:50px;
+        border-left-style:solid;
+        border-width:2px
     }
 
     #id_selector {font-size:3vw}
