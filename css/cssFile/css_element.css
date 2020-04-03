@@ -32,9 +32,11 @@
     /* class selector */
     .box_p {
         margin:auto auto;
-        padding:95px 0px 95px 0px;
         border:1px solid black;
         text-align:center;
+        padding:97px 0px 84px 0px;
+        font-size:16px;
+        color:rebeccapurple;
     }
     /* ID selector */
     #monDoc{
@@ -63,6 +65,7 @@
 
     #box1, #box2, #box3 {
         height:33.3%;
+        opacity:.5;
     }
 
     #box1{
