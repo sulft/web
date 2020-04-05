@@ -16,6 +16,7 @@
         font-style:italic; 
         font-weight:bold
     }
+
     h1, h2, h3{
         padding-left:10px;
         color:red; 
@@ -26,9 +27,6 @@
         max-width:300px
     }
 
-    a {color:green}
-
-
     /* class selector */
     .box_p {
         margin:auto auto;
@@ -38,6 +36,27 @@
         font-size:16px;
         color:rebeccapurple;
     }
+
+    /* pseudo classes*/
+    a:link {
+        color:blue;
+    }
+
+    a:visited {
+        color:green;
+    }
+
+    a:hover {
+        color:rgb(1, 0, 66);
+        font-size:30px;
+    }
+
+    a:active {
+        color:red;
+        font-size:30px;
+    }
+
+
     /* ID selector */
     #monDoc{
         max-width:1000px;
@@ -66,19 +85,17 @@
     #box1, #box2, #box3 {
         height:33.3%;
         opacity:.5;
+        background-size:cover;
     }
 
     #box1{
         background-color:#ff0000;
-        background-size:cover;
     }
 
     #box2 {
         background-color:#00ff00;   
-        background-size:cover;
     }
 
     #box3 {
         background-color:#0000ff;
-        background-size:cover;
     }
