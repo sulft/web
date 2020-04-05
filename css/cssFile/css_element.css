@@ -27,6 +27,10 @@
         max-width:300px
     }
 
+    ul li, ol li {
+        list-style-type:none;
+    }
+
     /* class selector */
     .box_p {
         margin:auto auto;
