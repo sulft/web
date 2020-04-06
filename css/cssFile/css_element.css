@@ -18,7 +18,7 @@
     }
 
     h1, h2, h3{
-        padding-left:10px;
+        margin:10px;
         color:red; 
         text-transform:capitalize
     }
@@ -27,8 +27,12 @@
         max-width:300px
     }
 
-    ul li, ol li {
+    ul, ol{
         list-style-type:none;
+    }
+
+    li {
+        margin:10px;
     }
 
     /* class selector */
@@ -42,30 +46,33 @@
     }
 
     /* pseudo classes*/
-    a:link {
-        color:blue;
-    }
+    a:link, a:visited {
+        color:#000000;
+        background-color:grey;
+        padding:5px;
+        border-radius:10px;
+        display:block;
+        width:90px;
 
-    a:visited {
-        color:green;
     }
 
     a:hover {
-        color:rgb(1, 0, 66);
-        font-size:30px;
+        color:white;
+        background-color:black;
+        /* effet d'ouverture */
+        margin-bottom:25px;
+        /* vitesse d'ouverture */
+        transition: margin-bottom .5s ease-in;
     }
 
     a:active {
         color:red;
-        font-size:30px;
+        background-color:black; 
     }
 
 
     /* ID selector */
-    #monDoc{
-        max-width:1000px;
-        min-width:300px;
-
+    #centerDoc{
         width:600px;
         margin:50px auto 50px auto; /*plus court*/
         /*margin-left:250px; 
@@ -82,8 +89,15 @@
 
     #id_selector {font-size:3vw}
 
+    #nav_id {
+        width:1000px;
+        margin-left:171px;
+    }
+
     #principal-box {
         height:600px;
+        width:600px;
+        margin-left:171px;
     }
 
     #box1, #box2, #box3 {
