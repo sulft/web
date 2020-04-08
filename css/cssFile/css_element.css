@@ -28,12 +28,17 @@
     }
 
     ul{
-        list-style-type:disc;
+        list-style-type:none;
         padding:0px 0px 0px 15px;
+        overflow:hidden;
     }
 
     li {
-        margin:10px;
+        margin:0;
+        float:left;
+        text-align:center;
+        text-transform:lowercase;
+
     }
 
     /* class selector */
@@ -51,19 +56,19 @@
         color:#000000;
         background-color:grey;
         padding:5px;
-        border-radius:10px;
         display:block;
         width:90px;
         opacity:0.85;
+        text-decoration:none;
     }
 
     a:hover {
         color:white;
         background-color:black;
-        /* effet d'ouverture */
+        /* effet d'ouverture
         margin-bottom:25px;
-        /* vitesse d'ouverture */
-        transition: margin-bottom .5s ease-in;
+        vitesse d'ouverture 
+        transition: margin-bottom .5s ease-in;*/
     }
 
     a:active {
@@ -93,6 +98,7 @@
     #nav_id {
         width:600px;
         margin-left:321px;
+        margin-bottom:30px;
     }
 
     #principal-box {
