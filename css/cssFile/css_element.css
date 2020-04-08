@@ -35,7 +35,7 @@
 
     li {
         margin:0;
-        float:left;
+        float:right;
         text-align:center;
         text-transform:lowercase;
 
@@ -79,7 +79,7 @@
 
     /* ID selector */
     #centerDoc{
-        width:600px;
+        width:50%;
         margin:50px auto 50px auto; /*plus court*/
         /*margin-left:250px; 
         margin-right:50px;
@@ -96,15 +96,14 @@
     #id_selector {font-size:3vw}
 
     #nav_id {
-        width:600px;
-        margin-left:321px;
+        width:100%;
+        
         margin-bottom:30px;
     }
 
     #principal-box {
         height:600px;
-        width:600px;
-        margin-left:321px;
+        width:100%;
     }
 
     #box1, #box2, #box3 {
