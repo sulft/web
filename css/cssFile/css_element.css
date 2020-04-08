@@ -22,9 +22,17 @@
         color:red; 
         text-transform:capitalize
     }
+
+    h1 {
+        font-size:3vw;
+    }
+
+    h2 {
+        font-size:2vw;
+    }
+
     h3 {
-        background-color:#7b75751a; 
-        max-width:300px
+        font-size:1.5vw;
     }
 
     ul{
@@ -80,7 +88,8 @@
     /* ID selector */
     #centerDoc{
         width:50%;
-        margin:50px auto 50px auto; /*plus court*/
+        margin:50px 20% 50px 20%; /*plus court*/
+        min-width:600px;
         /*margin-left:250px; 
         margin-right:50px;
         margin-top:50px;*/
@@ -93,11 +102,8 @@
         border-color:black;
     }
 
-    #id_selector {font-size:3vw}
-
     #nav_id {
         width:100%;
-        
         margin-bottom:30px;
     }
 
