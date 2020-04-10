@@ -9,9 +9,41 @@
     <style>
         * {margin:0px; padding:0px}
 
+        /*LISTE*/
+        ul {
+            margin:15px;
+            overflow:hidden;
+            list-style-type:none;
+        }
+
+        ul li {
+            float:left;
+            text-transform:capitalize;
+        }
+
+        li a:link, li a:visited {
+            display:block;
+            text-decoration:none;
+            padding:3px;
+            text-align:center;
+            background-color:black;
+            color:white;
+            width:70px;
+        }
+
+        li a:hover {
+            color:blue;
+            margin-right:15px;
+            transition:margin-right .5s ease-in;
+        }
+
+        li a:active {
+            color:red;
+        }
+
+
         #centerDoc {
             margin:10px;
-
             min-width:500px;
             max-width:1200px;
             text-align:justify;
@@ -25,7 +57,7 @@
             color:black;
         }
 
-        #test p {
+        #test-right p {
             margin:10px;
             text-align:left;
             width:200px;
@@ -51,6 +83,14 @@
 
 <body id="centerDoc">
     <h1>Utilisation intelligente de display</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo, quam sit amet placerat consectetur, magna risus pretium ex, non eleifend massa erat eu lectus. Duis commodo dolor id quam aliquam, at facilisis tortor vestibulum. Phasellus eget dictum dui. Aliquam luctus hendrerit mauris a maximus. Pellentesque condimentum mollis tortor non tristique. Vestibulum at lacinia metus. Vivamus vitae odio ipsum. Phasellus volutpat scelerisque elementum.
 
         Praesent sed tincidunt augue. Nunc molestie tellus leo, ac laoreet turpis ornare vitae. Sed blandit vulputate nulla, in rutrum mauris iaculis a. Integer ornare nisi at dolor rhoncus posuere. Cras pretium laoreet maximus. Phasellus placerat mauris ut efficitur fringilla. Donec facilisis elementum tincidunt.
@@ -60,7 +100,7 @@
         Proin laoreet molestie purus sit amet ullamcorper. Sed condimentum tristique lacus sed faucibus. Mauris congue vulputate ex eget bibendum. Nam sed molestie quam. Vivamus velit sapien, gravida sed dapibus eget, pellentesque eu tortor. Nulla at iaculis metus. Aenean auctor congue massa ut pellentesque. Duis luctus nulla in felis ornare, sit amet pellentesque mauris semper. Pellentesque venenatis porttitor lacus eget ultrices. Nulla lobortis, leo vitae efficitur ullamcorper, velit velit tempus erat, eu ultrices dolor nisl non dolor. Cras nec egestas tellus, id interdum nibh. Morbi massa mauris, pulvinar nec fermentum eget, egestas a ante. Proin porta convallis ex posuere commodo. Curabitur iaculis nec erat in vehicula. In vulputate, ex eu laoreet posuere, metus dui maximus erat, a dictum massa eros non orci.
     </p>
 
-    <div id="test"> 
+    <div id="test-right"> 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo, quam sit amet placerat consectetur, magna risus pretium ex, non eleifend massa erat eu lectus. Duis commodo dolor id quam aliquam, at facilisis tortor vestibulum. Phasellus eget dictum dui. Aliquam luctus hendrerit mauris a maximus. Pellentesque condimentum mollis tortor non tristique. Vestibulum at lacinia metus. Vivamus vitae odio ipsum. Phasellus volutpat scelerisque elementum.</p>
     </div>
 
