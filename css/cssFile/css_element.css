@@ -39,11 +39,12 @@
         list-style-type:none;
         padding:0px 0px 0px 15px;
         overflow:hidden;
+        width:300px;
     }
 
     li {
-        margin:0;
-        float:right;
+        margin-left:15px;
+        float:top;
         text-align:center;
         text-transform:lowercase;
 
@@ -73,10 +74,10 @@
     a:hover {
         color:white;
         background-color:black;
-        /* effet d'ouverture
+        /* effet d'ouverture */
         margin-bottom:25px;
-        vitesse d'ouverture 
-        transition: margin-bottom .5s ease-in;*/
+        /* vitesse d'ouverture */
+        transition: margin-bottom .5s ease-in;
     }
 
     a:active {
@@ -103,7 +104,9 @@
     }
 
     #nav_id {
-        width:100%;
+        position:fixed;
+        top:0;
+        left:0;
         margin-bottom:30px;
     }
 
