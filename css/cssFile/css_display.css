@@ -39,30 +39,34 @@ li a:active {
 #centerDoc {
     position:relative;
     top:0px;
-    left:120px;
-    min-width:300px;
+    left:5%;
+    right:5%;
+    min-width:200px;
     max-width:1000px;
-    text-align:justify;
 }
 
 h1 {
     width:50%;
     margin-bottom:15px auto;
-    color:red
+    color:red;
+    text-align:left;
 }
 
 p {
     margin:15px auto;
     font-family:monospace;
     color:black;
+    text-align:justify;
 }
+
 
 #test-right p, #test-left p  {
     color:white;
     background-color:rgb(119, 105, 105);
     overflow:auto;
-    height:250px;
-    width:250px;
+    min-width:300px;
+    width:40%;
+    margin:10px auto;
     text-align:left;
 }
 
