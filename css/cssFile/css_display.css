@@ -1,0 +1,77 @@
+* {margin:0px; padding:0px}
+
+/*LISTE*/
+ul {
+    overflow:hidden;
+    list-style-type:none;
+    display:block;
+    background-color: black;
+
+}
+
+ul li {
+    float:left;
+    text-transform:capitalize;
+
+}
+
+li a:link, li a:visited {
+    display:block;
+    text-decoration:none;
+    padding:3px;
+    text-align:center;
+    background-color:rgb(119, 105, 105);
+    color:white;
+    width:70px;
+}
+
+li a:hover {
+    color:blue;
+    margin-right:15px;
+    transition:margin-right .5s ease-in;
+}
+
+li a:active {
+    color:red;
+}
+
+
+#centerDoc {
+    position:relative;
+    top:0px;
+    left:120px;
+    min-width:300px;
+    max-width:1000px;
+    text-align:justify;
+}
+
+h1 {
+    width:50%;
+    margin-bottom:15px auto;
+    color:red
+}
+
+p {
+    margin:15px auto;
+    font-family:monospace;
+    color:black;
+}
+
+#test-right p, #test-left p  {
+    color:white;
+    background-color:rgb(119, 105, 105);
+    overflow:auto;
+    height:250px;
+    width:250px;
+    text-align:left;
+}
+
+#test-right p {
+    margin:5px 15px 5px 15px;
+    float:right;
+}
+
+#test-left p {
+    margin:5px 15px 5px 0px;
+    float:left;
+}
