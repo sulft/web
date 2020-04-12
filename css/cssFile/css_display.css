@@ -66,10 +66,10 @@ main h1 {
 }
 
 p {
+    text-align:center;
     padding:10px;
     font-family:sans-serif;
     color:black;
-    text-align:left;
 }
 
 p:first-letter {
