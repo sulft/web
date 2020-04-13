@@ -103,3 +103,11 @@ caption {
     background-color:rgb(0, 177, 9);
     font-size:2em;
 }
+
+/* Media queries */
+@media screen and (max-width:650px) {
+    main {
+        background-image:none;
+        background-color:green;
+    }
+}
