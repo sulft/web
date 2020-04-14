@@ -32,7 +32,6 @@ main {
 main img {
     float:right;
     width:250px;
-    height:500;
     margin:10px;
     margin-bottom:20px;
 }
@@ -52,7 +51,7 @@ h3 {
     margin:10px;
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:800px) {
     #header, main, nav, footer {width:100%}
     
     main, footer {
@@ -61,8 +60,6 @@ h3 {
 }
 
 @media screen and (max-width:650px) {
-
-    
     main img {
         display:none;
     }
