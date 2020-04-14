@@ -12,6 +12,7 @@ main {
     margin:10px auto;
     padding:5px;
     width:78%;
+    max-width:1000px;
     float:right;
 }
 
@@ -46,6 +47,12 @@ p {
     margin:3px;
 }
 
+img {
+    width:400px;
+    float:right;
+    margin:15px;
+}
+
 a:link, a:visited {
     display:block;
     color:green;
@@ -63,13 +70,15 @@ a:active {
 
 @media screen and (max-width:660px) {
 
+    main, nav {
+        width:96%;
+
+    }
+
     nav {
         clear:both;
-        border-style:none;
-        width:96%;
-    }
-    main {
-        width:96%;
+        border-right:none;
+        height:0px
     }
 
     nav ul {
@@ -82,6 +91,15 @@ a:active {
 
     nav ul li {
         padding:2px;
+    }
+
+    img {
+        float:none;
+        margin-left:7%;
+    }
+
+    p {
+        clear:both;
     }
 
     a:link, a:visited {
