@@ -3,3 +3,7 @@
 function my_function(message) {
 	console.log(message);
 }
+
+document.getElementById("test").onmouseover=function() {
+    my_function("mouse over");
+}
