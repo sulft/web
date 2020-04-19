@@ -1,9 +1,10 @@
 //i'm a javascript comment
 /* as CSS comment, I'm also a JS */
 function my_function(message) {
-	console.log(message);
+    alert(message);
 }
 
-document.getElementById("test").onmouseover=function() {
-    my_function("mouse over");
+document.getElementById("test").onclick=function() {
+    my_function("on click");
+    console.log("P tag gris on click");
 }
