@@ -12,7 +12,7 @@ function my_function(message) {
 }
 
 document.getElementById("click1").onclick=function() {
-    my_function(word);
+    my_function("on click");
 }
 
 document.getElementById("click2").onclick=function() {
