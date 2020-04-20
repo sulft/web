@@ -1,10 +1,17 @@
 //i'm a javascript comment
 /* as CSS comment, I'm also a JS */
 function my_function(message) {
-    alert(message);
+    console.log("event " + message);
 }
 
-document.getElementById("test").onclick=function() {
+document.getElementById("click1").onclick=function() {
     my_function("on click");
-    console.log("P tag gris on click");
+}
+
+document.getElementById("click2").onclick=function() {
+    my_function("on click2");
+}
+
+document.getElementById("change").onchange=function() {
+    my_function("on change");
 }

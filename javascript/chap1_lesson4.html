@@ -27,23 +27,23 @@
 				margin:10px;
 			}
 
-			#test{		
+			#click2{		
 				background-color:grey;
 			}
 
-			#test:hover{		
+			#click2:hover{		
 				cursor:pointer;
 			}
 		</style>
 	</head>
 
-	<body onkeypress="my_function('key pressed')">
+	<body>
 		<h1>Welcome Uber Nerdling!</h1>
 
-		<button type="button" onclick='my_function("on click")'>button my_function</button>
+		<button id="click1" type="button">button my_function</button>
 
 		<div>
-			<p id="test">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+			<p id="click2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 
@@ -52,7 +52,7 @@
 
 		<br>
 
-		<form onchange="my_function('it changed')">
+		<form id="change" onchange="my_function('it changed')">
 			<input type="radio" name="name">test
 			<input type="radio" name="name">test1
 		</form>
