@@ -5,7 +5,7 @@
 var word;
 
 //initialisation
-word="string";
+word="string" ;
 
 function my_function(message) {
     console.log("event " + message);
