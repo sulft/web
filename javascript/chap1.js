@@ -19,14 +19,14 @@ function nan_test() {
     console.log(number + " n'est pas un nombre ? " + isNaN(number));
 }
 
-function nan_test() {
-    var number=32;
+function parse_int() {
+    var number="33 mots";
     var string="mot";
-    console.log(string + " n'est pas un nombre ? " + isNaN(string)); //NaN = not a number
-    console.log(number + " n'est pas un nombre ? " + isNaN(number));
+    console.log(string + " nombre trouvé ? " + parseInt(string));
+    console.log(number + " nombre trouvé ? " + parseInt(number));
 }
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    nan_test("on click");
+    parse_int();
 }
