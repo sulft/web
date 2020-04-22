@@ -7,12 +7,26 @@ var emailVerification = email.indexOf("@gmail.com");
 var click1 = document.getElementById("click1");
 
 //function
-function my_function(message) {
+function email_test(message) {
     alert("position de l'élément recherché: " + emailVerification);
     console.log("event " + message);
 }
 
-//appel de my_function lorsque j'appuie sur le bouton d'ID "click1".
+function nan_test() {
+    var number=32;
+    var string="mot";
+    console.log(string + " n'est pas un nombre ? " + isNaN(string)); //NaN = not a number
+    console.log(number + " n'est pas un nombre ? " + isNaN(number));
+}
+
+function nan_test() {
+    var number=32;
+    var string="mot";
+    console.log(string + " n'est pas un nombre ? " + isNaN(string)); //NaN = not a number
+    console.log(number + " n'est pas un nombre ? " + isNaN(number));
+}
+
+//appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    my_function("on click");
+    nan_test("on click");
 }
