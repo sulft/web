@@ -28,5 +28,10 @@ function parse_int() {
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    parse_int();
+    if (3>4) {
+        parse_int();
+    }
+    else {
+        nan_test();
+    }
 }
