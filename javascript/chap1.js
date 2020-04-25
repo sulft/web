@@ -6,8 +6,18 @@ var click1 = document.getElementById('click_buttom');
 
 //function
 function useIt() {
-    var paragraph = document.getElementById('text');
-    paragraph.innerHTML = "Je suis une courte phrase";
+    var email="terryvilvergmail.com"
+    var result=email.indexOf("@");
+    console.log("déterminons si : "+ email +" est bien une adresse mail.");
+    if (result != -1) {
+        console.log("result in position: " + result);
+        console.log(true+ " " + email + " est bien une adresse mail.");
+
+    } else {
+        console.log("result is not on the string");
+        console.log(false + " " + email + " n'est pas une adresse mail.");
+
+    }
 }
 
 
