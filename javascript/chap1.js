@@ -9,8 +9,7 @@ function loop() {
     number = 5;
     var target = document.getElementById("text");
     target.innerHTML = "";
-    while (number > 0) {
-
+    for (var i = number ; i > 0 ; i--) {
         target.innerHTML = target.innerHTML + "compte à rebours : " + number + "<br>";
         console.log("compte à rebours : " + number);
         number--;
