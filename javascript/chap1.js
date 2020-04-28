@@ -17,9 +17,13 @@ function loop() {
     console.log("fin du compte à rebours !" );
 }
 
+function affiche() {
+    alert(document.title);
+}
+
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    loop();
+    affiche();
     this.style.color = "red";
 }
