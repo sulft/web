@@ -21,9 +21,15 @@ function affiche() {
     alert(document.title);
 }
 
+function array() {
+    var nombre = ["A","B","C","D"];
+    var target = document.getElementById("text");
+    target.innerHTML = nombre;    
+}
+
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    affiche();
+    array();
     this.style.color = "red";
 }
