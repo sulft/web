@@ -22,9 +22,11 @@ function affiche() {
 }
 
 function array() {
-    var nombre = ["A","B","C","D"];
+    var nombre = ["A", 3, "C", "D"];
+    var total = ["Boulanger", nombre, "Banane"];
     var target = document.getElementById("text");
-    target.innerHTML = nombre;    
+    target.innerHTML = total;
+    alert(target.innerHTML.includes("A,3,C"));
 }
 
 
