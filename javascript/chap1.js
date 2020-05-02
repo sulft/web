@@ -22,10 +22,11 @@ function affiche() {
 }
 
 function array() {
-    var nombre = ["A", 3, "C", "D","E"];
+    var nombre = ["A", 3, "Z", "D","E"];
+    nombre.sort();
     var target = document.getElementById("text");
     target.innerHTML = nombre;
-    alert(nombre.length);
+    alert(nombre.length + " éléments dans le tableau");
 }
 
 
