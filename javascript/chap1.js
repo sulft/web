@@ -25,8 +25,12 @@ function array() {
     var nombre = ["A", 3, "Z", "D","E"];
     nombre.sort();
     var target = document.getElementById("text");
-    target.innerHTML = nombre;
-    alert(nombre.length + " éléments dans le tableau");
+    target.innerHTML ="";
+    for(var i = 0 ; i <= 1 ; i++) {
+        target.innerHTML = target.innerHTML + nombre + " <br>Taille du tableau actuel: " + nombre.length +"<br><br>";
+        if(i == 0)
+            nombre.push("F");
+    }
 }
 
 
