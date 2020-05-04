@@ -33,9 +33,14 @@ function array() {
     }
 }
 
+function reset_value() {
+    click1.value="sorry"; // change the value inside button of id 'click_buttom'
+    array();
+}
+
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
 click1.onclick=function() {
-    array();
+    reset_value();
     this.style.color = "red";
 }

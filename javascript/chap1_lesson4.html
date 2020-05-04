@@ -5,6 +5,20 @@
 		<title>Ch1 JavaScript</title>
 
 		<style>
+			#click_buttom {
+				color:blue;
+			}
+
+			body {
+				width:80%;
+				margin:5px auto;
+			}
+
+			h1 {
+				color:red;
+				font-size:40px;
+			}
+
 			button {
 				font-size:14px;
 				margin:10px;
@@ -12,16 +26,27 @@
 				background-color:rgb(182, 178, 178);
 				border-radius:30%;
 			}
+
+			#text {
+				width:80%;
+			}
+
+			@media screen and (max-width:600px) {
+				h1 {
+					color:blue;
+				}
+
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>Welcome Uber Nerdling!</h1>
 
-		<button id="click_buttom" type="button">Activate</button>
+		<input type="button" id="click_buttom" value="activate">
 
-		<div>
-			<p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+		<div  id="text">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 		</div>
 
 		<script src="chap1.js"></script>
