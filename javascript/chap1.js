@@ -1,8 +1,7 @@
 //i'm a javascript comment
 /* as CSS comment, I'm also a JS */
-
-//Déclaration + initialisation de variable
-var click1 = document.getElementById('click_buttom');
+var left_butt = document.getElementById('left_button');
+var right_butt = document.getElementById('right_button');
 
 //function
 function loop() {
@@ -33,14 +32,24 @@ function array() {
     }
 }
 
-function reset_value() {
-    click1.value="sorry"; // change the value inside button of id 'click_buttom'
-    array();
+function button(id) {
+    var touche = document.getElementById(id);
+    touche.value="test"; 
 }
 
+function button2(htmlElement) {
+    htmlElement.value="test"; // change the value inside button of id 'click_buttom'
+}
 
-//appel de email_test lorsque j'appuie sur le bouton d'ID "click1".
-click1.onclick=function() {
-    reset_value();
+//appel de email_test lorsque j'appuie sur le bouton d'ID "left_butt".
+left_butt.onclick=function() {
+    button('left_button');
+    //button2(left_butt);
+    this.style.color = "red";
+}
+
+right_butt.onclick=function() {
+    button('right_button');
+   //button2(right_butt);
     this.style.color = "red";
 }

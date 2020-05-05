@@ -5,12 +5,22 @@
 		<title>Ch1 JavaScript</title>
 
 		<style>
-			#click_buttom {
+			#left_button, #right_button {
 				color:blue;
+				cursor:pointer;
+				border-radius:30%;
+				float:left;
+			}
+
+			#right_button {
+				color:blue;
+				cursor:pointer;
+				border-radius:30%;
+				float:right;
 			}
 
 			body {
-				width:80%;
+				width:50%;
 				margin:5px auto;
 			}
 
@@ -19,16 +29,9 @@
 				font-size:40px;
 			}
 
-			button {
-				font-size:14px;
-				margin:10px;
-				cursor:pointer;
-				background-color:rgb(182, 178, 178);
-				border-radius:30%;
-			}
-
 			#text {
-				width:80%;
+				text-align:justify;
+				clear:both;
 			}
 
 			@media screen and (max-width:600px) {
@@ -42,9 +45,10 @@
 
 	<body>
 		<h1>Welcome Uber Nerdling!</h1>
-
-		<input type="button" id="click_buttom" value="activate">
-
+		<form name="form" method="post">
+			<input type="button" id="left_button" value="activate">
+			<input type="button" id="right_button" value="inactive">
+		</form>
 		<div  id="text">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 		</div>
