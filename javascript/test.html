@@ -1,27 +1,59 @@
 <!DOCTYPE HTML>
-
+<!-- crée un black mode ou un white mode en appuyant sur le bouton correspondant -->
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Color</title>
+
+        <style>
+            body {
+                background-color: white;
+                color:black;
+            }
+        </style>
     </head>
     
 
-    <body>
-        <h1>Background-color</h1>
+    <body id ="back">
+        <h1 id="big">Background-color</h1>
 
-        <p>Texte que nous allons tester</p>
+        <p id="textParagraph">Texte que nous allons tester</p>
 
         <form name="bouton">
-            <input type="button" value="Change color" id="bColorText">
-            <input type="button" value="Change background color" id="bColorBackground">
+            <input type="button" value="Black mode" id="blackMode">
+            <input type="button" value="White mode" id="whiteMode">
         </form>
+
     </body>
 
     <script>
-        var textColor = document.getElementById("bColorText");
-        var textColor = document.getElementById("bColorBackground");
+        var black = document.getElementById("blackMode");
+        var white = document.getElementById("whiteMode");
+        var text = document.getElementById("textParagraph");
 
+        function changeEverything(id) {
+            if(id==black) {
+                back.style.backgroundColor="black";
+                text.style.color="white";
+                big.style.color="white";
+            }
+            else if(id==white) {
+                back.style.backgroundColor="white";
+                text.style.color="black";
+                big.style.color="black";
+            }
+            else  { }
+
+        }
+
+        black.onclick = function() {
+            changeEverything(black);
+            back.style.color="grey";
+        }
+
+        white.onclick = function() {
+            changeEverything(white);
+        }
 
     </script>
 </html>
