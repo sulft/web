@@ -22,13 +22,16 @@
         <form name="bouton">
             <input type="button" value="Black mode" id="blackMode">
             <input type="button" value="White mode" id="whiteMode">
+            <input type="button" value="text color" id="colorText">
         </form>
 
     </body>
 
     <script>
+        var i = 0;
         var black = document.getElementById("blackMode");
         var white = document.getElementById("whiteMode");
+        var textColor = document.getElementById("colorText");
         var text = document.getElementById("textParagraph");
 
         function changeEverything(id) {
@@ -46,12 +49,21 @@
 
         }
 
+        function colorTextFunction(tab) {
+            text.style.color=tab[i++%tab.length];
+        }
+
         black.onclick = function() {
             changeEverything(black);
         }
 
         white.onclick = function() {
             changeEverything(white);
+        }
+
+        textColor.onclick = function() {
+            var tabColor = ["red","blue","green"];
+            colorTextFunction(tabColor);
         }
 
     </script>
