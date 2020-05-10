@@ -51,6 +51,7 @@
 
         function colorTextFunction(tab) {
             text.style.color=tab[i++%tab.length];
+            return text.style.color;
         }
 
         black.onclick = function() {
@@ -63,7 +64,7 @@
 
         textColor.onclick = function() {
             var tabColor = ["red","blue","green"];
-            colorTextFunction(tabColor);
+            alert(colorTextFunction(tabColor));
         }
 
     </script>
