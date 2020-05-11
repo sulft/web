@@ -31,9 +31,9 @@ main {
 
 main img {
     float:right;
+    clear:none;
     width:250px;
-    margin:10px;
-    margin-bottom:20px;
+    margin:10px 10px 20px 10px;
 }
 
 nav {
@@ -45,6 +45,11 @@ footer {
     clear:both;
     float:right;
     width:78%
+}
+
+p {
+    padding:0px 10px;
+    text-align:justify;
 }
 
 h3 {
