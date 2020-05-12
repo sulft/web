@@ -30,7 +30,6 @@ function array() {
         if(i == 0)
             nombre.push("F");
     }
-    return nombre;
 }
 
 function button(id) {
