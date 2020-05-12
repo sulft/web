@@ -30,6 +30,7 @@ function array() {
         if(i == 0)
             nombre.push("F");
     }
+    return nombre;
 }
 
 function button(id) {
@@ -45,8 +46,7 @@ function button2(htmlElement) {
 left_butt.onclick=function() {
     //button('left_button');
     //button2(left_butt);
-    array(); 
-    alert(nombre); //cannot access variable that are inside function without a return
+    alert(array()); //1 façon de récupérer la variable nombre
     this.style.color = "red";
 }
 
