@@ -30,6 +30,7 @@ function array() {
         if(i == 0)
             nombre.push("F");
     }
+    return nombre;
 }
 
 function button(id) {
@@ -43,8 +44,10 @@ function button2(htmlElement) {
 
 //appel de email_test lorsque j'appuie sur le bouton d'ID "left_butt".
 left_butt.onclick=function() {
-    button('left_button');
+    //button('left_button');
     //button2(left_butt);
+    array(); 
+    alert(nombre); //cannot access variable that are inside function without a return
     this.style.color = "red";
 }
 
