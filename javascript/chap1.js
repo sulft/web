@@ -20,17 +20,12 @@ function affiche() {
     alert(document.title);
 }
 
-function array() {
-    var nombre = ["A", 3, "Z", "D","E"];
-    nombre.sort();
-    var target = document.getElementById("text");
-    target.innerHTML ="";
-    for(var i = 0 ; i <= 1 ; i++) {
-        target.innerHTML = target.innerHTML + nombre + " <br>Taille du tableau actuel: " + nombre.length +"<br><br>";
-        if(i == 0)
-            nombre.push("F");
-    }
-    return nombre;
+function returnSomething() {
+    var nom = "Vilver";
+    var prenom = "Terry";
+    var age = 15;
+    var personne = [nom, prenom, age];
+    return personne;
 }
 
 function button(id) {
@@ -46,7 +41,8 @@ function button2(htmlElement) {
 left_butt.onclick=function() {
     //button('left_button');
     //button2(left_butt);
-    alert(array()); //1 façon de récupérer la variable nombre
+    treeVariable = returnSomething();
+    console.log("Je m'appelle " + treeVariable[1] + " " + treeVariable[0] + "." +"\nJ'ai " + treeVariable[2] + " ans."); //2 variable façon de récupérer la variable nombre
     this.style.color = "red";
 }
 
