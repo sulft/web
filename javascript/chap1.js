@@ -21,11 +21,14 @@ function affiche() {
 }
 
 function returnSomething() {
-    var nom = "Vilver";
-    var prenom = "Terry";
-    var age = 15;
-    var personne = [nom, prenom, age];
-    return personne;
+    var age = 14;
+    var bool = ["true", "false"];
+
+    if(age>=15) {
+        return bool[0] + " j'ai 15 ans ou plus.";
+    } else {
+        return bool[1] + " j'ai moins de 15 ans.";
+    }
 }
 
 function button(id) {
@@ -41,8 +44,9 @@ function button2(htmlElement) {
 left_butt.onclick=function() {
     //button('left_button');
     //button2(left_butt);
-    treeVariable = returnSomething();
-    console.log("Je m'appelle " + treeVariable[1] + " " + treeVariable[0] + "." +"\nJ'ai " + treeVariable[2] + " ans."); //2 variable façon de récupérer la variable nombre
+    console.log("Avez-vous plus de 15 ans ?");
+    var bool = returnSomething();
+    console.log(bool);
     this.style.color = "red";
 }
 
