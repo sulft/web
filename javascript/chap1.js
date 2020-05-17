@@ -2,22 +2,13 @@
 /* as CSS comment, I'm also a JS */
 var left_butt = document.getElementById('left_button');
 var right_butt = document.getElementById('right_button');
+var text = document.getElementById('text');
 
 //function
-function loop() {
-    number = 5;
-    var target = document.getElementById("text");
-    target.innerHTML = "";
-    for (var i = number ; i > 0 ; i--) {
-        target.innerHTML = target.innerHTML + "compte à rebours : " + number + "<br>";
-        console.log("compte à rebours : " + number);
-        number--;
-    } 
-    console.log("fin du compte à rebours !" );
-}
 
 function affiche() {
-    alert(document.title);
+    var word = "caramel";
+    text.innerHTML = text.innerHTML + " " + word; //HTML DOM by using innerHTML
 }
 
 function returnSomething() {
@@ -31,27 +22,6 @@ function returnSomething() {
     }
 }
 
-function button(id) {
-    var touche = document.getElementById(id);
-    touche.value="test"; 
-}
-
-function button2(htmlElement) {
-    htmlElement.value="test"; // change the value inside button of id 'click_buttom'
-}
-
-//appel de email_test lorsque j'appuie sur le bouton d'ID "left_butt".
-left_butt.onclick=function() {
-    //button('left_button');
-    //button2(left_butt);
-    console.log("Avez-vous plus de 15 ans ?");
-    var bool = returnSomething();
-    console.log(bool);
-    this.style.color = "red";
-}
-
-right_butt.onclick=function() {
-    button('right_button');
-   //button2(right_butt);
-    this.style.color = "red";
+left_butt.onclick = function() {
+    affiche();
 }
