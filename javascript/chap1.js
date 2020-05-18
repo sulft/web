@@ -22,6 +22,14 @@ function returnSomething() {
     }
 }
 
+    function domUtilisation() {
+        
+    }
+
 left_butt.onclick = function() {
     affiche();
+}
+
+right_butt.onclick = function() {
+    domUtilisation();
 }
