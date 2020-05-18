@@ -6,11 +6,6 @@ var text = document.getElementById('text');
 
 //function
 
-function affiche() {
-    var word = "caramel";
-    text.innerHTML = text.innerHTML + " " + word; //HTML DOM by using innerHTML
-}
-
 function returnSomething() {
     var age = 14;
     var bool = ["true", "false"];
@@ -22,12 +17,26 @@ function returnSomething() {
     }
 }
 
-    function domUtilisation() {
-        
-    }
+function domUtilisation() {
+    text.innerHTML = "";
+    var ab = document.createElement("p"); //création de l'élément p
+    var node = document.createTextNode("je suis un caméléon"); // création d'un texte
+    ab.appendChild(node); //ajout du text à l'élément p
+
+    //ajout de l'élément p à mon tag div
+    var div = document.getElementById("theDiv");
+    div.appendChild(ab);
+
+    //ici j'ajoute "je suis un caméléon" à mon tag div d'id ="theDiv"
+}
+
+function domUtilisation1() {
+    var word = "caramel";
+    text.innerHTML = text.innerHTML + " " + word; //HTML DOM by using innerHTML
+}
 
 left_butt.onclick = function() {
-    affiche();
+    domUtilisation1();
 }
 
 right_butt.onclick = function() {
