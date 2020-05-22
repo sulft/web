@@ -24,8 +24,7 @@ function domUtilisation() {
     ab.appendChild(node); //ajout du text à l'élément p
 
     //ajout de l'élément p à mon tag div
-    var div = document.getElementById("theDiv");
-    div.appendChild(ab);
+    document.getElementById("theDiv").appendChild(ab);
 
     //ici j'ajoute "je suis un caméléon" à mon tag div d'id ="theDiv"
 }
