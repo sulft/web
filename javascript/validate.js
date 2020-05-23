@@ -1,13 +1,10 @@
 
 	document.getElementById('submit').onclick=function() {
 
-		var doSubmit = validateForm();
-
-		if(doSubmit == false) {
-
+		return false;
+		/*if(validateForm() == false) {
 			return false;
-		}
-		
+		}*/
 	}
 
 
@@ -16,22 +13,18 @@
 		var nameFirst = document.getElementById('nameFirst');
 		var theValue = nameFirst.value;
 
-		if(theValue != "Stefan") {
+		if(theValue != "Terry") {
 			
 			console.log("Will this fire?");
 
 			var messageHolder = document.getElementById('target');
 			messageHolder.style.color = "red";
-			messageHolder.innerHTML = "<h2>Put in my name!</h2>";
+			messageHolder.innerHTML = "<h3>Vous n'avez pas entré le nom attendu.</h3>";
 			nameFirst.select();
 			//nameFirst.focus();
 			
 
-			return false;
-
-			console.log("Will this fire 2?");
-
-			
+			return false;		
 		}
 		
 }
