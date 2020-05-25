@@ -1,10 +1,9 @@
 
 	document.getElementById('submit').onclick=function() {
 
-		return false;
-		/*if(validateForm() == false) {
+		if(validateForm() == false) {
 			return false;
-		}*/
+		}
 	}
 
 
@@ -18,13 +17,13 @@
 			console.log("Will this fire?");
 
 			var messageHolder = document.getElementById('target');
-			messageHolder.style.color = "red";
-			messageHolder.innerHTML = "<h3>Vous n'avez pas entré le nom attendu.</h3>";
+			messageHolder.style.color = "green";
+			messageHolder.innerHTML = "Vous n'avez pas entré le nom attendu.";
 			nameFirst.select();
-			//nameFirst.focus();
-			
+		
+			return false;
 
-			return false;		
+			console.log("Will this fire? (bis)"); //ce texte ne sera jamais lu dans la console
 		}
 		
 }
