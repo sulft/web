@@ -47,13 +47,15 @@
     element.contentEditable = false;
       
     // Show the markup in a message box.
-    text.innerHTML = "Vous avez écrit : " + element.innerHTML;
+    text.innerHTML = "Vous avez écrit : " + element.innerHTML +".";
   }
 
   function restart() {
     //get rid of all the element on the text
     var element = document.getElementById("editableElement");
+    var text = document.getElementById("text");
     element.innerHTML = "";
+    text.innerHTML = "Restart.";
     startEdit()
   }
 
