@@ -19,6 +19,7 @@
 </head>
 <body>
   <main>
+    <p id="text" style="color:green"> </p>
 
     <button id="start" onclick="startEdit()">Start Editing</button>
     <button id="finish" onclick="stopEdit()">Finish Editing</button>
@@ -42,10 +43,11 @@
   function stopEdit() {
     // Return the element to normal.
     var element = document.getElementById("editableElement");
+    var text = document.getElementById("text");
     element.contentEditable = false;
       
     // Show the markup in a message box.
-    alert("This is what you wrote: \n" + element.innerHTML);
+    text.innerHTML = "Vous avez écrit : " + element.innerHTML;
   }
 
   function restart() {
