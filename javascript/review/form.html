@@ -6,27 +6,54 @@
 
         <style>
             span {
+                font-size:15px;
                 color:black;
                 background-color:yellow;
+            }
+
+            h2 {
+                color:red
             }
         </style>
     </head>
 
-    <body>
-        <form name="login" action="traitement.php">
+    <body> 
+        <h2>Sign up<h2>
+        <form name="signup" action="traitement.php" method="post">
+            <span>Email:</span>
+            <input type="text" name="mail">
+
             <span>Username:</span>
             <input type="text" name="username">
 
             <span>Password:</span>
             <input type="password" name="password">
 
+            <span>Sexe</span>
+            <select name="sexe">
+                <option value="Homme">H</option>
+                <option value="Femme">F</option>
+            <input type="submit">
+        </form>
+
+        <br>
+
+        <h2>Login<h2>
+        <form name="login" action="traitement.php" method="post">
+            <span>Username:</span>
+            <input type="text" name="username">
+
+            <span>Password:</span>
+            <input type="password" name="password">
 
             <input type="submit">
         </form>
 
-        <form name="signup">
-
-        </form>
+        <h2>Comments<h2>
+            <form name="Comments" action="traitement.php" method="post">
+                <TEXTAREA name="comments" rows="10" cols="70"></TEXTAREA>
+                <input type="submit">
+            </form>
 
     </body>
 </html>
