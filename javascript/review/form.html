@@ -18,7 +18,7 @@
     </head>
 
     <body> 
-        <h2>Sign up<h2>
+        <h2>Sign up</h2>
         <form name="signup" action="traitement.php" method="post">
             <span>Email:</span>
             <input type="text" name="mail">
@@ -29,10 +29,24 @@
             <span>Password:</span>
             <input type="password" name="password">
 
+            <br>
+
+            <span>Fruits préférés:</span>
+            <input type="checkbox" name="fruit" value="Pomme">Pomme
+            <input type="checkbox" name="fruit" value="Banane">Banane
+            <input type="checkbox" name="fruit" value="Poire">Poire
+            <input type="checkbox" name="fruit" value="Fraise">Fraise
+
+            <br>
+
             <span>Sexe</span>
             <select name="sexe">
                 <option value="Homme">H</option>
                 <option value="Femme">F</option>
+            </select>
+
+            <br>
+
             <input type="submit">
         </form>
 
@@ -51,7 +65,8 @@
 
         <h2>Comments<h2>
             <form name="Comments" action="traitement.php" method="post">
-                <TEXTAREA name="comments" rows="10" cols="70"></TEXTAREA>
+                <textarea name="comments" rows="10" cols="70"></textarea>
+                <br>
                 <input type="submit">
             </form>
 
