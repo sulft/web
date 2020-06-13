@@ -18,15 +18,15 @@
     </head>
 
     <body> 
-        <h2>Sign up</h2>
+        <h2>Inscription</h2>
         <form name="signup" action="traitement.php" method="post">
             <span>Email:</span>
             <input type="text" name="mail">
 
-            <span>Username:</span>
+            <span>Identifiant:</span>
             <input type="text" name="username">
 
-            <span>Password:</span>
+            <span>Mot de passe:</span>
             <input type="password" name="password">
 
             <br>
@@ -39,10 +39,11 @@
 
             <br>
 
-            <span>Sexe</span>
+            <span>Sexe:</span>
             <select name="sexe">
-                <option value="Homme">H</option>
-                <option value="Femme">F</option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <option value="Autre">Autre</option>
             </select>
 
             <br>
@@ -52,18 +53,18 @@
 
         <br>
 
-        <h2>Login<h2>
+        <h2>Connexion</h2>
         <form name="login" action="traitement.php" method="post">
-            <span>Username:</span>
+            <span>Identifiant:</span>
             <input type="text" name="username">
 
-            <span>Password:</span>
+            <span>Mot de passe:</span>
             <input type="password" name="password">
 
             <input type="submit">
         </form>
 
-        <h2>Comments<h2>
+        <h2>Commentaire</h2>
             <form name="Comments" action="traitement.php" method="post">
                 <textarea name="comments" rows="10" cols="70"></textarea>
                 <br>
