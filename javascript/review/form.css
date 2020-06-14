@@ -1,0 +1,21 @@
+/*tag selector*/
+html {
+    background-color:lightblue;
+}
+
+span {
+    font-size:15px;
+    font-weight:600;
+    color:black;
+    background-color:white;
+}
+
+h2 {
+    color:red
+}
+
+/*ID selector*/
+#body {
+    text-align:center;
+
+}
