@@ -14,6 +14,11 @@ h2 {
     color:red
 }
 
+ul {
+    padding:0px;
+    margin:0px;
+}
+
 /*ID selector*/
 #body {
     text-align:center;
