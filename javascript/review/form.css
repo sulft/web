@@ -19,6 +19,10 @@ ul {
     margin:0px;
 }
 
+ul a {
+    color:green;
+}
+
 /*ID selector*/
 #body {
     text-align:center;
