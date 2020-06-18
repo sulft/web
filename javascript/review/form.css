@@ -1,6 +1,10 @@
 /*tag selector*/
-html {
-    background-color:lightblue;
+
+body {
+    background-image:url("images/grunge.jpg");
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 span {
@@ -21,15 +25,14 @@ ul {
 
 span#test {
     text-decoration:underline;
-    color:red;
+    color:green;
 }
 
 ul a {
     color:green;
 }
 
-/*ID selector*/
-#body {
+body {
     text-align:center;
-
+    font-family:'Roboto', sans-serif,'Lucida Sans Regular', sans-serif;
 }
