@@ -53,6 +53,12 @@ span#test {
     color:green;
 }
 
-ul a {
-    color:green;
+/* Pseudo classe */
+a:link, a:visited {
+    margin:0px auto 3px auto;
+    text-decoration:none;
+    display:block;
+    background-color:lightgrey;
+    color:black;
+    width:150px;
 }
