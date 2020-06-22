@@ -6,7 +6,7 @@ body {
     background-repeat:no-repeat;
     background-size:cover;*/
     font-family:'Roboto', sans-serif,'Lucida Sans Regular', sans-serif;
-    width:900px;
+    width:1050px;
 }
 
 p {
@@ -30,6 +30,7 @@ p {
 
 #part1 {
     background-color:red;
+    float:right;
 }
 
 #part2 {
