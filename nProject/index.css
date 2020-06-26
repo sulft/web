@@ -13,7 +13,7 @@ body {
     text-align:center;
 }
 
-nav {
+nav, #nav2{
     background-color:lightgrey;
     position:fixed;
     left:10px;
@@ -22,13 +22,8 @@ nav {
 }
 
 #nav2 {
-    background-color:lightgrey;
     text-align:left;
-    position:fixed;
-    left:10px;
     top:200px;
-    float:left;
-    width:20%;
     height:100%;
 }
 
@@ -38,7 +33,7 @@ nav {
 
 nav h2, #nav2 h2 {
     margin:10px;
-    font-size:2.5em;
+    font-size:2vw;
 }
 
 nav ol {
@@ -62,22 +57,23 @@ nav ol li a {
 }
 
 .content h2 {
-    font-size:2em;
-    margin-left:0px;
+    font-size:2vw;
 }
 
 .tableCell_a_propos {
-    display:table-cell;
     background-color:#b30000;
-    width:10%;
-    padding:24px;
-    margin:25px;
+    text-align:justify;
 }
 
 .tableCell {
+    text-align:center;
+}
+
+.tableCell_a_propos, .tableCell {
     display:table-cell;
     width:10%;
-    padding:24px;
+    padding:30px;
+
 }
 
 /* pseudo class */
