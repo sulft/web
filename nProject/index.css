@@ -8,21 +8,35 @@
 body {
     width:96%;
     margin:1% auto;
-    background-color:lightblue;
+    background-color:white;
+    font-family:sans-serif;
     text-align:center;
 }
 
 nav {
-
+    background-color:lightgrey;
     position:fixed;
     left:10px;
-    border-style:solid;
-    border-width:2px;
     float:left;
     width:20%;
 }
 
-nav h2 {
+#nav2 {
+    background-color:lightgrey;
+    text-align:left;
+    position:fixed;
+    left:10px;
+    top:200px;
+    float:left;
+    width:20%;
+    height:100%;
+}
+
+#nav2 .phrase {
+    margin:0px 10px;
+}
+
+nav h2, #nav2 h2 {
     margin:10px;
     font-size:2.5em;
 }
@@ -45,39 +59,32 @@ nav ol li a {
 .content {
     margin-left:21%;
     width:79%;
-    border-style:solid;
-    border-width:2px;
 }
 
 .content h2 {
-    margin:10px;
-    font-size:2.5em;
+    font-size:2em;
+    margin-left:0px;
 }
 
-p.phrase {
-    text-align:justify;
-    margin:5px auto;
-    width:30%;
-    font-size:24px;
+.tableCell_a_propos {
+    display:table-cell;
+    background-color:#b30000;
+    width:10%;
+    padding:24px;
+    margin:25px;
 }
 
 .tableCell {
     display:table-cell;
-    text-align:justify;
     width:10%;
-    padding:10px;
-}
-
-.tableCell p {
-    font-size:1.5em;
+    padding:24px;
 }
 
 /* pseudo class */
 a:link, a:visited {
     display:block;
     text-decoration:none;
-    color:blue;
-    background-color:lightblue;
+    color:#b30000;
 }
 
 a:hover {
