@@ -19,6 +19,7 @@ nav, #nav2{
     left:10px;
     float:left;
     width:20%;
+    padding-bottom:2%;
 }
 
 #nav2 {
@@ -27,8 +28,8 @@ nav, #nav2{
     height:100%;
 }
 
-#nav2 .phrase {
-    margin:0px 10px;
+p.phrase {
+    padding:10px;
 }
 
 nav h2, #nav2 h2 {
@@ -46,7 +47,7 @@ nav ol li {
 
 nav ol li a {
     padding:5px;
-    font-size:1.5em;
+    font-size:1em;
 }
 
 /* class selector */
@@ -63,6 +64,7 @@ nav ol li a {
 .tableCell_a_propos {
     background-color:#b30000;
     text-align:justify;
+    color:white;
 }
 
 .tableCell {
@@ -72,8 +74,7 @@ nav ol li a {
 .tableCell_a_propos, .tableCell {
     display:table-cell;
     width:10%;
-    padding:30px;
-
+    padding:15px;
 }
 
 /* pseudo class */
