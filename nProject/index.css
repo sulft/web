@@ -1,0 +1,93 @@
+/* FICHIER CSS nProject */
+/* selector tag */
+* {
+    padding:0px;
+    margin:0px;
+}
+
+body {
+    width:96%;
+    margin:1% auto;
+    background-color:white;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+nav, #nav2{
+    background-color:lightgrey;
+    position:fixed;
+    left:10px;
+    float:left;
+    width:20%;
+    padding-bottom:2%;
+}
+
+#nav2 {
+    text-align:left;
+    top:200px;
+    height:100%;
+}
+
+p.phrase {
+    padding:10px;
+}
+
+nav h2, #nav2 h2 {
+    margin:10px;
+    font-size:2vw;
+}
+
+nav ol {
+    margin:20px 0px;
+}
+
+nav ol li {
+    list-style-type:none;
+}
+
+nav ol li a {
+    padding:5px;
+    font-size:1em;
+}
+
+/* class selector */
+
+.content {
+    margin-left:21%;
+    width:79%;
+}
+
+.content h2 {
+    font-size:2vw;
+}
+
+.tableCell_a_propos {
+    background-color:#b30000;
+    text-align:justify;
+    color:white;
+}
+
+.tableCell {
+    text-align:center;
+}
+
+.tableCell_a_propos, .tableCell {
+    display:table-cell;
+    width:10%;
+    padding:15px;
+}
+
+/* pseudo class */
+a:link, a:visited {
+    display:block;
+    text-decoration:none;
+    color:#b30000;
+}
+
+a:hover {
+    background-color:white;
+}
+
+a:active {
+    color:black;
+}
