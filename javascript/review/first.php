@@ -7,7 +7,14 @@
     
     <body>
         <h3>my first php page </h3>
-        
-        <?php print("My first sentence") ?>
+
+
+        <?php echo phpinfo(); ?>
+
+        <?php     
+            $word = "chocolat";
+
+            echo "My first sentence. <br> " . $word".";
+        ?>
     </body>
 </html>
