@@ -10,11 +10,5 @@
 
 
         <?php echo phpinfo(); ?>
-
-        <?php     
-            $word = "chocolat";
-
-            echo "My first sentence. <br> " . $word".";
-        ?>
     </body>
 </html>
