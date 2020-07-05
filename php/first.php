@@ -11,8 +11,9 @@
 
         <?php 
             $a=10+10;
-            $a="mdp";
-            echo "a=" . $a;
+            $b="mdp";
+            echo "a=" . $a . "<br>";
+            echo "a=$a<br>";
         ?>
     </body>
 </html>
