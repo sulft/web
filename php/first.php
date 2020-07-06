@@ -6,14 +6,21 @@
     </head>
     
     <body>
+        
         <h3>my first php page </h3>
 
 
         <?php 
-            $a=10+10;
+            $a=true;
             $b="mdp";
-            echo "a=" . $a . "<br>";
-            echo "a=$a<br>";
+
         ?>
+
+        <style>
+        <?php 
+            include "first.css";
+        ?>
+        </style>
+
     </body>
 </html>
