@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -11,9 +12,9 @@
 
 
         <?php 
-            $a=true;
-            $b="mdp";
-
+            $a= array("math","francais","anglais");
+            echo "nb element dans le tableau: " . count($a) . "<br>";
+            echo "test";
         ?>
 
         <style>
