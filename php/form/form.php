@@ -7,7 +7,8 @@
             $mdp =$_POST["password"];
 
             if($mdp != "azerty") {
-                echo "mdp ou id incorrecte !";
+                echo "<script>alert('mot de passe incorrecte');</script>";
+                echo "<script>window.history.back();</script>";
             } else {
                 echo "Accès autorisé !";
             }
