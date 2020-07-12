@@ -2,6 +2,10 @@
     $messageNumber = strlen("Terry");
     $date = date("d/m/y");
     $a = scandir("C:projet/web/php");
+
+    function test($sexe = "homme") {
+        echo "Je suis un " . $sexe . ".";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +30,12 @@
                 echo $value . "<br>";
             }
         ?>
+
+        <h1>Custom function</h1>
+        <?php 
+            test();
+        ?>
+        
 
     </body>
 </html>
