@@ -4,7 +4,7 @@
     $a = scandir("C:projet/web/php");
 
     function test($sexe = "homme") {
-        echo "Je suis un " . $sexe . ".";
+        return "Je suis un " . $sexe . ".";
     }
 ?>
 
@@ -33,7 +33,12 @@
 
         <h1>Custom function</h1>
         <?php 
-            test();
+            echo test();
+            echo test("inconnu");
+            echo test("femme");
+            echo test("rien");
+            echo test("??");
+            echo test("!!");
         ?>
         
 
