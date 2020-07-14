@@ -14,12 +14,8 @@
         <?php 
             $_SESSION["animaux"] = "lion";
             print_r($_SESSION); echo "<br>";
-            /*
-            session_unset();
-            print_r($_SESSION);
-            session_destroy();
-            print_r($_SESSION);
-            */
+            
+            unset($_SESSION["animaux"]);
 
             if(isset($_SESSION["animaux"])) {
                 echo "set";
