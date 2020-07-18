@@ -1,9 +1,11 @@
 body {
-    background-image:url('http://copier-coller.com/wp-content/uploads/2015/01/texture.png')
+    max-width:80%;
+    margin:0px auto;
+    background-image:url('http://copier-coller.com/wp-content/uploads/2015/01/texture.png');
 }
 
 #logo {
-    height:49px;
+    height:50px;
     background-image: url('http://copier-coller.com/wp-content/uploads/2015/01/logo.png');
     background-repeat:no-repeat;
 }
