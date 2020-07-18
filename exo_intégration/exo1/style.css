@@ -1,0 +1,9 @@
+body {
+    background-image:url('http://copier-coller.com/wp-content/uploads/2015/01/texture.png')
+}
+
+#logo {
+    height:49px;
+    background-image: url('http://copier-coller.com/wp-content/uploads/2015/01/logo.png');
+    background-repeat:no-repeat;
+}
