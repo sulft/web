@@ -4,7 +4,7 @@
     $a = scandir("C:projet/web/php");
 
     function test($sexe = "homme") {
-        return "Je suis un " . $sexe . ".";
+        return "Je suis un " . $sexe . ".<br>";
     }
 ?>
 

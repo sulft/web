@@ -39,20 +39,17 @@ if(isset($_SESSION['isLoggedIn'])) {
 
 } else {
 
-
 // Using Heredoc, to echo out the form. 
 $theForm = <<<THEFORM
 
 
-  <p>Welcome to WheatBook!</p>
-  <h2>Please enter your user name and password to log in:</h2>
+  <p>Bienvenu sur mon site!</p>
+  <h2>Entrez votre identifiant et votre mot de passe.</h2>
 
   <form method='post' action='ch12-login-response.php'>
-
       <input type='text' name='userName' id='username'>
       <input type='password' name='password'>
       <input type='submit'>
-
   </form>
 
 
@@ -65,30 +62,24 @@ echo $theForm;
 
 
 
-  <?php
+<?php
 
-    // using the querystring to send messages back to this login page.
+  // using the querystring to send messages back to this login page.
 
-    $isBlock =  $_GET["isBlock"];
-    $badUserCredentials = $_GET["badUserCredentials"];
+  $isBlock = $_GET["isBlock"];
+  $badUserCredentials = $_GET["badUserCredentials"];
 
-    if(isset($isBlock)) {
-
-      echo "<h2>Ah, ah, aaaaah ... you need to log in buddy!</h2>";
-      echo "<script>document.getElementById('username').focus();</script>";
-
-    } else if($badUserCredentials) {
-
-      echo "<h2>User name OR password is wrong buddy!</h2>";
-      echo "<script>document.getElementById('username').focus();</script>";
-
-    }
-
-
-  ?>
+  if(isset($isBlock)) {
+    echo "<h2>Ah, ah, aaaaah ... you need to log in buddy!</h2>";
+    echo "<script>document.getElementById('username').focus();</script>";
+  } else if($badUserCredentials) {
+    echo "<h2>User name OR password is wrong buddy!</h2>";
+    echo "<script>document.getElementById('username').focus();</script>";
+  }
+?>
 
 
 </main>
 
-	</body>
+</body>
 </html>

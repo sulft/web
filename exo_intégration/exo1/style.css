@@ -1,11 +1,64 @@
-body {
-    max-width:80%;
-    margin:0px auto;
-    background-image:url('http://copier-coller.com/wp-content/uploads/2015/01/texture.png');
+#logo {
+    background-image:url('http://copier-coller.com/wp-content/uploads/2015/01/logo.png');
+    background-repeat:no-repeat;
+    float:left;
+    margin-top:30px;
+    height:70px;
+    width:170px;
 }
 
-#logo {
-    height:50px;
-    background-image: url('http://copier-coller.com/wp-content/uploads/2015/01/logo.png');
-    background-repeat:no-repeat;
+body {
+    width:80%;
+    max-width:1200px;
+    margin:0px auto;
+    background-image:url("http://copier-coller.com/wp-content/uploads/2015/01/texture.png");
+}
+
+nav {
+    margin-top:37px;
+    float:right;
+}
+
+nav ul li {
+    list-style-type:none;
+    float:left;
+    margin-left:60px;
+}
+
+/*pseudo class*/
+nav ul li a:link,nav ul li a:visited {
+    display:block;
+    color:rgba(36, 36, 36, 0.342);
+    text-decoration:none;
+}
+
+nav ul li a:hover {
+    color:white;
+    padding:5px 15px;
+    background-color:black;
+}
+
+#separation {
+    min-height:120px;
+}
+
+#box1 {
+    background-color:lightgrey;
+    padding:5px;
+    text-align:justify;
+}
+
+#box2 {
+    margin-top:5%;
+    width:65%;
+    float:right;
+    text-align:justify;
+}
+
+.class1 {
+    padding:5px;
+}
+
+.class1 p {
+    color:grey;
 }
