@@ -69,8 +69,12 @@ nav ul li a:hover {
 
 .description1 {
     padding:5px;
+    margin-bottom:6%;
 }
 
+#bunchOfA{
+    text-align:center;
+}
 .description1 p {
     color:grey;
 }
