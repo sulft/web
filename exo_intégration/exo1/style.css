@@ -81,24 +81,14 @@ nav ul li a:hover {
 
 #img1, #img2, #img3, #img4 {
     position: relative;
+    left:35%;
+    top:5%;
+    width:30%
 }
 
 #img2, #img3, #img4 {
-    top:60%;
-}
-
-#img1 {
-    left:
-}
-
-#img2 {
-    left:
-}
-
-#img3 {
-    left:    
-}
-
-#img4 {
-    left:
+    top:40%;
+    width:20%;
+    left:-15%;
+    margin-left:5px;
 }
