@@ -83,6 +83,8 @@ body {
 
 .email label, .mdp label {
     margin:8px 0;
+    color:white;
+    font-weight: 600;
 }
 
 .email input, .mdp input {
