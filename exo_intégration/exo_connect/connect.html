@@ -5,10 +5,12 @@
     <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css_file.css" rel="stylesheet">
         <title>Connexion</title>
     </head>
-        <div id="connexion">
-            <div id="connexion-top">
+    <body>
+        <div class="connexion">
+            <div class="connexion-top">
                 <h1>Log in with</h1>
                 <div class="cartes_connexion">
                     <div class="carte_connexion">
@@ -17,18 +19,33 @@
                     </div>
                     <div class="carte_connexion">
                         <img src="facebook.png" alt="">
-                        <span>facebook</span>
+                        <span>Facebook</span>
                     </div>
                 </div>
+                <span id="connexion-or">or</span>
+            </div>
+
+            <div class="connexion_champ">
+                <div class="email">
+                    <label for="">Email: </label>
+                    <input type="text" placeholder="Entrez votre email.." name="email">
+                </div>
+
+                <div class="mdp">
+                    <label for="">Mot de passe: </label>
+                    <input type="password" placeholder="Entre votre mot de passe.." name="mdp">
+                <div>
+
+                <button class="bouton_connexion">Connexion</button>
+
+                <span class="compte">Pas encore de compte ?
+                <span class="inscription">Inscrivez-vous !     
+                </span>
+                </span>
 
             </div>
         </div>
-    <nav>
+    </body>
 
-    </nav>
-
-    <main>
-
-    </main>
 
 </html>
