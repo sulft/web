@@ -1,6 +1,8 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <link href="manipulation.js" src="stylesheet">
+
 
         <style>
             * {
@@ -10,23 +12,60 @@
             }
 
             .big_box {
-                margin:10 auto;
-                background-color:blue;
+                margin:50 auto;
+                background-color:lightgrey;
                 width:50%;
                 height:800px;
+                border-radius:10px;
             }
 
+            .choice_box {
+                text-align:center;
+                height:300px;
+            }            
+            
+            .image_box {
+                height:470px;
+                margin:15px 0;
+
+            }
+
+            #image {
+                width:85%;
+                height:470px;
+                display:block;
+                margin:0 auto;
+                border-radius:10px;
+
+
+            }
+
+            .choice {
+                padding:10px;
+                margin-bottom:30px;
+            }
         </style>
     </head>
 
     <body>
         <div class="big_box">
             <div class="choice_box">
-        
+                <div class="choice">
+                    <h1>Choix 1</h1>
+                    <a href="#" id="choice1">Click here</a>
+                </div>
+                <div class="choice">
+                    <h1>Choix 2</h1>
+                    <a href="#"  id="choice2">Click here</a>
+                </div>
+                <div class="choice">
+                    <h1>Aucun choix</h1>
+                    <a href="#"  id="choice3">Click here</a>
+                </div>
             </div>
 
             <div class="image_box">
-
+                <img id="image" src="image3.jpg">
             </div>
         </div>
     </body>
