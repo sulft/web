@@ -80,6 +80,24 @@ main {
     margin-top:25px;
 }
 
+.button {
+    margin-top:5px;
+}
 .info {
-    padding-left:70px;
+    animation-name:animer;
+    animation-duration:3s;
+}
+
+.info2 {
+    margin-left:15px;
+}
+
+@keyframes animer {
+    50% {
+        color:red;
+    }
+
+    100% {
+        color:purple;
+    }
 }
