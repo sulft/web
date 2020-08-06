@@ -32,6 +32,12 @@ main {
     left:-15px;
 }
 
+.figure_lune,.figure_coeur, .figure_coeur::before, .figure_coeur::after {
+    animation-name:animer;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+}
+
 .figure_coeur {
     position:fixed;
     left:5%;
@@ -39,7 +45,9 @@ main {
     width:50px;
     height:50px;
     background-color:white;
-    transform:rotate(-45deg)
+    transform:rotate(-45deg);
+
+
 }
 
 .figure_coeur::before {
@@ -83,21 +91,18 @@ main {
 .button {
     margin-top:5px;
 }
-.info {
-    animation-name:animer;
-    animation-duration:3s;
-}
 
 .info2 {
     margin-left:15px;
 }
 
 @keyframes animer {
-    50% {
-        color:red;
+    0% {
+        background-color:red;
     }
 
     100% {
-        color:purple;
+        background-color:purple;
+        opacity:0;
     }
 }
