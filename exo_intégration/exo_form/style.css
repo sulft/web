@@ -11,6 +11,9 @@ main {
     height: 1000px;
 }
 
+h1 {
+    color:purple;
+}
 
 .figure_lune {
     position:fixed;
@@ -103,6 +106,6 @@ main {
 
     100% {
         background-color:purple;
-        opacity:0;
+
     }
 }
