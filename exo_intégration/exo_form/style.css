@@ -37,8 +37,9 @@ h1 {
 
 .figure_lune,.figure_coeur, .figure_coeur::before, .figure_coeur::after {
     animation-name:animer;
-    animation-duration:3s;
-    animation-fill-mode:forwards;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+
 }
 
 .figure_coeur {
@@ -104,8 +105,23 @@ h1 {
         background-color:red;
     }
 
-    100% {
+    25% {
         background-color:purple;
+
+    }
+
+    50% {
+        background-color:purple;
+
+    }
+
+    60% {
+        background-color:purple;
+
+    }
+
+    100% {
+        background-color:red;
 
     }
 }
