@@ -102,23 +102,23 @@ h1 {
 
 @keyframes animer {
     0% {
-        background-color:red;
+        background-color:#D8BFD8;
     }
 
-    25% {
-        background-color:purple;
+    30% {
+        background-color:#EE82EE;
     }
 
     50% {
         background-color:purple;
     }
 
-    60% {
+    80% {
         background-color:purple;
     }
 
     100% {
-        background-color:red;
+        background-color:#D8BFD8;;
     }
 }
 
