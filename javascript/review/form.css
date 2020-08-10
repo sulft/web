@@ -9,7 +9,7 @@ body {
 
 nav {
     position:fixed;
-    top:-5px;
+    top:0px;
     width:85%;
     background-color:lightgrey;
 }
@@ -20,7 +20,8 @@ nav a {
 }
 
 #content {
-   clear:both;
+    margin-top:10px;
+    clear:both;
 }
 
 p {
@@ -34,10 +35,6 @@ h2 {
 }
 
 /* Pseudo classe */
-nav:hover {
-    top:0px;
-}
-
 a:link, a:visited {
     text-decoration:none;
     display:block;
