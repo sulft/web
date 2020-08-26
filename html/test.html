@@ -1,0 +1,97 @@
+<DOCTYPE html>
+
+<!-- Revue des différentes notions-->
+
+<html>
+    <main>
+        <head> <title> Les chiens </title>
+        <link href = "https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap"
+        rel = "stylesheet" type = "text/css">
+        
+        <style>
+
+            .background{
+                background-color:brown;
+            }
+
+            .border-modification{
+                border-color:rgb(192, 55, 21);
+                border-width: 15px;
+                border-style: solid;
+                border-radius:50%;
+                width:500px;
+            }
+
+            p, h1, h2, li {
+                font-family:'yeon Sung',monospace;
+            }
+
+            li{
+                background-color:grey;
+                padding:5px;
+            }
+
+            .red-text {
+                color : red;
+            }
+
+            
+
+        </style>
+        
+        </head>
+        <body class = "background">
+            <a href="#footer">Aller en bas de page </a>
+            <h1 class = "red-text"> Les beaux chiens </h1>
+            <h2 class = "red-text"> Les caractères </h2>
+            <p>Les chiens sont des animaux possédant d'incroyables qualités </p>
+            <img src ="https://cdn.pixabay.com/photo/2019/08/19/07/45/pets-4415649_960_720.jpg" 
+            alt ="un beau chien" class = "border-modification">
+            <ol>
+                <li>Fidèle</li>
+                <li>Vigilant</li>
+                <li>Courageux</li>
+            </ol>
+            <p> il existe de très belle races de <a href = "https://lemagduchien.ouest-france.fr/dossier-255-top-10-beaux-chiens-monde.html" target ="_blank"> chiens</a></p>
+
+            <h2 class = "red-text"> Les plus belles races </h2>
+            <ul>
+                <li class ="change-padding"> Samoyède </li>
+                <li> Husky </li>
+                <li> Labrador </li>
+            </ul>
+
+            <form action = "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">
+                <input type = "text" placeholder = "Vrai ou faux ?" required>
+                <button type ="submit"> Envoyé </button>
+                <br><br>
+                
+                <div>
+                <p>Quel sont les qualités des chiens ? (réponse à choix multiple)</p>
+                <label>
+                    <input type = "checkbox" value ="fidèle" name ="caractères"> Fidèle                    
+                </label>
+                <label>
+                    <input type = "checkbox" value ="Vigilant" name ="caractères"> Vigilant
+                </label>
+                <label>
+                    <input type = "checkbox" value = "Arrogant" name = "Caractères"> Arrogant 
+                </label>
+                <br><br>
+                </div>
+
+                <div>
+                    <p> Quel est la plus belle race de chien ? </p>
+                    <label>
+                        <input type = "radio" value = "Husky" name ="race"> Husky
+                    </label>
+                    <label>
+                        <input type = "radio" value = "Bulldog" name = "race" checked> Bulldog
+                    </label>
+                    <br><br>
+                </div>
+            </form>
+            <footer id ="footer"> Bas de page </footer>
+        </body>
+    </main>
+</html>

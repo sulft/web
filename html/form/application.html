@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Html form</title>
+    </head>
+
+    <body>
+        <h1>Questionnaire</h1>
+        <p>Ceci est un questionnaire à compléter sans donner de 
+            <strong>fausses</strong> informations !
+        </p
+
+        <div>
+        <form name="questionnaire" action="questionnaire.php" method="get">
+            Prénom: <input type="text" name="prénom" size=10 required><br>
+            Nom: <input type="text" name="nom" size=10 required><br>
+            
+            Vous êtes en ?
+            <select name="poste">
+                <option value="CDI">CDI</option>
+                <option value="CDD">CDD</option>
+                <option value="intérim">intérim</option>
+                <option value="alternance">alternance</option>
+                <option value="partiel">temps partiel</option>
+            </select><br><br>
+
+            Avez-vous un véhicule ?
+            <input type="radio" name="réponse" value="oui">Oui
+            <input type="radio" name="réponse" value="non" checked>Non
+            <br><br>
+
+            Sur quel site voulez-vous travailler ?
+            <input type="checkbox" name="ville" value="Lyon">Lyon
+            <input type="checkbox" name="ville" value="Paris">Paris
+            <input type="checkbox" name="ville" value="Montpellier">Montpellier
+            <input type="checkbox" name="ville" value="Marseille">Marseille
+            <br><br>
+
+            Autre chose à ajouter ?
+            <br>
+            <textarea name="commentaire" rows=10 cols=25></textarea>
+
+            <input type="submit">
+        </form>
+        </div>
+
+    </body>
+</html>
+

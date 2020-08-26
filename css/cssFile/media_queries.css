@@ -1,0 +1,33 @@
+* {margin:0px;}
+
+main {
+    margin:0px auto 10px auto;
+    padding:30px;
+    background-color:#3fb03f;
+}
+
+main p {
+    margin-top:5px;
+}
+
+@media screen and (max-width:600px) {
+    main {
+        background-color:#FF0000;
+    }
+}
+
+@media screen and (min-width:800px) {
+    main {
+        background-color:#0000FF;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    main {
+        background-color:#FFFFFF;
+    }
+    h1, p {
+        display:none;
+    }
+}
+

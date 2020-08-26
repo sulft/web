@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 12 - contenteditable attribute</title>
+
+
+	<style type="text/css">
+	
+		#editableElement {background-color: #DFE4DF; width: 400px; height: 150px; padding: 10px; margin: 0 auto; margin-top: 10px; margin-bottom: 10px}
+    #start, #finish, #restart {position:relative; left:265px; top:210px;}
+
+    main {width: 50%; margin: 0 auto;}
+
+
+
+	</style>
+	
+</head>
+<body>
+  <main>
+    <p id="text" style="color:green"> </p>
+
+    <button id="start" onclick="startEdit()">Start Editing</button>
+    <button id="finish" onclick="stopEdit()">Finish Editing</button>
+    <button id="restart" onclick="restart()">Restart</button>
+
+    <p id="editableElement"></p>
+
+  </main>
+
+
+<script type="text/javascript">
+
+	
+	function startEdit() {
+    // Make the element editable.
+    var element = document.getElementById("editableElement");
+    element.contentEditable = true;
+    element.focus();
+  }
+
+  function stopEdit() {
+    // Return the element to normal.
+    var element = document.getElementById("editableElement");
+    var text = document.getElementById("text");
+    element.contentEditable = false;
+      
+    // Show the markup in a message box.
+    text.innerHTML = "Vous avez écrit : " + element.innerHTML +".";
+  }
+
+  function restart() {
+    //get rid of all the element on the text
+    var element = document.getElementById("editableElement");
+    var text = document.getElementById("text");
+    element.innerHTML = "";
+    text.innerHTML = "Restart.";
+    startEdit()
+  }
+
+</script>
+
+
+</body>
+</html>

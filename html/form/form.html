@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <main>
+        <head> 
+            <title>index</title> 
+        </head>
+
+        <body>
+            <h1>My HTML form</h1>
+            <p>Exemple de formulaire qui ne m'appartient pas, pour trouver l'auteur,
+                cliquer sur l'image.
+            </p>
+
+            <a href="https://www.programming9.com/programs/html-codes/287-html-form-tag-with-example"
+            target="_formulaire">
+                <img src="form.jpg" style="border-style:solid; border-width:8px; 
+                border-color:greenyellow">
+            </a>
+            <p>Nous allons voir les différents types de choses que nous 
+                pouvons faire en créant un <strong>formulaire</strong> : </p>
+
+            <div>
+                <form name ="login" action="process-form.php" method="post"> <!-- it's good practice to give name to form -->
+                    Username:<input name="username" type="text" size="10" required>
+                    <br>
+                    Password:<input name="password" type="password" size="10" required>
+                    <br>
+                    <input name="vehicle" type="radio" value="vélo" checked>J'ai une voiture
+                    <input name="vehicle" type="radio" value="voiture">J'ai un vélo
+                    <br>
+                    <select name="cars">
+                        <option value="renault">Renault</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <br><br>
+                    Comments :
+                    <br>
+                    <textarea name="commentaire" rows=15 cols=30></textarea>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div>
+                <form name ="signup">
+
+                </form>
+            </div>
+        </body>
+
+
+    </main>
+
+</html>

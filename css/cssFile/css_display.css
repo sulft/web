@@ -1,0 +1,113 @@
+
+
+* {margin:0px;}
+
+main, nav {display:block}
+
+/*tag selector*/
+main {
+    width:80%;
+    margin:40px auto;
+    max-width:700px;
+    padding:40px 0px;
+    text-indent:10px;
+
+    border-radius:10%;
+    background-image:url("image-background/fruit2.gif");
+    background-size:cover;
+}
+
+nav {
+    position:fixed;
+    top:0px;
+    left:0px;
+    margin-bottom:10px;
+    width:100%;
+    background-color:rgb(119, 105, 105);
+    min-width:304px;
+}
+
+ul {
+    max-width:400px;
+    padding:0px;
+    overflow:hidden;
+    list-style-type:none;
+}
+
+ul li {
+    float:left;
+    text-transform:capitalize;
+}
+
+li a:link, li a:visited {
+    display:block;
+    text-decoration:none;
+    padding:3px;
+    text-align:center;
+    background-color:rgb(119, 105, 105);
+    color:white;
+    width:70px;
+}
+
+li a:hover {
+    color:blue;
+    margin-right:15px;
+    transition:margin-right .5s ease-in;
+}
+
+li a:active {
+    color:red;
+}
+
+main h1 {
+    font-family: 'Calligraffitti', cursive;
+    text-align:center;
+    padding:10px;
+}
+
+p {
+    text-align:center;
+    padding:10px;
+    font-family:sans-serif;
+    color:black;
+}
+
+p:first-letter {
+    font-family:serif;
+    font-size:3em;
+    color:rgb(0, 177, 9);
+}
+
+/* Table */
+table{
+    margin:auto auto;
+    background-color:rgb(223, 207, 167);;
+}
+
+table, td, th, caption {
+    border:1px #000000 solid;
+}
+
+td, th {
+    padding:15px;
+    text-align:center;
+    color:#000000;
+}
+
+tr:nth-child(even) {
+    background-color:rgb(139, 210, 139);
+}
+
+caption {
+    color:#FFFFFF;
+    background-color:rgb(0, 177, 9);
+    font-size:2em;
+}
+
+/* Media queries */
+@media screen and (max-width:650px) {
+    main {
+        background-image:none;
+        background-color:green;
+    }
+}

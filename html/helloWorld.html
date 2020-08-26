@@ -1,0 +1,109 @@
+<!Doctype HTML>
+
+<html>
+<main>
+
+<head>
+    <title>Le chat</title> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+    rel = "stylesheet" type = "text/css">
+
+    <style>
+        #cat-photo-form{
+            background-color:green;
+        }
+
+        .red-text{
+            color : red;
+        }
+
+        h2{
+            font-family:lobster, monospace;
+        }
+
+        p, li{ 
+            font-size:16; 
+            font-family:monospace;
+        }
+        .smaller-image{
+            width:px;
+        }
+
+        .thick-green-border{
+            border-width:10px;
+            border-color:green;
+            border-style:solid;
+            border-radius:50%; 
+        }
+
+        .silver-background{
+            background-color:silver;
+        }
+
+        [type='checkbox'] {
+            margin: 15px 0px 10px 0px;
+        }
+
+        [type='radio'] {
+            margin: 15px 0px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class = "red-text"> CatPhotoApp </h2>
+    <p>Click here to view more <a target="_blank" href ="https://lh3.googleusercontent.com/proxy/9p4m_xTEGUVizjIPq2zpaNqnsCndnFfABR65wJ8qrfE8IW7z43SfmwzV5UZpxYBNtfzqUVbGv5i_X70g_03qpC2TDLnDL3SU6dAcGZGMJTkB1A"> cat photos </a></p>
+
+    <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" 
+        class ="smaller-image thick-green-border" 
+        alt="A cute orange cat lying on its back."></a>
+    
+    <!-- création d'une liste non ordonnée-->
+    <div class ="silver-background">
+    <p >Things cats love:</p>
+        <ul>
+            <li>Milk</li>
+            <li>Fish</li>
+            <li>Lasagna</li>
+        </ul>
+    <!-- création d'une liste ordonnée-->
+    <p>Top 3 things cats hate:</p>
+        <ol>
+            <li> Water </li>
+            <li> Meat </li>
+            <li> Dog </li>
+        </ol>
+    </div>
+    <!-- Création d'une zone de texte, le "placeholder" permet d'indiquer à
+    l'utilisateur ce qu'il doit entrer dans la zone. -->
+    <div>   
+    <form action = "/submit-cat-photo" id ="cat-photo-form">
+        <input type ="text" placeholder = "cat photo url" required>
+        <button type ="submit"> submit </button>
+        <br>
+        <!-- création de bulle à choix unique -->
+        <label for = "indoor">
+            <input id = "indoor" type = "radio" name = "indoor-outdoor" value ="indoor" checked>Indoor
+        </label>
+        <label for = "outdoor">
+            <input id = "outdoor" type = "radio" name = "indoor-outdoor" value ="outdoor">Outdoor
+        </label><br>
+
+        <!-- création de bulle à choix multiple -->
+        <label for = "love">
+            <input id = "love" type = "checkbox" name = "personality" value ="love" checked> Love
+        </label>
+        <label for = "faith">
+            <input id = "faith" type = "checkbox" name = "personality" value ="faith"> Faith
+        </label>
+        <label for = "sadness">
+            <input id = "sadness" type = "checkbox" name = "personality" value ="sadness"> Sadness
+        </label>
+
+        <!-- le "checked permet de cocher le label de la case correspondante pour les radio 
+         et les checkbox-->
+    </form>
+    </div>
+</body>
+</main>
+</html>

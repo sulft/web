@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+
+<html>
+    <main>
+        <head>
+            <style>
+                .test {
+                    --skin: white;
+                }
+                body {
+                    background-color: var(--skin);
+                    font-family: monospace;
+                    color: green;
+                }
+                .pink-text {
+                    color : pink;
+                }
+                #orange-text{
+                    color:orange;
+                }
+            </style>
+            <!-- Dans le cas où 2 couleurs différentes sont donnés à un texte, la class 
+            "pink-text va prendre le dessus sur le choix de la couleur du body-->
+        </head>
+
+        <body>
+            <h1 id="orange-text" class ="pink-text">Hello World</h1>
+        </body>
+    </main>
+</html>
