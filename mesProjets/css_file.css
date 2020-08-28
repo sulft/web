@@ -3,9 +3,49 @@
     margin:0px;
 }
 
+
+body {
+    width:86%;
+    margin:auto;
+}
+
+nav {
+    margin-bottom:4%;
+}
+
 nav ul {
     list-style-type: none;
     display:flex;
+}
+
+nav ul a {
+    display:flex;
+    flex-basis:1;
+    align-self:stretch;
     justify-content:space-evenly;
-    align-items:center;
+    margin: 0 auto;
+    border-width:1px;
+    border-style: solid;
+    border-color:black;
+}
+
+nav ul a:link{
+    background-color:green;
+    width:100%;
+}
+
+nav ul a:hover {
+    animation-name:button;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes button {
+    0% {
+        background-color:green;
+    }
+
+    100% {
+        background-color:black;
+    }
 }
