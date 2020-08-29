@@ -1,16 +1,37 @@
 * {
     padding:0px;
     margin:0px;
+    box-sizing:border-box;
+}
+
+body {
+    background-color:#0247FE;
+}
+
+main {
+    height:500px;
+    background-color:#D4DDF7;
+}
+
+main p {
+    text-align:justify;
+    padding:0px 15px;
+}
+
+h1 {
+    padding:0 12px;
+    padding-top:20px;
+    font-size:3em;
+}
+
+h2 {
+    padding:20px 12px;
 }
 
 
 body {
     width:86%;
     margin:auto;
-}
-
-nav {
-    margin-bottom:4%;
 }
 
 nav ul {
@@ -20,17 +41,20 @@ nav ul {
 
 nav ul a {
     display:flex;
-    flex-basis:1;
     align-self:stretch;
+    font-size:1.25em;
+    padding:5px;
     justify-content:space-evenly;
     margin: 0 auto;
     border-width:1px;
+    text-decoration:none;
+    color:#0247FE;
     border-style: solid;
     border-color:black;
 }
 
 nav ul a:link{
-    background-color:green;
+    background-color:#342309;
     width:100%;
 }
 
@@ -40,12 +64,17 @@ nav ul a:hover {
     animation-fill-mode:forwards;
 }
 
+footer {
+    text-align:right;
+    font-size:1.2em;
+}
+
 @keyframes button {
     0% {
-        background-color:green;
+        background-color:#342309;
     }
 
     100% {
-        background-color:black;
+        background-color:#000000;
     }
 }
