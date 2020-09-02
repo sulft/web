@@ -3,6 +3,7 @@
     padding:0px;
 }
 
+<<<<<<< HEAD
 main {
     font-family: 'Recursive', sans-serif;
 }
@@ -11,3 +12,133 @@ main {
     margin:5px;
     padding:2px;
 }
+=======
+body {
+    background:linear-gradient(90deg, black, white);  
+}
+
+main {
+    height: 1000px;
+}
+
+h1 {
+    color:purple;
+}
+
+.figure_lune {
+    position:fixed;
+    left:7%;
+    top:10%;
+    width:40px;
+    height:40px;
+    transform:scale(2);
+    border-radius:50%;
+    background-color:transparent;
+    box-shadow:-10px 5px 0 3px white;
+    animation-name:animer;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+}
+
+.figure_lune p {
+    position:absolute;
+    transform:scale(0.5);
+    color:white;
+    top:10px;
+    left:-15px;
+}
+
+
+.figure_coeur {
+    position:fixed;
+    left:5%;
+    top:22%;
+    width:50px;
+    height:50px;
+    background-color:purple;
+    transform:rotate(-45deg);
+    animation-name:coeur;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+
+}
+
+.figure_coeur::before {
+    position:absolute;
+    content: "";
+    top:-25px;
+    border-radius:50%;
+    left:0px;
+    width:50px;
+    height:50px;
+    background-color:purple;
+}
+
+.figure_coeur::after {
+    position:absolute;
+    content: "";
+    top:0px;
+    border-radius:50%;
+    left:25px;
+    width:50px;
+    height:50px;
+    background-color:purple;
+}
+
+.main_content {
+    width:50%;
+    min-width:800px;
+    margin:20% auto;
+    padding:20px;
+    border-style:solid;
+    border-color:#ccc;
+    border-radius:10px;
+    border-width:2px;
+    box-shadow:20px 10px 20px rgba(0,0,0,0.20)
+}
+
+.utilisateur_info {
+    margin-top:25px;
+}
+
+.button {
+    margin-top:5px;
+}
+
+.info2 {
+    margin-left:15px;
+}
+
+
+@keyframes animer {
+    0% {
+        background-color:#D8BFD8;
+    }
+
+    30% {
+        background-color:#EE82EE;
+    }
+
+    50% {
+        background-color:purple;
+    }
+
+    80% {
+        background-color:purple;
+    }
+
+    100% {
+        background-color:#D8BFD8;;
+    }
+}
+
+@keyframes coeur {
+    0% {
+        transform:scale(0.6) rotate(-45deg);
+    }
+
+    30% {
+        transform:scale(1) rotate(-45deg);
+    }
+}
+>>>>>>> dda580a7ed5f7079486d8347faa8fb34508b6bf3

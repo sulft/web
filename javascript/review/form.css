@@ -6,8 +6,16 @@ body {
     margin:0px auto;
 }
 
+<<<<<<< HEAD
+nav {
+    position:fixed;
+    top:0px;
+    width:85%;
+    background-color:lightgrey;
+=======
 p {
     text-align:justify;
+>>>>>>> 76f7ffa3f7b81d3677464cf4a05d0caab73a4d47
 }
 
 span {
@@ -16,9 +24,15 @@ span {
     color:black;
 }
 
+<<<<<<< HEAD
+#content {
+    margin-top:10px;
+    clear:both;
+=======
 h2 {
     color:red;
     text-transform:uppercase;
+>>>>>>> 76f7ffa3f7b81d3677464cf4a05d0caab73a4d47
 }
 
 ul {
@@ -30,11 +44,14 @@ li {
     list-style-type: none;
 }
 
+<<<<<<< HEAD
+=======
 span#test {
     text-decoration:underline;
     color:green;
 }
 
+>>>>>>> 76f7ffa3f7b81d3677464cf4a05d0caab73a4d47
 /* Pseudo classe */
 a:link, a:visited {
     text-decoration:none;

@@ -3,7 +3,7 @@ var number = 0;
 
 console.log("test");
 
-var choice1 =  document.getElementById('choice1');
+var choice1 = document.getElementById('choice1');
 var choice2 = document.getElementById('choice2');
 var choice3 = document.getElementById('choice3');
 
