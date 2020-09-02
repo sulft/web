@@ -1,0 +1,13 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+main {
+    font-family: 'Recursive', sans-serif;
+}
+
+.info {
+    margin:5px;
+    padding:2px;
+}
