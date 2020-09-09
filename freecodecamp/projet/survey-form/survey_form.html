@@ -21,7 +21,7 @@
             </fieldset>
 
             <fieldset id="formulaire_2">
-                <label id="transport-label" for="dropdown">Moyen de transport utilisé :</label>
+                <label id="transport-label" for="dropdown">Moyen de transport le plus utilisé :</label>
                 <select id="dropdown">
                     <option value="void"></option>
                     <option value="voiture">voiture</option>
@@ -29,25 +29,51 @@
                     <option value="transport_en_commun">transport encommun</option>
                 </select>
 
-                <label>Préférez la neige ou le beau temps ?
-                <input type=radio name="gout" value="1">1</label>
+                <!-- temps qu'ils/elles préfère -->
+                <label for="note">Préférez la neige ou le beau temps ?
+                <input type=radio id="note" name="gout" value="1">1</label>
 
-                <label for="gout">
-                <input type=radio name="gout" value="2">2</label>
+                <label for="note2">
+                <input type=radio id="note2" name="gout" value="2">2</label>
 
-                <label for="gout">
-                <input type=radio name="gout" value="3">3</label>
+                <label for="note3">
+                <input type=radio id="note3" name="gout" value="3">3</label>
 
-                <label for="gout">
-                <input type=radio name="gout" value="4">4</label>
+                <label for="note4">
+                <input type=radio id="note4" name="gout" value="4">4</label>
 
-                <label for="gout">
-                <input type=radio name="gout" value="5">5</label>
+                <label for="note5">
+                <input type=radio id="note5" name="gout" value="5">5</label>
+
+                <!-- sports qu'il/elle a pratiqué -->
+                <label for="sport"> Quels sont les sports que vous avez pratiqué ?
+                <input type="checkbox" id="sport" name="sports" value="baseball">Baseball</label>
+
+                <label for="sport-2">
+                <input type="checkbox" id="sport-2" name="sports" value="baseball">Basketball</label>
+
+                <label for="sport-3">
+                <input type="checkbox" id="sport-3" name="sports" value="baseball">Rugby</label>
+
+                <label for="sport-4">
+                <input type="checkbox" id="sport-4" name="sports" value="baseball">Golf</label>
+
+                <label for="sport-5">
+                <input type="checkbox" id="sport-5" name="sports" value="baseball">Handball</label>
+
+                <label for="sport-6">
+                <input type="checkbox" id="sport-6" name="sports" value="baseball">Balle au prisonnier</label>
+
+                <!-- Activité que l'utilisateur souhaite réaliser -->
+                <label for="rêve"> Quel activité vous avez toujours voulu réaliser dans votre vie ? 
+                <textarea id="rêve" name="rêve" rows="5" cols="10">Mon rêve est de .. </textarea>
             </fieldset>
+
+            <button type="submit" id="submit">Envoyer</button>
         </form>
     </main>
 
     <footer>
-
+        Site crée par Terry Vilver
     </footer>
 </html>
