@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <link rel="stylesheet" href="survey-form.css">
+        <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap" rel="stylesheet">
 
 
+    </head>
     <main>
         <h1 id="title">Bienvenue sur mon formulaire !</h1>
 
@@ -10,19 +14,19 @@
 
         <form id="survey-form">
             <fieldset id="formulaire_1">
-                <label id="name-label" for="name">Prénom</label>
-                <input type="text" id="name" placeholder="Entrez votre prénom.." required>
+                <label id="name-label" for="name">Prénom:</label>
+                <input class="input-text" type="text" id="name" placeholder="Entrez votre prénom.." required>
 
-                <label id="mail-label" for="mail">Adresse e-mail</label>
-                <input type="email" id="mail" placeholder="Entrez votre mail.." required>
+                <label class="input-header" id="mail-label" for="mail">Adresse e-mail:</label>
+                <input class="input-text" type="email" id="mail" placeholder="Entrez votre mail.." required>
 
-                <label id="number-label" for="age">Votre âge</label>
-                <input type="number" id="age" min=5 max=110 placeholder="âge ?">
+                <label class="input-header" id="number-label" for="age">Votre âge:</label>
+                <input class="input-text" type="number" id="age" min=1 max=110 placeholder="âge ?">
             </fieldset>
 
             <fieldset id="formulaire_2">
                 <label id="transport-label" for="dropdown">Moyen de transport le plus utilisé :</label>
-                <select id="dropdown">
+                <select class="input-text"   id="dropdown">
                     <option value="void"></option>
                     <option value="voiture">voiture</option>
                     <option value="vélo">vélo</option>
@@ -30,8 +34,10 @@
                 </select>
 
                 <!-- temps qu'ils/elles préfère -->
-                <label for="note">Préférez la neige ou le beau temps ?
-                <input type=radio id="note" name="gout" value="1">1</label>
+                <label class="input-header" for="note">Sur une échelle de 1 à 5, préférez-vous la neige ou le beau temps ?</label>
+
+                <label for="note1">
+                <input type=radio id="note1" name="gout" value="1">1</label>
 
                 <label for="note2">
                 <input type=radio id="note2" name="gout" value="2">2</label>
@@ -46,8 +52,11 @@
                 <input type=radio id="note5" name="gout" value="5">5</label>
 
                 <!-- sports qu'il/elle a pratiqué -->
-                <label for="sport"> Quels sont les sports que vous avez pratiqué ?
-                <input type="checkbox" id="sport" name="sports" value="baseball">Baseball</label>
+                <label class="input-header" for="sport"> Quels sont les sports que vous avez pratiqué ?</label>
+
+                <label for="sport-1">
+                <input type="checkbox" id="sport-1" name="sports" value="baseball">Baseball</label>
+    
 
                 <label for="sport-2">
                 <input type="checkbox" id="sport-2" name="sports" value="baseball">Basketball</label>
@@ -65,8 +74,8 @@
                 <input type="checkbox" id="sport-6" name="sports" value="baseball">Balle au prisonnier</label>
 
                 <!-- Activité que l'utilisateur souhaite réaliser -->
-                <label for="rêve"> Quel activité vous avez toujours voulu réaliser dans votre vie ? 
-                <textarea id="rêve" name="rêve" rows="5" cols="10">Mon rêve est de .. </textarea>
+                <label class="input-header" for="rêve"> Quel activité vous avez toujours voulu réaliser dans votre vie ? <br>
+                <textarea id="rêve" name="rêve" rows="5" cols="50">Mon rêve est de .. </textarea></label>
             </fieldset>
 
             <button type="submit" id="submit">Envoyer</button>
