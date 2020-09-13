@@ -2,3 +2,27 @@
     margin:0;
     padding:0;
 }
+
+#header {
+    position:fixed;
+    min-width:100%;
+    margin:0 auto;
+
+}
+
+#nav-bar ul { 
+    display:flex;
+    flex-direction:row;
+    list-style-type: none; 
+    justify-content: flex-end;
+}
+
+ul li { 
+    margin-left: auto;
+    padding-right:10px;     
+}
+
+#nav-bar ul a:hover {
+    color:red;  
+}
+
