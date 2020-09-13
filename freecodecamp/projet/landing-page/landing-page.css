@@ -3,8 +3,16 @@
     padding:0;
 }
 
+body {
+    height:1200px;
+    background-color:black;
+}
+
+
 #header {
     position:fixed;
+    top:-20px;
+    left:0;
     min-width:100%;
     margin:0 auto;
 
@@ -14,15 +22,19 @@
     display:flex;
     flex-direction:row;
     list-style-type: none; 
-    justify-content: flex-end;
 }
 
 ul li { 
-    margin-left: auto;
-    padding-right:10px;     
+    flex:2;   
+}
+ul li a {
+    display:block;
+    width:100%;
+    background-color:red;
 }
 
 #nav-bar ul a:hover {
-    color:red;  
+    color:green;
+    background-color:black;  
 }
 
