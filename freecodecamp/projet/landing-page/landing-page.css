@@ -1,40 +1,74 @@
 * {
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    height:1200px;
+#header {
+    background-color:#000;
+    display:flex;
+    width:100%;
+    height:120px;
+}
+
+.logo {
+    color:#000;
+    flex:1;
+    font-size:40px;
+    text-transform:uppercase;
+}
+
+#header-img {
+    width:120px;
+    height:120px;
+}
+
+#nav-bar {
+    flex:2;
+}
+
+#nav-bar ul {
+    display:flex;
+    background-color:#000;
+    list-style:none;
+    flex-flow:row wrap;
+}
+
+nav ul li {
+    display:flex;
+    flex:1;
+    height:120px; 
+}
+
+.nav-link {
+    display:block;
+    align-self:center;
+    text-decoration:none;
+    color:grey; 
     background-color:black;
 }
 
+.nav-link:hover{
+    color:#fff;
+}
 
-#header {
-    position:fixed;
-    top:-20px;
-    left:0;
-    min-width:100%;
+main {
     margin:0 auto;
+    width:90%;
+}  
 
-}
-
-#nav-bar ul { 
-    display:flex;
-    flex-direction:row;
-    list-style-type: none; 
-}
-
-ul li { 
-    flex:2;   
-}
-ul li a {
-    display:block;
+#form {
+    margin-top:3%;
     width:100%;
-    background-color:red;
+    text-align:center;
 }
 
-#nav-bar ul a:hover {
-    color:green;
-    background-color:black;  
+#form #mail {
+    font-size:25px;
+    padding-right:5px;
+}
+
+#form input {
+    padding:2px 0;
 }
 
