@@ -50,8 +50,43 @@ nav ul li {
     background-color:black;
 }
 
-.nav-link:hover{
-    color:#fff;
+footer ul {
+  float:right;
+}
+
+footer ul li {
+  float:left;
+  padding:20px;
+  list-style-type:none;
+}
+
+footer ul li a{
+  align-self:none;
+  color:grey;
+  text-decoration:none;
+}
+
+footer p {
+  font-style:italic; 
+  color:grey; 
+  margin-top:70px;
+  margin-right:-310px;
+  float:right;
+}
+
+footer ul li a:hover, .nav-link:hover {
+  animation-name:footer-query;
+  animation-duration:2s;
+}
+
+@keyframes footer-query {
+  0% {
+    color:grey;
+  }
+
+  100%{
+    color:white;
+  }
 }
 
 main {
@@ -134,4 +169,21 @@ iframe {
   width:100%;
   margin:3% auto 1% auto;
   height:400px;
+}
+
+footer {
+  width:90%;
+  margin:0 auto;
+  background-color:black;
+  height:150px;
+}
+
+@media (min-width:1000px) {
+  body {
+    background-color:#d1d1e0;
+  }
+
+  #offre {
+    border-color:black;
+  }
 }
