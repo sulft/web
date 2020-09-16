@@ -1,0 +1,1 @@
+var myName; //création d'une variable en JS

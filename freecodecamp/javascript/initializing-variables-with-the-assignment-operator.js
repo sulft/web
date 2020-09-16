@@ -1,0 +1,1 @@
+var a = 9; // déclaration + initialisation de "a"
