@@ -1,0 +1,110 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  body {
+      width:100%;
+      height:100%;
+  }
+  
+  code {
+      background-color: #eee;
+      border-radius: 3px;
+      font-family: courier, monospace;
+      padding: 0 3px;
+  }
+  
+  #navbar {
+    position:fixed;
+    left:0;
+    float:left;
+    width:25%;
+    height:100%;
+    border-style:double;
+    background-color:grey;
+    overflow:scroll;
+    clear:both;
+  }
+  
+  #navbar .nav-link {
+    display:block;
+    margin:0;
+    padding:20px 0;
+    font-size:18px;
+    color:black;
+    text-decoration:none;
+    border-style:solid;
+    animation-fill-mode:forwards;
+    border-width:1px;
+    width:100%;
+    text-align:center;
+  }
+  
+  #navbar header {
+    font-size:1.5em;
+    padding:3%;
+    text-align:center;
+  }
+  
+  #main-doc {
+    width:60%;
+    margin:0;
+    margin-left:28%;
+    max-width:900px;
+  }
+  
+  .main-section {
+    margin:3% 0;
+    text-align:justify;
+  }
+  
+  .main-section p {
+    margin:1.5%;
+  }
+  
+  #Lorem_Ipsum {
+    margin:0;
+  }
+  
+  .main-section ol {
+    margin-left:8%;
+    padding:3px 0;
+  }
+  
+  .main-section ul {
+    margin-left:8%;
+    padding:3px 0;
+  }
+  
+  header {
+    font-size:24px;
+    padding:6px 0;
+  }
+  
+  .nav-link:hover {
+    animation-name:change-color;
+    animation-duration:1s;
+  }
+  
+  @keyframes change-color {
+    0% {
+      color:black;
+      background-color:grey;
+    }
+    
+    100% {
+      color:white;
+      background-color:black;
+    }
+  }
+  
+  @media (min-width:1000px) {
+    .main-section header {
+      font-weight:bold;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
