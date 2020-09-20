@@ -1,0 +1,139 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  /* navbar */
+  #navbar {
+    position:sticky;
+    top:0;
+  }
+  
+  #navbar ul{
+    display:flex;
+    flex-direction:row;
+    list-style-type:none;
+    background-color:#2A0934;
+    height:50px;
+    padding-right:1%;
+  }
+  
+  #navbar ul li {
+    display: flex;
+    flex:1;
+    text-decoration:none;
+    justify-content:flex-end;
+    align-self:center;
+  }
+  
+  #navbar ul li a {
+    color:#0247FE;
+    text-decoration:none;
+  }
+   
+  
+  /* hover property */
+  #navbar ul li a:hover , #contact .info:hover {
+    color:#FFCD1A;
+  }
+  
+  
+  /* welcome section */
+  #welcome-section {
+    display:table;
+    width:100%;
+    background-color:#1258DC;
+    height:100vh;
+  }
+  
+  #welcome-section #presentation {
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+  }
+  
+  #welcome-section #presentation h1 {
+    color:#42066F;
+    font-size:3.5em;
+  }
+  
+  #welcome-section #presentation p {
+    font-size:1.2em;
+    font-style:italic;
+  }
+  
+  /* Parti projet */
+  
+  #title_projects {
+    text-align:center;
+    text-decoration:underline;
+    color:#0247FE;
+    padding:2% 0;
+    background-color:#D4DDF7;
+  }
+  
+  #projects {
+     text-align:center;
+     display:grid;
+     height:600px;
+     grid-template-areas:"test test1" "test2 test3";
+    background-color:#D4DDF7;
+    color:#0247FE;
+  }
+  
+  #projects #page_de_destination {
+    padding-top:3%;
+    grid-area:"test";
+  }
+  
+  #projects #formulaire {
+    padding-top:3%;
+    grid-area:"test1";
+  }
+  
+  #projects #page_hommage {
+    padding-top:3%;
+    grid-area:"test2";
+  }
+  
+  #projects #page_de_documentation {
+    padding-top:3%;
+    grid-area:"test3";
+  }
+  
+  .project-tile a {
+    color:#4D7BF9;
+  }
+  
+  .project-tile a:hover {
+    color:black;
+  }
+  
+  
+  /* Footer */
+  #contact {
+    background-color:#2A0934;
+  }
+  
+  #contact .info {
+    text-align:right;
+    display:block;
+    font-size:2em;
+    text-decoration:none;
+    color:#0247FE;
+  }
+  
+  @media (max-width:600px) {
+      #projects {
+      grid-template-areas:"test" "test1" "test2" "test3";
+      }
+    
+      #navbar ul li {
+      justify-content:space-evenly;
+      }
+  }
+    
+    
+  
+  
