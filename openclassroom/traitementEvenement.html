@@ -5,13 +5,13 @@
     </head>
 
     <body>
-        <h2>Traitement d'évènement..</h2>  
+        <h2>Affichage de l'âge</h2>  
         <div id="application">
             <button @click="showAge">Mon bouton</button>
 
             <h2>Votre âge</h2>
             <label for="age">Quel est votre age: </label>
-            <input type="text" id="age" v-on:keyup.enter="changeAge">
+            <input type="text" id="age" v-model="age">
         </div>
 
         
@@ -27,10 +27,6 @@
                     showAge() {
                         alert("Vous avez " + this.age + " ans.")
                     },
-
-                    changeAge() {
-                        this.age = document.getElementById("age").value
-                    }
                 }
             })
         </script>
