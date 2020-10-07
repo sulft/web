@@ -9,12 +9,12 @@
 
         <h2>Panier de course:</h2>
         <ul>
-            <li>bananes: {{ fruit[0] }}$ </li>
-            <li>pommes: {{ fruit[1] }}$</li>
-            <li>Citrons: {{ fruit[2] }}$</li>
+            <li v-for="item in panier">
+                <a :href="item.url">{{ item.label }} </a> : {{ item.prix }} $ 
+            </li>
         </ul>
+        <p>Prix total : {{ total }} $</p>
 
-        <p>Montant total : {{ prixtotal }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -23,11 +23,35 @@
             data: {
                 test: 'Mon titre',
                 nombre: 32,
-                fruit: [12, 10, 9]
+                panier : [
+                    {
+                        label:"pomme",
+                        prix: 12,
+                        url: "/1.html"
+                    },
+
+                    {
+                        label:"banane",
+                        prix: 3,
+                        url: "/2.html"
+                    },
+
+                    {
+                        label:"mangue",
+                        prix: 7,
+                        url: "/3.html"
+                    }
+                ]
             },
             computed: {
-                prixtotal() {
-                    return this.fruit[0] + this.fruit[1] + this.fruit[2]
+                total() {
+                    let prixTotal = 0
+
+                    this.panier.forEach(item => {
+                        prixTotal += item.prix        
+                    })
+
+                    return prixTotal
                 }
             }
         })
