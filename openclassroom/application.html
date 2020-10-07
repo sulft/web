@@ -5,7 +5,27 @@
 </head>
 <body>
     <div id="app">
-        <h1>Hello</h1>
+        <h1>{{ test }}</h1>
+
+        <h2>Panier de course:</h2>
+        <ul>
+            <li>{{ tab[0] }}</li>
+            <li>{{ tab[1] }}</li>
+            <li>{{ tab[2] }}</li>
+        </ul>
+
+        <p>J'ai {{ nombre }} ans.</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data: {
+                test: 'Mon titre',
+                nombre: 32,
+                tab: ["banane", "pomme", "crayon"]
+            }
+        })
+    </script>
 </body>
 </html>
