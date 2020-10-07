@@ -9,12 +9,12 @@
 
         <h2>Panier de course:</h2>
         <ul>
-            <li>{{ tab[0] }}</li>
-            <li>{{ tab[1] }}</li>
-            <li>{{ tab[2] }}</li>
+            <li>bananes: {{ fruit[0] }}$ </li>
+            <li>pommes: {{ fruit[1] }}$</li>
+            <li>Citrons: {{ fruit[2] }}$</li>
         </ul>
 
-        <p>J'ai {{ nombre }} ans.</p>
+        <p>Montant total : {{ prixtotal }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -23,7 +23,12 @@
             data: {
                 test: 'Mon titre',
                 nombre: 32,
-                tab: ["banane", "pomme", "crayon"]
+                fruit: [12, 10, 9]
+            },
+            computed: {
+                prixtotal() {
+                    return this.fruit[0] + this.fruit[1] + this.fruit[2]
+                }
             }
         })
     </script>
