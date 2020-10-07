@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Mon panier de course</title></head>
+
+    <body>
+        <h1>Liste de course</h1>
+        <div id="liste">
+            <h2>Ma liste</h2>
+            <ul>
+                <li v-for="item in course">
+                    <a v-bind:href="item.url">{{ item.vetement }} </a> : {{ item.prix }} $
+                </li>
+            </ul>
+
+            <p>Votre panier est de : {{ total }} $</p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            const maListe = new Vue ({
+                el:"#liste",
+                data: {
+                    course: [
+                        {
+                            vetement: "jean",
+                            prix: 30,
+                            url: "/jean.html"
+                        },
+
+                        {
+                            vetement: "pull",
+                            prix: 15,
+                            url: "/pull.html"
+                        },
+
+                        {
+                            vetement: "chemise",
+                            prix: 50,
+                            url: "/chemise.html"
+                        }    
+                    ]
+                },
+                
+                computed: {
+                    total () {
+                        let prixTotal = 0
+
+                        this.course.forEach (item => {
+                            prixTotal += item.prix
+                        })
+
+                        return prixTotal
+                    }
+                }
+            }) 
+        </script>
+    </body>
+
+</html>
