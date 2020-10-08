@@ -1,0 +1,2 @@
+08/10/2020
+Creation de code php et contruction d'une variable.
