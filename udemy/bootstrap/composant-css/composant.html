@@ -38,8 +38,43 @@
             </div>
 
             <h3>les meilleurs resto de paris <span class="bg-danger badge">New !</span></h3>
+
             <button class="btn btn-primary">Demande d'ami <span class="badge bg-danger rounded-pill">09</span></button>
 
+            <form class="mt-5">
+                <p>
+                    <label for="prenom" class="form-label">Prénom : </label>
+                    <input type="text" name="prenom" id="prenom" class="form-control-sm">
+                </p>
+                <p>
+                    <label for="pays" class="form-label">Pays : </label>
+                    <select type="text" name="pays" id="pays" class="form-select">
+                        <option value="France">France</option>
+                        <option value="Algérie">Algérie</option>
+                        <option value="Angleterre">Angleterre</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="fichier" class="form-label">Prénom : </label>
+                    <input type="file" name="fichier" id="prenom" class="form-control">
+                </p>
+
+                <p>
+                    <label for="email" class="form-label">Adresse email : </label>
+                    <input type="email" name="email" id="email" class="form-control-plaintext" readonly value="terryvilver@gmail.com">
+                </p>
+
+                <p class="form-check form-switch"> <!-- gestion des form -->
+                    <input type="checkbox" name="mode-sombre-switch" id="mode-sombre-switch" class="form-check-input">
+                    <label for="mode-sombre-switch" class="form-check-label">Mode sombre</label>
+                </p>
+
+                <p class="form-check"> <!-- gestion des form -->
+                    <input type="checkbox" name="mode-sombre" id="mode-sombre" class="form-check-input">
+                    <label for="mode-sombre" class="form-check-label">Mode sombre</label>
+                </p>
+            </form>
         </section>
     </body>
 
