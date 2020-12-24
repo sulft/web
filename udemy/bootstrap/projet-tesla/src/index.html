@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+<header>
+  <nav class="navbar navbar-dark bg-dark sticky-top py-3">
+    <div class="container"> 
+      <img class="mx-auto" src="https://believemy.com/uploads/2f3811b9174e35a2d77902ffd36a9a37_4dfb82dd429edb6a11a81ff74e9abfc4.png" style="height: 50px"/>
+    </div>
+  </nav>
+</header>
+
+<!-- ICI : bannière -->
+<div class="text-white py-5" style="background: center/cover url('https://believemy.com/uploads/126d05180ddf6f2ea67c8b669855bf89_e45c0e92710b43b3b938ed8fc4938f71.png')">
+  <div class="container">
+    <h1 class="display-2">Bienvenue.</h1>
+    <p class="lead">Le site Tesla vous permet de commander vos fusées et vos voitures, même lorsque vous êtes dans votre canapé.    
+    <span class="badge bg-success">Un conseillé est en ligne.</span></p>
+  </div>
+</div>
+
+<!-- PREMIERE SECTION -->
+<section>
+  
+  <div class="container">
+    
+    <!-- ICI : progress bar-->
+    <div class="progress bg-light mt-5">
+      <div class="progress-bar w-50 bg-danger progress-bar-striped progress-bar-animated"></div>
+    </div>
+    <!-- ICI : alerte -->
+    <div class="alert alert-primary">
+    Bienvenue sur Tesla. Ce site est en maintenance.
+    <hr>
+      <!-- ICI : les deux boutons -->
+      <div class="btn-group btn-block">
+        <button type="button" class="btn btn-danger "><a href="#" class="text-white text-decoration-none">Suivre les avancement</a></button>
+        <button type="button" class="btn btn-success "><a href="#" class="text-white text-decoration-none">Nous contacter</a></button>
+      </div>
+      
+    </div>
+    
+    <nav>
+     <!-- ICI : fil d'ariane -->
+      <ul class="breadcrumb alert alert-secondary">
+        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+        <li class="breadcrumb-item" >Maintenance</li>
+      </ul>
+    </nav>
+    
+  </div>
+  
+</section>
+
+<!-- DEUXIEME SECTION -->
+<section>
+  
+  <div class="container">
+    
+    <!-- ICI : les cartes --> 
+    
+    <div class="card bg-secondary text-white">
+      <img class="card-img-top" src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Nouveautés</h5>
+        <p class="card-text"> Vous pourrez bientot acheter des fusées pour aller sur la lune</p>
+      </div>
+    </div>
+    
+    <div class="card bg-secondary text-white my-3">
+      <img class="card-img-top" src="https://believemy.com/uploads/c7fe8837368024dc01e1845337f167e9_18fb807dabb97a3e4f920d1b0c9176b1.png" alt="...">
+      <div class="card-header">information</div>
+      <div class="card-body">
+        <h5 class="card-title">Nouveautés</h5>
+        <p class="card-text">Les 30 premiers acheteur de feusées partiront avec Elon Musk</p>
+      </div>
+    </div>
+      
+  </div>
+  
+</section>
+
+<!-- TROISIEME SECTION -->
+<section class="bg-dark pt-3 pb-5">
+  <div class="container">
+    <h2>Contactez-nous</h2>
+    <!-- ICI : formulaire -->
+    <form class="px-5 bg-dark text-white">
+      <h2>Contactez-nous</h2>
+      <p>
+        <label for="email" class="form-label">Adresse email</label><br>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Entrez votre adresse email">
+        <span class="text-muted">Nous ne partagerons pas votre adresse email.</span>
+      </p>
+
+      <p class="">
+        <label for="message" class="form-label">Messages</label>
+        <textarea name="message" id="message" class="form-control"></textarea>
+      </p>
+
+      <button type="button" class="btn btn-outline-light">Soumettre</button>
+    </form>
+  </div>
+</section>
+
+<!-- ICI : pied de page -->
+  <section class="bg-secondary">
+    <div class="ps-5 py-2">© tesla</div>
+  </section>
+</body>
+</html>
+
