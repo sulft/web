@@ -5,59 +5,143 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+      <link rel="stylesheet" href="grille.css">
       <title>Document</title>
   </head>
 
-  <body class="bg-dark">
-    <nav class="navbar navbar-dark bg-success navbar-expand-md">
+  <body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <div class="container">
-        <div class="navbar-brand">
-          <span>Marque</span>
-        </div>
+        <div class="navbar-brand">Marque</div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">SAV</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- crée le carousel -->
-    <div class="carousel slide" id="leCarousel" data-bs-ride="carousel">
-        <!-- carousel content -->
-        <div class="carousel-inner mx-auto">
-            <!-- premier slide -->
-            <div class="carousel-item active">
-              <img src="https://cdn.pixabay.com/photo/2017/05/11/23/21/mount-fuji-2305606_960_720.jpg" alt="mont fuji"  class="w-100 d-block">
-            </div>
+  
+    <div class="container">
 
-            <!-- 2e slide -->
-            <div class="carousel-item">
-              <img src="https://cdn.pixabay.com/photo/2017/06/10/05/26/landscape-2389023_960_720.jpg" alt="paysage" class="w-100 d-block">
-            </div>
+      <div id="leCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Indicateur-->
+        <ol class="carousel-indicators">
+          <li data-bs-target="#leCarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#leCarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#leCarousel" data-bs-slide-to="2"></li>
+        </ol>
 
-            <!-- 3e slide -->
-            <div class="carousel-item">
-              <img src="https://cdn.pixabay.com/photo/2017/01/13/07/41/kyoto-1976538_960_720.jpg" alt="statue" class="w-100 d-block">
+        <!-- Crée les slides-->
+        <div class="carousel-inner">
+
+          <!-- 1er slide -->
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="https://cdn.pixabay.com/photo/2017/05/11/23/21/mount-fuji-2305606_960_720.jpg" class="d-block w-100 img-fluid" alt="mont fuji">
+            <div class="carousel-caption">
+              <h5>Le mont fuji</h5>
+              <p>Des montagnes</p>
             </div>
+          </div>
+
+          <!-- 2e slide -->
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://cdn.pixabay.com/photo/2017/06/10/05/26/landscape-2389023_960_720.jpg" class="d-block w-100 img-fluid" alt="paysage">
+            <div class="carousel-caption">
+              <h5>Le paysage </h5>
+              <p>Un beau paysage</p>
+            </div>
+          </div>
+
+          <!-- 3e slide -->
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="https://cdn.pixabay.com/photo/2017/01/13/07/41/kyoto-1976538_960_720.jpg" class="d-block w-100 img-fluid" alt="statues">
+            <div class="carousel-caption">
+              <h5>La prairie des statues</h5>
+              <p>Magnifique statue</p>
+            </div>
+          </div>
         </div>
+
+        <a class="carousel-control-prev" href="#leCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Précédent</span>
+        </a>
+
+        <a class="carousel-control-next" href="#leCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Suivant</span>
+        </a>
+
+      </div>
+
+      <!-- Dropdown (liste déroulante) -->
+      <div class="dropdown m-3">
+          <!-- bouton -->
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="monBoutonBleu">
+            Je suis un menu 
+          </button>
+
+          <!-- élément du menu-->
+          <ul class="dropdown-menu" aria-labelledby="#monBoutonBleu">
+            <li><a class="dropdown-item" href="#">section 1</a></li>
+            <li><a class="dropdown-item" href="#">section 2</a></li>
+            <li><a class="dropdown-item" href="#">section 3</a></li>
+          </ul>
+      </div>
+
+      <div class="btn-group m-3">
+        <button type="button" class="btn btn-primary">J'aime</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" id="mesOptions">
+          <span class="visually-hidden">Options</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="#mesOptions">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+        </ul>
+      </div>
+ 
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Supprimer votre compte
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Supression du compte</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Voulez-vous vraiment supprimer votre compte ? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet posuere nulla, vel rhoncus est scelerisque et. Etiam cursus dolor id lorem interdum, at commodo augue pulvinar. Curabitur molestie mi sed interdum condimentum. Vivamus ornare suscipit dolor, id euismod est scelerisque eget. Fusce scelerisque felis sed vulputate pharetra. Morbi consequat risus lorem, quis molestie turpis aliquet ut. Donec non suscipit risus, ut elementum quam. Quisque sit amet lectus ac massa pellentesque laoreet. Donec sit amet sem quam. Mauris dictum risus et justo condimentum, porttitor imperdiet magna porta. Cras a commodo massa. Nullam et hendrerit arcu.
+
+                Duis hendrerit nec dolor in malesuada. In auctor sapien purus, commodo blandit purus venenatis at. Aliquam erat volutpat. Ut ac velit velit. Suspendisse vel tellus hendrerit dolor rutrum consequat. Aliquam sed felis suscipit, molestie mauris iaculis, convallis enim. Praesent eu lobortis arcu. Ut at erat ultrices ante interdum condimentum. Aliquam ipsum ex, scelerisque at augue pharetra, vehicula vestibulum turpis. Vivamus semper metus ut est interdum, nec ultrices risus tincidunt. Duis posuere commodo arcu vel commodo. Aenean suscipit, arcu quis accumsan aliquet, elit sem gravida quam, ac interdum ligula leo et nibh. Aliquam non dolor elementum, interdum elit at, tempor augue. Nam consequat turpis nec nulla auctor, maximus ullamcorper mi mollis.
+              
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet posuere nulla, vel rhoncus est scelerisque et. Etiam cursus dolor id lorem interdum, at commodo augue pulvinar. Curabitur molestie mi sed interdum condimentum. Vivamus ornare suscipit dolor, id euismod est scelerisque eget. Fusce scelerisque felis sed vulputate pharetra. Morbi consequat risus lorem, quis molestie turpis aliquet ut. Donec non suscipit risus, ut elementum quam. Quisque sit amet lectus ac massa pellentesque laoreet. Donec sit amet sem quam. Mauris dictum risus et justo condimentum, porttitor imperdiet magna porta. Cras a commodo massa. Nullam et hendrerit arcu.
+
+                Duis hendrerit nec dolor in malesuada. In auctor sapien purus, commodo blandit purus venenatis at. Aliquam erat volutpat. Ut ac velit velit. Suspendisse vel tellus hendrerit dolor rutrum consequat. Aliquam sed felis suscipit, molestie mauris iaculis, convallis enim. Praesent eu lobortis arcu. Ut at erat ultrices ante interdum condimentum. Aliquam ipsum ex, scelerisque at augue pharetra, vehicula vestibulum turpis. Vivamus semper metus ut est interdum, nec ultrices risus tincidunt. Duis posuere commodo arcu vel commodo. Aenean suscipit, arcu quis accumsan aliquet, elit sem gravida quam, ac interdum ligula leo et nibh. Aliquam non dolor elementum, interdum elit at, tempor augue. Nam consequat turpis nec nulla auctor, maximus ullamcorper mi mollis.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-danger">Confirmer</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <a class="carousel-control-prev" href="#leCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="sr-only">Précedent</span>
-    </a>
-
-    <a class="carousel-control-next" href="#leCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="sr-only">Suivant</span>
   </body>
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
