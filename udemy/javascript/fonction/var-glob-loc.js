@@ -1,7 +1,7 @@
-let crie; //variable globale
+let crie = "toujours plus bas !";; //variable globale
 
 function crieDeGuerre() {
-    crie = "toujours plus fort !"; //variable local
+    let crie = "toujours plus fort !"; //variable local
     console.log(crie);
 }
 
