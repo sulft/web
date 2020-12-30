@@ -1,1 +1,1 @@
-console.log('Bonjour toi !'); console.log('Bonjour');
+console.log('Bonjour toi !'); console.log('Bonjour'); //Affiche du texte dans le terminal
