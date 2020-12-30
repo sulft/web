@@ -1,4 +1,4 @@
-let crie;
+let crie; //variable globale
 
 function crieDeGuerre() {
     crie = "toujours plus fort !"; //variable local
