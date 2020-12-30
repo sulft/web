@@ -1,7 +1,7 @@
-
+let crie;
 
 function crieDeGuerre() {
-    let crie = "toujours plus fort !"; //variable local
+    crie = "toujours plus fort !"; //variable local
     console.log(crie);
 }
 
