@@ -9,7 +9,12 @@
     <body>
 
         <?php 
-            echo "<h1>Hello World</h1>";
+            /*echo "<h1>Hello World</h1>";
+            commentaire sur plusieurs 
+            ligne
+            */
+
+             //echo "<h1>Hello World</h1>"; commentaire sur une ligne
         ?>
         
     </body>
