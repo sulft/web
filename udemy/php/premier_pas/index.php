@@ -9,6 +9,7 @@
     <body>
 
         <?php 
+        echo "Hello World !";
             /*echo "<h1>Hello World</h1>";
             commentaire sur plusieurs 
             ligne
