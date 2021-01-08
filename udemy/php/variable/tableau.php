@@ -19,3 +19,4 @@
     //echo "Bonjour" . ' ' . $personA['prenom'] . ' ' . $personA['nom'] . ' !';
     echo "Bonjour" . ' ' . $personB[1] .  ' ' . $personB[2] .' !'; 
 ?>
+
