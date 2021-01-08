@@ -7,29 +7,28 @@
 </head>
 <body>
     <?php 
-try{
-    // create a PostgreSQL database connection
-    $conn = new PDO('pgsql:host=localhost; dbname=postgres', 'postgres', 'Vjjvjj412*');
-    
-    // display a message if connected to the PostgreSQL successfully
-    if($conn){
-        echo "Connected successfully!";
+        try{
+            // create a PostgreSQL database connection
+            $conn = new PDO('pgsql:host=localhost; dbname=postgres', 'postgres', 'Vjjvjj412*');
+            
+            // display a message if connected to the PostgreSQL successfully
+            if($conn){
+                echo "Connected successfully!";
+            }
         }
-   }
-   catch (PDOException $e){
-    // report error message
-    echo $e->getMessage();
-   }
-   try {
-        $genre = $conn->query ("SELECT * from genre");
-        $pays = $conn->query ("SELECT * from pays");
-        $fruit = $conn->query ("SELECT * from fruit");
-    }
-    catch(PDOException $e){
-        echo $e->getMessage();
-    }
+        catch (PDOException $e){
+            // report error message
+            echo $e->getMessage();
+        }
+        try {
+            $genre = $conn->query ("SELECT * from genre");
+            $pays = $conn->query ("SELECT * from pays");
+            $fruit = $conn->query ("SELECT * from fruit");
+        } catch(PDOException $e){
+            echo $e->getMessage();
+        }
 
-    echo $genre;
+        echo $genre;
     ?>
 
     <form action="test.php" target="_blank" autocomplete="on" method="post">
