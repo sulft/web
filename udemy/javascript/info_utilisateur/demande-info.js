@@ -2,4 +2,4 @@
 la fonction prompt() renvoie une valeur. 
 */
 let age = prompt('Quel est votre âge ?');
-alert('Vous avez ' + age +' ans');
+alert("vous avez " + age + ' ans !')

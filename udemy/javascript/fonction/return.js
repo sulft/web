@@ -7,5 +7,3 @@ function calcul(nb1,nb2) {
     return result; /* Retourne le résultat */ 
 }
 console.log(calcul(nombre1,nombre2));
-
-//paramètre par défaut
