@@ -1,4 +1,4 @@
-let consommable = "kiwi";
+let consommable = "kii";
 
 switch(consommable) {
     case 'banane':
@@ -12,5 +12,4 @@ switch(consommable) {
         break;
     default:
         console.log('ceci n\'est pas une fruit');
-        break;
 }
