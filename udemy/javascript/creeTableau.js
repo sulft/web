@@ -1,13 +1,17 @@
 //création d'un tablea 1D
 let monTableau = ['Un','Deux ','Trois'];
-console.log(monTableau[1]);
+monTableau.push('quatre'); //ajoute un élément au début du tableau
+monTableau.unshift('zero'); //ajoute une élément à la fin du tableau
+//console.log(monTableau);
 
 //création d'un tablea 2D
 let monTableau2D = [
     ['Mark','Djef','Bill'],
     ['Zuckerberg','Bezos','Gates']
 ];
-console.log(monTableau2D[1][2]);
+monTableau2D[0].unshift('test');
+monTableau2D[1].push('test');
+//console.log(monTableau2D);
 
 //tableau associatif
 let monTableauAssociatif = {
@@ -15,5 +19,6 @@ let monTableauAssociatif = {
     'nom' : 'Zuckerberg',
     'poste' : 'pdg de Facebook'
 };
-console.log(monTableauAssociatif['poste'])
+monTableauAssociatif['nationalite'] = "américaine"; //ajoute un élément dans un tableau associatif
+console.log(monTableauAssociatif)
 
