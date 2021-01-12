@@ -1,14 +1,13 @@
 //création d'un tablea 1D
 let monTableau = ['Un','Deux','Trois'];
-/* retrouver un élément à l'aide de son index uniquement sur tableau à une dimension */
-console.log(monTableau.indexOf('Trois'));
+console.log(monTableau.join(' / '));
 
 //création d'un tablea 2D
 let monTableau2D = [
     ['Mark','Djef','Bill'],
     ['Zuckerberg','Bezos','Gates']
 ];
-//console.log(monTableau2D);
+console.log(monTableau2D[0].join('\n')+ monTableau2D[1].join(', '));
 
 //tableau associatif
 let monTableauAssociatif = {
