@@ -9,8 +9,7 @@ let monTableau2D = [
     ['Mark','Djef','Bill'],
     ['Zuckerberg','Bezos','Gates']
 ];
-monTableau2D[0].unshift('test');
-monTableau2D[1].push('test');
+monTableau2D.shift();
 //console.log(monTableau2D);
 
 //tableau associatif
@@ -20,5 +19,6 @@ let monTableauAssociatif = {
     'poste' : 'pdg de Facebook'
 };
 monTableauAssociatif['nationalite'] = "américaine"; //ajoute un élément dans un tableau associatif
+delete(monTableauAssociatif.poste)
 console.log(monTableauAssociatif)
 
