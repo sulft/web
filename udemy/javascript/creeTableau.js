@@ -1,13 +1,16 @@
 //création d'un tablea 1D
 let monTableau = ['Un','Deux','Trois'];
-console.log(monTableau.join(' / '));
+//monTableau.splice(3,0,'random','pie')
+//console.log(monTableau)
 
 //création d'un tablea 2D
+/* Challenge ajouter un 3e tableau */
 let monTableau2D = [
     ['Mark','Djef','Bill'],
     ['Zuckerberg','Bezos','Gates']
 ];
-console.log(monTableau2D[0].join('\n')+ monTableau2D[1].join(', '));
+monTableau2D.splice(0,0,[22,35,42]);
+console.log(monTableau2D)
 
 //tableau associatif
 let monTableauAssociatif = {
@@ -15,5 +18,5 @@ let monTableauAssociatif = {
     'nom' : 'Zuckerberg',
     'poste' : 'pdg de Facebook'
 };
-console.log(monTableauAssociatif)
+
 
