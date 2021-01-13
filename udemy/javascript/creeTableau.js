@@ -19,4 +19,15 @@ let monTableauAssociatif = {
     'poste' : 'pdg de Facebook'
 };
 
+//faisons la même chose à l'aide d'une fonction
+let concatenation = function(tableau) {
+    //concatener un tableau associatif
+    let chaine ='';
+    for( const valeur of Object.keys(tableau)) {
+        chaine += (tableau[valeur] + ' : ' + valeur + "\n")
+    }
+    console.log(chaine)
+}
+
+concatenation(monTableauAssociatif)
 
