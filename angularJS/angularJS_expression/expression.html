@@ -7,16 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div data-ng-app="" data-ng-init="test='grey'; firstName='Terry'; lastName='VILVER'">
-
-        First Name: <input type="text" data-ng-model="firstName"><br>
-        Last Name: <input type="text" data-ng-model="lastName"><br>
-        <br>
-        Full Name: 
-        <span data-ng-bind="firstName + ' ' + lastName" >
-
+    <div data-ng-app="" data-ng-init="nombre=[5,3,16]">
+    <p> The result is
+        <span data-ng-bind="{{nombre[2]}}" >
         </span>
-        
+    </p>
     </div>
+
 </body>
 </html>
