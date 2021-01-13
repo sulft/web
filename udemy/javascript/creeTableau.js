@@ -10,7 +10,7 @@ let monTableau2D = [
     ['Zuckerberg','Bezos','Gates']
 ];
 monTableau2D.splice(0,0,[22,35,42]);
-console.log(monTableau2D)
+//console.log(monTableau2D)
 
 //tableau associatif
 let monTableauAssociatif = {
