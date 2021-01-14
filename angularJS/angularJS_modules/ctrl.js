@@ -1,4 +1,3 @@
 app.controller('ctrl', function($scope) {
-    $scope.name = 'Terry';
-    $scope.lastName = 'VILVER';
+    $scope.email = 'Terryvilver@gmail.com';
 });
