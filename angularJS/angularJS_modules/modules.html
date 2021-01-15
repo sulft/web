@@ -12,10 +12,10 @@
         }
     </style>
 </head>
-<body>
-
-
-    <form data-ng-app="myApp" data-ng-controller="ctrl" name="form">
+<body data-ng-app="myApp">
+    
+    <p>{{test}}</p>
+    <form data-ng-controller="ctrl" name="form">
         <p>Nom : <input type="text" name="nom" data-ng-model="nom"></p>
         <p>Prenom : <input type="text" name="prenom" data-ng-model="prenom"></p>
         <ul>
