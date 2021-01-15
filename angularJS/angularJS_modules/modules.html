@@ -16,9 +16,9 @@
 
 
     <form data-ng-app="myApp" data-ng-controller="ctrl" name="form">
-        <p>Email : <input type="email" name="email" data-ng-model="email"></p>
+        <p>Nom : <input type="text" name="nom" data-ng-model="nom"></p>
+        <p>Prenom : <input type="text" name="prenom" data-ng-model="prenom"></p>
         <w3></w3>
-        <p data-ng-show="form.email.$error.email">email invalide</p>
         <p >touché ? {{form.email.$touched}}</p>
         <p>modifié ? {{form.email.$dirty}}</p>
     </form>
