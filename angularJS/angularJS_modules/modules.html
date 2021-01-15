@@ -18,6 +18,11 @@
     <form data-ng-app="myApp" data-ng-controller="ctrl" name="form">
         <p>Nom : <input type="text" name="nom" data-ng-model="nom"></p>
         <p>Prenom : <input type="text" name="prenom" data-ng-model="prenom"></p>
+        <ul>
+            <li ng-repeat="x in names">
+                {{x.name + " " + x.age + " ans "}}
+            </li>
+        </ul>
         <w3></w3>
         <p >touché ? {{form.email.$touched}}</p>
         <p>modifié ? {{form.email.$dirty}}</p>
