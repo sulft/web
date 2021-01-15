@@ -7,6 +7,7 @@ app.controller('ctrl', function($scope) {
         {name : 'Hans',     age : 20}
     ];
     $scope.complet = function() {
-        return $scope.prenom + " " + $scope.nom;
+        $scope.nom = 'DESPAGNE';
+        $scope.prenom = 'Hans';
     };
 });
