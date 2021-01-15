@@ -8,8 +8,8 @@ app.controller('ctrl', function($scope) {
     $scope.nom = 'vilver';
     $scope.prenom = 'terry';
     $scope.names = [
-        {name : 'John',     age : 12},
-        {name : 'Antoni',   age : 16}, 
+        {name : 'John',     age : 24},
+        {name : 'Antoni',   age : 12}, 
         {name : 'Hans',     age : 20}
     ];
     $scope.complet = function() {

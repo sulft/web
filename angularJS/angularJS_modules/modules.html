@@ -19,8 +19,8 @@
         <p>Nom : <input type="text" name="nom" data-ng-model="nom"></p>
         <p>Prenom : <input type="text" name="prenom" data-ng-model="prenom"></p>
         <ul>
-            <li data-ng-repeat="x in names">
-                {{x.name + " " + x.age + " ans "}}
+            <li data-ng-repeat="x in names | orderBy:'age'">
+                {{x.age + " ans " | uppercase}}
             </li>
         </ul>
         <w3 data-ng-click="complet()"></w3>
