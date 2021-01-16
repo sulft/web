@@ -10,7 +10,7 @@
     <p>Nom : <input type='text' data-ng-model='test'>
         <ul>
             <li data-ng-repeat="x in names | filter:{name:test}">
-              {{x.name}}  
+              {{x.name + " est née à " + x.country}}  
             </li>
         </ul>
     </p>
