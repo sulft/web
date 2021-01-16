@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous"></script>
+    <style>
+        table, th , td {
+          border: 1px solid grey;
+          border-collapse: collapse;
+          padding: 5px;
+        }
+        
+        table tr:nth-child(odd) {
+          background-color: #f1f1f1;
+        }
+        
+        table tr:nth-child(even) {
+          background-color: #ffffff;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body data-ng-app='app' data-ng-controller='ctrl'>
+    <p>Nom : <input type='text' data-ng-model='test'>
+        <table>
+            <tr data-ng-repeat="x in names | filter:{name:test}">
+                <td>{{$index+1}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.country | uppercase}}</td> 
+            </tr>
+        </table>
+    </p>
+    <script>
+        var app = angular.module('app',[]);
+        app.controller('ctrl',function($scope) { 
+            $scope.names = [
+                {name:'Jani',country:'Norway'},
+                {name:'Carl',country:'Sweden'},
+                {name:'Margareth',country:'England'},
+                {name:'Hege',country:'Norway'},
+                {name:'Joe',country:'Denmark'},
+                {name:'Gustav',country:'Sweden'},
+                {name:'Birgit',country:'Denmark'},
+                {name:'Mary',country:'England'},
+                {name:'Kai',country:'Norway'}
+            ];
+        });
+    </script>
+</body>
+</html>
