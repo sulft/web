@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body data-ng-app='app' data-ng-controller='ctrl'>
+    <p>Nom : <input type='text' data-ng-model='test'>
+        <ul>
+            <li data-ng-repeat="x in names | filter:{name:test}">
+              {{x.name}}  
+            </li>
+        </ul>
+    </p>
+    <script>
+        var app = angular.module('app',[]);
+        app.controller('ctrl',function($scope) { 
+            $scope.names = [
+                {name:'Jani',country:'Norway'},
+                {name:'Carl',country:'Sweden'},
+                {name:'Margareth',country:'England'},
+                {name:'Hege',country:'Norway'},
+                {name:'Joe',country:'Denmark'},
+                {name:'Gustav',country:'Sweden'},
+                {name:'Birgit',country:'Denmark'},
+                {name:'Mary',country:'England'},
+                {name:'Kai',country:'Norway'}
+            ];
+        });
+    </script>
+</body>
+</html>
