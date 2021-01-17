@@ -1,8 +1,13 @@
-//typescript est javascript
-function log(message) {
-    console.log(message);
+interface Point {
+    x: number,
+    y: number
 }
 
-var message = 'Hello World';
+let drawPoint = (point:Point) => {
+    // ...
+}
 
-log(message);
+drawPoint({
+    x:1,
+    y:2
+})
