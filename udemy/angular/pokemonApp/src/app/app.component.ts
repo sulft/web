@@ -2,6 +2,7 @@
 import { Component } from '@angular/core'; 
 import { OnInit } from '@angular/core';
 
+import { POKEMONS } from './mock-pokemons';
 import { Pokemon } from './pokemon';
 
 @Component({
@@ -11,25 +12,18 @@ import { Pokemon } from './pokemon';
 })
 export class AppComponent implements OnInit{
 
-  title = 'Liste de pokemon'
   private pokemons:Pokemon[];
+  title:string = 'Liste de pokemons'
 
   ngOnInit() {
-    this.pokemons = [
-      { 
-        id:1,
-        hp:100,
-        cp:100,
-        name:'Carapuce',
-        picture:'test',
-        types:['Feu','Eau'],
-        created:new Date()
-      }
-    ];
+    this.pokemons = POKEMONS;
+
   }
-    selectPokemon(pokemon: Pokemon) {
+  //methode permettant de gérer les intéractions de l'utilisateur
+  //ICI détecter le clique du pokemon sélectionner et dire son nom
+  selectPokemon(pokemon: Pokemon) {
       alert("vous avez cliqué sur" + pokemon.name);
 
     }
 }
- //le mot clé export rends le "component" accessible pour d'autre fichier
+ //le mot clé export rends le "component" accessible pour d'autre fichier (exemple le app.module.ts)
