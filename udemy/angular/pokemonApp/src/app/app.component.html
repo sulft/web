@@ -6,3 +6,7 @@
     <button (click)='onClick()'>Cliquez ici !</button>
 </ul>
 
+<span>Ton prénom: </span>
+<input #box (keyup)="onKey(box.value)" type="text"> 
+<p>{{box.value}}</p> <!--Afficher des variable référencé -->
+<p>{{value}}</p>

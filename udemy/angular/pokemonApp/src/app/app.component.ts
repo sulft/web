@@ -13,10 +13,15 @@ import { Pokemon } from './pokemon';
 export class AppComponent implements OnInit{
 
   private pokemons:Pokemon[];
+  value:string = null;
   title:string = 'Liste de pokemons'
 
   ngOnInit() {
     this.pokemons = POKEMONS;
+  }
+
+  onKey(value: string) {
+    this.value = 'Bonjour ' + value;
   }
 
   onClick() {
