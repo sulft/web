@@ -111,4 +111,4 @@ export const POKEMONS: Pokemon[] = [
         types: ["Feu"],
         created: new Date()
     }
-]
+];
