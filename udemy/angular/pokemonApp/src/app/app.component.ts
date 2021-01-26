@@ -12,9 +12,8 @@ import { Pokemon } from './pokemon';
 })
 export class AppComponent implements OnInit{
 
-  private pokemons:Pokemon[];
+  pokemons:Pokemon[];
   title:string = 'Liste de pokemons';
-  values = ''
 
   ngOnInit() {
     this.pokemons = POKEMONS;
