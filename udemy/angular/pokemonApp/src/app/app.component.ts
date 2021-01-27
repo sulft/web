@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
   //methode permettant de gérer les intéractions de l'utilisateur
   //ICI détecter le clique du pokemon sélectionner et dire son nom
   selectPokemon(pokemon: Pokemon) {
-     alert("vous avez cliqué sur" + pokemon.name);
+     alert("vous avez cliqué sur " + pokemon.name);
   }
 }
  //le mot clé export rends le "component" accessible pour d'autre fichier (exemple le app.module.ts)
