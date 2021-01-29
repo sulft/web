@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
+import { UserListComponent } from './user-list/user-list.component';
+
+//module
+import { UsersModule } from './users/users.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

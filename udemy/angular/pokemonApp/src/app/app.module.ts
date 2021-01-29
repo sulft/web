@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core'; // Permet de déclarer un module
 import { AppComponent } from './app.component';
 import { CardDirecDirective } from './card-direc.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
+import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardDirecDirective,
-    PokemonTypeColorPipe
+    PokemonTypeColorPipe,
+    DetailPokemonComponent
   ],
   imports: [
     BrowserModule
