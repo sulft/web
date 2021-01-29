@@ -7,12 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title:string = 'Bienvenu';
-  test = {
-    name: 'kelly',
-    age: 20,
-    tab1:['nb','nb1','nb2']
-  };
-  tab = ['test','test1','test2'];
-  siteUrl=window.location.href;
+  myName:string = 'Terry'
+    getName(name:string) {
+    alert('Bonjour ' + name + " ! ");
+  }
 
 }
