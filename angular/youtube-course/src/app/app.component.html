@@ -1,12 +1,4 @@
-<h1>Important events in Angular</h1>
-<button (click)="myEvent('onClick')">Appuyez ici !</button>
-<br><br>
-<input #box (blur)="myEvent(box.value)" (keyup.enter)="myEvent(box.value)" type = 'text'> KEYUP <!-- Utilisation de deux event dans le même élément. -->
-<br><br>
-<input #box1 (blur)="myEvent(box1.value)" type = 'text'> BLUR
-<br><br>
-
-<h2 (mouseover)="myEvent('mouseOver')" style='background-color:green'>mouseOver</h2>
-<h2 (mouseleave)="myEvent('mouseLeave')" style='background-color:blue'>mouseLeave</h2>
-
-
+<h1>{{title}}</h1>
+<input type="text" #value (keyup.enter)="myEvent($event.target.value)">
+<button (click)="myEvent(value.value)">Cliquer ICI</button>
+<p>Votre identifiant est : {{unTexte}}</p>

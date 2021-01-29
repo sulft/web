@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'Bienvenu';
-  myEvent(evt) {
-    console.log(evt);
+  title:string = "Get input box value";
+  unTexte:string;
+  myEvent(text) {
+    this.unTexte = text;
   }
 
 }
