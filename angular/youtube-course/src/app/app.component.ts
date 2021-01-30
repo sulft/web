@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = "Get input box value";
-  unTexte:string;
-  myEvent(text) {
-    this.unTexte = text;
+  title:string = "Property binding";
+  name:string = 'Terry';
+  state:boolean = true;
+  enableBox() {
+    if(this.state) { this.state = false }
+    else { this.state = true }
   }
 
 }
