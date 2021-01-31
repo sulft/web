@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = "Condition in angular";
-  show:string = 'blue';
+  title:string = "Switch case condition in angular";
+  color:string = 'blue';
 
 }

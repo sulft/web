@@ -1,22 +1,19 @@
 <h1>{{title}}</h1>
-<!-- <h1 *ngIf="show=='yes';then ifBlock else elseBlock"></h1>
 
-<ng-template #ifBlock>
-    <h1> if block </h1>
-</ng-template>
-
-<ng-template #elseBlock>
-    <h1> else block </h1>
-</ng-template> -->
-
-<ng-template [ngIf]="show=='blue'">
-    <h1> blue block </h1>
-</ng-template>
-
-<ng-template [ngIf]="show=='red'">
-    <h1> red block </h1>
-</ng-template>
-
-<ng-template [ngIf]="show=='green'">
-    <h1> green block </h1>
-</ng-template>
+<div [ngSwitch]="color">
+    <h2 style="color:red;" *ngSwitchCase="'red'">
+        red color
+    </h2>
+    <h2 style="color:blue;" *ngSwitchCase="'blue'">
+        blue color
+    </h2>
+    <h2 style="color:green;" *ngSwitchCase="'green'">
+        green color
+    </h2>
+    <h2 style="color:yellow;" *ngSwitchCase="'yellow'">
+        yellow color
+    </h2>
+    <h2 style="color:grey;" *ngSwitchDefault="'grey'">
+        grey color
+    </h2>
+</div>
