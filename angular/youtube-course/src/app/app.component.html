@@ -1,14 +1,13 @@
 <h1>{{title}}</h1>
 
-<table border='3'>
-    <tr>
-        <td>nom</td>
-        <td>age</td>
-        <td>email</td>
-    </tr>
-    <tr *ngFor="let item of array">
-        <td>{{item.nom}}</td>
-        <td>{{item.age}}</td>
-        <td>{{item.email}}</td>
-    </tr>
-</table>
+<form #simpleForm='ngForm' (ngSubmit)='getValues(simpleForm.value)'>
+    <input type="text" ngModel name="prenom" placeholder="Entrez votre prénom">
+    <br><br>
+    <input type="text" ngModel name="nom" placeholder="Entrez votre nom">
+    <br><br>
+    <input type="number" ngModel  name="age" placeholder="Entrez votre age">
+    <br><br>
+    <input type="password" ngModel  name="password" placeholder="Entrez votre mot de passe">
+    <br><br>
+    <button>Récupération des informations</button>
+</form>
