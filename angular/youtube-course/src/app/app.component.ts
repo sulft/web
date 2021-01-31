@@ -6,12 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = "Property binding";
-  name:string = 'Terry';
-  state:boolean = true;
-  enableBox() {
-    if(this.state) { this.state = false }
-    else { this.state = true }
-  }
+  title:string = "Condition in angular";
+  show:string = 'blue';
 
 }
