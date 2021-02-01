@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = "Make header and footer";
+  title:string = "Style binding";
+  color:string ='red';
+  err:boolean = false;
+
+  updateColor() {
+    this.color = "yellow";
+    this.err =! this.err;
+  }
 
 }

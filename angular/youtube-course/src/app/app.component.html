@@ -1,3 +1,7 @@
-<app-header></app-header>
 <h1>{{title}}</h1>
-<app-footer></app-footer>
+
+<h1 style='color: red'>heading 1</h1>
+<h1 [style.color]="'green'">heading 1</h1>
+<h1 [style.color]="color">heading 1</h1>
+<h1 [style.color]="err?'grey':'blue'">Conditional style</h1>
+<button (click)="updateColor()">Update color</button>
