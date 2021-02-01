@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = "Simple form in Angular";
+  title:string = "Make header and footer";
 
-
-  getValues(val:any) {
-    console.log(val)
-  }
 }
