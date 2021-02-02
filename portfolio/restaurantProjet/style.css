@@ -52,7 +52,7 @@ section {
 
 
 #information {
-    height: 100vh;
+    height: 95vh;
     background: url(./assets/plat2.jpg);
     background-size:100% 100%;
     background-repeat: no-repeat
@@ -73,9 +73,9 @@ section {
 footer {
     clear: both;
     position: relative;
-    height: 50px;
+    height: 5vh;
     color: grey;
-    background-color: #000000;
+    background-color: red;
 }
 
 @media (max-width: 573px) {
