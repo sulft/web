@@ -1,0 +1,70 @@
+
+section {
+    height:100vh;
+    border-bottom: 5px solid black;
+}
+
+.box {
+    font-family: 'Roboto Slab', serif;
+    color:black;
+    font-weight: 900;
+    background-color: white;
+    opacity: 1;
+    padding:3%;
+}
+
+.box h1 {
+    text-align:center;
+    font-size: 7vh;
+    opacity: 0.7;
+}
+
+#accueil .box p {
+    font-size: 3vh;
+    color: black;
+}
+
+
+
+#accueil {
+    background: url(./assets/luxe-accueil.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#catégories {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url(./assets/luxe-catégorie.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat
+
+}
+
+
+
+#voitures {
+    background: url();
+    background-size:100% 100%;
+    background-repeat: no-repeat
+}
+
+#utilitaires {
+    background: url();
+    background-size:100% 100%;
+    background-repeat: no-repeat
+}
+
+#informations {
+    background: url();
+    background-size:100% 100%;
+    background-repeat: no-repeat
+}
