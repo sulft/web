@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <div class="sticky-top">
     <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: black;">
         <div class="container-fluid">
@@ -19,15 +20,15 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto">
+              <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item">
-                  <a class="nav-link border border-light rounded rounded-3" href="#accueil">Accueil</a>
+                  <a class="nav-link" href="#accueil">Accueil</a>
                 </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link border border-light rounded rounded-3" href="#carte">Carte</a>
+                <li class="nav-item mx-lg-2">
+                  <a class="nav-link" href="#carte">Carte</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link border border-light rounded rounded-3" href="#information">Information</a>
+                  <a class="nav-link" href="#information">Information</a>
                 </li>
               </ul>
             </div>
@@ -35,82 +36,84 @@
     </nav>
   </div>
 
-    <section class="accueil" id="accueil">
-      <div class='container'>
-        <div class="row ">
-          <div class="col-sm-8"></div>
-          <div class="col-sm-4 vertical-center" style="height: 100vh;">
+
+  <!-- ACCUEIL -->
+  <section id="accueil">
+    <div class='container'>
+      <div class="row ">
+        <div class="col-sm-8"></div>
+        <div class="col-sm-4 vertical-center" style="height: 100vh;">
+          <div class="dark rounded rounded-3">
             <h1 class="text-light align-middle">"テリーズレストラン"</h1><br>
             <p class="text-light fs-4">"Restaurant de Terry".<br>Une cuisine revisitée rempli de saveur nouvelle.<br> Evidemment avec des produits frais.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="carte" id="carte">
-      <div class="menu">
-          <div class="row">
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Ramen</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
+  <!-- CARTE -->
+  <section class="d-flex py-5" id="carte">
+    <div class="container menu py-3 px-1 rounded">
+      <div class="row g-lg-3 gy-3">
 
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Lovebox</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">California</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Maki saumon</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Sushi crevette</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class='col-lg-4'>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Poke bowl</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+          <div class='col-lg-6'>
+            <div class="card fullOpacity">
+              <img src="/assets/menu.jpg" class="card-img-top" alt="Ramen">
+              <div class="card-body">
+                <h5 class="card-title">Ramen</h5>
+                <p class="card-text">Oeuf, nouilles et persil.</p>
               </div>
             </div>
           </div>
-      </div>
 
-    </section>
+          <div class='col-lg-6'>
+            <div class="card">
+              <img src="/assets/menu3.jpg"class="card-img-top" alt="Sushi au saumon">
+              <div class="card-body">
+                <h5 class="card-title">Sushi au saumon<span class="ms-1 badge bg-danger">New</span></h5>
+                <p class="card-text">Riz, saumon et sauce sucrée.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-lg-6'>
+            <div class="card">
+              <img src="/assets/menu4.jpg"  class="card-img-top" alt="Sushi rolls">
+              <div class="card-body">
+                <h5 class="card-title">Sushi rolls</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class='col-lg-6'>
+            <div class="card">
+              <img src="/assets/menu2.jpg" class="card-img-top" alt="Sushi crevette">
+              <div class="card-body">
+                <h5 class="card-title">Sushi au crevette</h5>
+                <p class="card-text">Riz, crevette et sauce salé.</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </section>
     
-    <section class="information" id="information"></section>
+  <section class="information d-flex " id="information">
+    <div class="menu">
+      <h3 class="m-3 text-center border-end p-3 border-light">Nous avons hâte de vous rencontrer !</h3>
+      <p class=" p-3 text-center">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sollicitudin varius turpis, quis sodales lacus dapibus eu. Aliquam nec interdum eros. Vivamus non accumsan elit. Nam feugiat lorem sit amet porta pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+
 </body>
 
 </html>
