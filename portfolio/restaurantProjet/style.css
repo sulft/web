@@ -45,7 +45,7 @@ section {
 
 
 .menu { 
-    opacity:0.98;
+    opacity:0.97;
     margin:auto;
 }
 
@@ -62,7 +62,6 @@ section {
     display: flex;
     align-items: center;
     opacity:0.90;
-    height:50%;
     width:75%;
     background-color: black;
     color:white;
@@ -78,10 +77,34 @@ footer {
     background-color: red;
 }
 
+.footer-content-right {
+    padding-right:40px;
+    margin-top:20px;
+    float:right;
+  }
+  
+  .icon-style {
+    height:40px;
+    margin-left:20px;
+    margin-top:5px;
+  }
+  
+  .icon-style:hover {
+    background-color:yellow;
+    padding:5px;
+  }
+
 @media (max-width: 573px) {
     .dark {
         background-color: #000000;
         opacity: 0.8;
         padding: 2%;
     }
+}
+
+@media (min-width: 600px) {
+    #information .menu { 
+        height:50%
+    }
+    
 }
