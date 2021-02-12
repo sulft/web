@@ -1,5 +1,6 @@
 
 body {
+    background-color: black;
     width: 100%;
     min-height: 100%;
 }
@@ -52,7 +53,7 @@ section {
 
 
 #information {
-    height: 95vh;
+    height: 110vh;
     background: url(./assets/plat2.jpg);
     background-size:100% 100%;
     background-repeat: no-repeat
@@ -70,29 +71,32 @@ section {
 
 
 footer {
-    clear: both;
     position: relative;
     height: 5vh;
     color: grey;
-    background-color: red;
+    background-color: black;
 }
 
-.footer-content-right {
-    padding-right:40px;
-    margin-top:20px;
-    float:right;
-  }
   
   .icon-style {
-    height:40px;
-    margin-left:20px;
-    margin-top:5px;
+    height:4vh;
+    margin:0px 1vw;
+    border: solid;
+    border-color: white;
+    border-radius: 10em;
   }
   
   .icon-style:hover {
-    background-color:yellow;
-    padding:5px;
+    background-color:white;
+    padding:2px;
   }
+
+  .center {
+    margin: 0px auto;
+    width: 50%;
+  }
+
+
 
 @media (max-width: 573px) {
     .dark {
