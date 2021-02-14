@@ -53,7 +53,7 @@ section {
 
 
 #information {
-    height: 110vh;
+    min-height: 110vh;
     background: url(./assets/plat2.jpg);
     background-size:100% 100%;
     background-repeat: no-repeat
@@ -103,6 +103,12 @@ footer {
         background-color: #000000;
         opacity: 0.8;
         padding: 2%;
+    }
+}
+
+@media (max-width: 550px) {
+    #information .menu {
+        width:95%;
     }
 }
 
