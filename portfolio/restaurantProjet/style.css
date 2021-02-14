@@ -22,16 +22,20 @@ section {
 
 #accueil {
     height: 100vh;
-    background: url(./assets/plat.jpg);
-    background-size:100% 100%;
-    background-repeat: no-repeat;
+    margin:0;
+    padding:0;
+    background: url(./assets/plat.jpg) no-repeat center; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 }
 
 
 #carte {
-    background: url(./assets/plat3.jpg);
-    background-size:100% 100%;
-    background-repeat: no-repeat
+    margin:0;
+    padding:0;
+    background: url(./assets/plat3.jpg) no-repeat center; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 
 }
 
@@ -53,10 +57,12 @@ section {
 
 
 #information {
-    min-height: 110vh;
-    background: url(./assets/plat2.jpg);
-    background-size:100% 100%;
-    background-repeat: no-repeat
+    min-height: 100vh;
+    margin:0;
+    padding:0;
+    background: url(./assets/plat2.jpg) no-repeat center; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 }
 
 #information .menu { 
