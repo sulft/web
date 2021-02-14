@@ -114,6 +114,10 @@ footer {
     #information .menu {
         width:95%;
     }
+
+    .row {
+        --bs-gutter-x: 0;
+    }
 }
 
 
@@ -121,8 +125,6 @@ footer {
     #information .menu { 
         height:50%
     }
+
 }
 
-.row {
-    --bs-gutter-x: 0;
-}
