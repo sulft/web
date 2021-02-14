@@ -96,6 +96,10 @@ footer {
     width: 50%;
   }
 
+  footer span {
+    float: left; 
+    padding-left: 0.5vw;
+  }
 
 
 @media (max-width: 573px) {
@@ -112,9 +116,13 @@ footer {
     }
 }
 
+
 @media (min-width: 600px) {
     #information .menu { 
         height:50%
     }
-    
+}
+
+.row {
+    --bs-gutter-x: 0;
 }
