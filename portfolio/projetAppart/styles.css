@@ -1,0 +1,12 @@
+nav .navbar-brand img{
+    max-height:40px;
+}
+
+header {
+    background-image:url(maldives-vacances-plage-soleil.jpg);
+    min-height: 70vh;
+}
+
+header .row {
+    min-height:70vh
+}
