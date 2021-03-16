@@ -1,12 +1,25 @@
+body, div {
+    box-sizing: border-box;
+}
+
 nav .navbar-brand img{
     max-height:40px;
 }
 
 header {
     background-image:url(maldives-vacances-plage-soleil.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     min-height: 70vh;
+    background-repeat: no-repeat;
+
 }
 
 header .row {
     min-height:70vh
+}
+
+header #col1 {
+    background-color: rgba(0,0,0,0.5);
+    min-height: 70vh;
 }
