@@ -33,4 +33,16 @@ h1, h2, p {
     color:white;
 }
 
+.carousel-item img {
+    height:60vh;
+}
+
+.carousel-inner {
+    margin: auto;
+}
+
+#carouselExampleControls {
+    width: 60vw;
+    margin:0 auto;
+}
 
