@@ -9,13 +9,18 @@ body {
     background-repeat: no-repeat;
 }
 
-header {
-    height: 30vh;
-    background-color: rgb(0, 0, 0,0.5);
-}
-
 #titre {
     font-family: 'PT Serif', serif;
+    display: border-box;
+}
+
+#titre::first-letter {
+    color: red;
+    font-size: 130%;
+}
+
+.title {
+    padding-top:5%
 }
 
 #accueil {
