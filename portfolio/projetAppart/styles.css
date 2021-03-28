@@ -3,11 +3,6 @@ nav .navbar-brand img{
     max-height:40px;
 }
 
-body {
-    background-image:url(background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 #titre {
     font-family: 'PT Serif', serif;
@@ -24,19 +19,17 @@ body {
 }
 
 #accueil {
-    background-color: rgb(0, 0, 0,0.5);
+    background-color: #fff;
     min-height:100vh;
 }
 
 #presentation {
-    background-color: rgb(0, 0, 0,1);
+    background-color: #f8f9fa;
     min-height:100vh;
 }
 
 #reservation {
-    background-image:url(background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color:#212529;
     height:100vh;
     max-height: 200vh;
 }
@@ -45,44 +38,11 @@ h1, h2, h5, p {
     color:white;
 }
 
-
-
-/* *********** RESERVATION ************** */
-.reserver1{
-    color: white;
-    padding:1% 0;
+#presentation img {
+    width: 100%;
 }
 
 
-.reserver0 {
-    padding:2.5% 0;
-}
-
-/* ******* bouton ******* */
-#smSize {
-    width: 10vw;
-}
-
-
-/* ********* INPUT CSS ********* */
-input { 
-    text-align: center; 
-}
-
-.form-control:focus, .form-control:active {
-    background-color:transparent;
-}
-
-    
-input {
-    color: white;
-    background: transparent;
-  }
-  
-input::placeholder{
-    opacity: 1;
-    color: white
-}
 
 
   
