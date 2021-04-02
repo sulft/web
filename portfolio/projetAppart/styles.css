@@ -45,9 +45,18 @@ h1, h2, h5, p {
 
 #reservation {
     background-color:#292521;
-
-
 }
+
+@media (max-width: 768px) { 
+    .vcenter {
+        text-align: center;
+    }
+
+    .centerImage {
+        display: block;
+        margin: 0 auto;
+    }
+ }
 
 
   
