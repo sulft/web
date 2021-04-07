@@ -1,8 +1,7 @@
-
+/**************** NAV **********/
 nav .navbar-brand img{
     max-height:40px;
 }
-
 
 #titre {
     font-family: 'PT Serif', serif;
@@ -14,11 +13,12 @@ nav .navbar-brand img{
     color:#aaa;
     font-size: 130%;
 }
+/**************** FIN NAV **********/
 
 .title {
     padding-top:5%
 }
-
+/******* SECTION ***********/
 #accueil {
     background-color: #fff;
     min-height:100vh;
@@ -34,6 +34,7 @@ nav .navbar-brand img{
     height:100vh;
     max-height: 200vh;
 }
+/******* FIN SECTION ***********/
 
 h1, h2, h5, p {
     color:white;
@@ -58,7 +59,29 @@ h1, h2, h5, p {
     }
 }
 
+/******** IMAGE **********/
 
-  
+/***** FIN IMAGE ******/
 
-  
+.shadow-sm img {
+    transition: 1s;
+    filter: grayscale(70%);
+    width: 100%;
+}
+
+.shadow-sm img:hover {
+    transition: 1s;
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.shadow-sm a {
+    display: inherit;
+}
+
+
+
+#lightbox {
+    display: flex;
+    flex-direction: column-reverse;    
+  }

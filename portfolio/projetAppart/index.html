@@ -7,11 +7,15 @@
       <meta name="Réservation de logement" content="Site de réservation d'un logement, pour passer vos vacances et de super moment !">
       <!-- CSS only -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/lightbox.min.css">
+      <script src="js/lightbox-plus-jquery.js"></script>
       <link rel="shortcut icon" href=""> <!-- logo de l'onglet -->
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
       <title>R'BnB</title>
+
+      <script src="https://kit.fontawesome.com/3eb397d643.js" crossorigin="anonymous"></script>
   </head>
   
   <body id='haut'>
@@ -46,26 +50,52 @@
         <div class="row py-lg-5">
           <div class="col-lg-4 col-md-12 mx-auto">
             <img src="evolution.svg" alt="">
-            <h1 class="fw-light text-dark">Démarrer en 2021</h1>
-              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            <h1 class="fw-light text-dark">Quand ?</h1>
+              <p class="lead text-muted">Démarrer en 2021 !</p>
           </div>
           <div class="col-lg-4 col-md-12 mx-auto">
             <img src="relax.svg" alt="">
-            <h1 class="fw-light text-dark">Se détendre</h1>
-              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            <h1 class="fw-light text-dark">Objectif ?</h1>
+              <p class="lead text-muted">Se détendre !</p>
           </div>
           <div class="col-lg-4 col-md-12 mx-auto">
             <img src="reservation.svg" alt="">
-            <h1 class="fw-light text-dark">Réserver maintenant</h1>
+            <h1 class="fw-light text-dark">Réserver ?</h1>
               <p class="lead text-muted">Oui c'est possible !!!</p>
           </div>
         </div>
       </section>
       <!-- ******************** FIN Accueil ************************-->
         
+       <!-- ******************** Présentation ************************-->
       <div class="album py-5 bg-light">
         <div class="container-fluid">
           <div class="row g-3">
+            <div class="col-12 col-lg-6">
+              <div class="row images">
+                <div class="col col-sm-6 gy-2">
+                  <div class="card shadow-sm">
+                    <a href="image1.jpeg" data-lightbox="mygallery"><img src="image1.jpeg" alt=""></a>
+                  </div>
+                </div>
+                <div class="col col-sm-6 gy-2">
+                  <div class="card shadow-sm">
+                    <a href="image3.jpeg" data-lightbox="mygallery"><img src="image3.jpeg" alt=""></a>
+                  </div>
+                </div>
+                <div class="col col-sm-6 gy-2">
+                  <div class="card shadow-sm">
+                    <a href="image4.jpeg" data-lightbox="mygallery"><img src="image4.jpeg"  alt=""></a>
+                  </div>
+                </div>
+                <div class="col col-sm-6 gy-2">
+                  <div class="card shadow-sm">
+                    <a href="image5.jpeg" data-lightbox="mygallery"><img src="image5.jpeg" alt=""></a>
+                  </div>
+                </div>
+                <a class="text-center pt-3" href="">Accéder à notre galerie</a>
+              </div>
+            </div>
             <div class="ps-sm-3 col-12 col-lg-6">
               <div class="row">
                 <div class="col col-md-2">
@@ -74,9 +104,8 @@
                 <div class="col-md-10">
                   <h2 class="ps-2 vcenter text-dark">Adresse</h2>
                     <ul>
-                      <li>Situé à </li>
-                      <li>Jacuzzi</li>
-                      <li>Jeu de société</li>
+                      <li>Se situe à St-Quentin (02). </li>
+                      <li>Il comprend : Jacuzzi / Sauna / Billard / Jeux de sociétés.</li>
                     </ul>
                 </div>
               </div>
@@ -85,11 +114,11 @@
                   <img src="ferris_wheel.svg" class="centerImage"  alt="">
                 </div>
                 <div class="col-md-10">
-                  <h2 class="ps-2 vcenter text-dark">Loisir</h2>
+                  <h2 class="ps-2 vcenter text-dark">Loisir sur place</h2>
                     <ul>
-                      <li>Parc</li>
-                      <li>Monument</li>
-                      <li>Commerce</li>
+                      <li>Il y a des parcs.</li>
+                      <li>Il y a des monuments et plein de choses à visiter..</li>
+                      <li>Vous pouvez également acheter des produits locaux aux commerces de proximités.</li>
                     </ul>
                 </div>
               </div>
@@ -107,34 +136,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
-              <div class="row">
-                <div class="col col-sm-6 gy-2">
-                  <div class="card shadow-sm">
-                    <img src="image1.jpeg" alt="">
-                  </div>
-                </div>
-                <div class="col col-sm-6 gy-2">
-                  <div class="card shadow-sm">
-                    <img src="image3.jpeg" alt="">
-                  </div>
-                </div>
-                <div class="col col-sm-6 gy-2">
-                  <div class="card shadow-sm">
-                    <img src="image4.jpeg" alt="">
-                  </div>
-                </div>
-                <div class="col col-sm-6 gy-2">
-                  <div class="card shadow-sm">
-                    <img src="image5.jpeg" alt="">
-                  </div>
-                </div>
-                <a class="text-center  pt-3" href="">Accéder à notre galerie</a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+       <!-- ******************** FIN Présentation ************************-->
 
       <div class="container" >
           <div class="py-3 text-center">
@@ -223,8 +228,7 @@
         </p>
       </div>
     </footer>
-        
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-        
+
+
   </body>
 </html>
