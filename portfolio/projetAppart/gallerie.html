@@ -1,90 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <link rel="shortcut icon" href=""> <!-- logo de l'onglet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallerie</title>
     <style>
         *{
             box-sizing: border-box;
         }
+
+        img {
+            transition: 1s;
+            filter: grayscale(70%);
+            width: 100%;
+        }
+
+        img:hover {
+            transition: 1s;
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
     </style>
 </head>
-<body>
+
+<body id="presentation">
+    <div class="container-fluid">
+        <h1 class="text-dark text-center my-5">Gallerie</h1>
+    </div>
+
     <div class="container">
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a href="image2.jpg" target="_blank"><img src="image2.jpg" alt="" width="300" height="200"></a>
-                <div class="des">Add a Description of the image here</div>  
+                <a href="image2.jpg" data-lightbox="mygallery"><img src="image2.jpg" alt="" width="300" height="200"></a>
             </div>
         </div>
     </div>
