@@ -18,22 +18,7 @@ nav .navbar-brand img{
 .title {
     padding-top:5%
 }
-/******* SECTION ***********/
-#accueil {
-    background-color: #fff;
-    min-height:100vh;
-}
 
-#presentation {
-    background-color: #f8f9fa;
-    min-height:100vh;
-}
-
-#reservation {
-    background-color:#212529;
-    height:100vh;
-    max-height: 200vh;
-}
 /******* FIN SECTION ***********/
 
 h1, h2, h5, p {
@@ -44,9 +29,6 @@ h1, h2, h5, p {
     width: 100%;
 }
 
-#reservation {
-    background-color:#292521;
-}
 
 @media (max-width: 768px) { 
     .vcenter {
