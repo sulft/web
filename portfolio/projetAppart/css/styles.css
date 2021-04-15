@@ -45,6 +45,8 @@ h1, h2, h5, p {
 
 /***** FIN IMAGE ******/
 
+
+
 .shadow-sm img {
     transition: 1s;
     filter: grayscale(70%);
@@ -112,3 +114,7 @@ h1, h2, h5, p {
     }
 
 }
+
+.container-fluid .row {
+    
+} 
