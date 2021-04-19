@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<?php
+require_once 'recaptcha/autoload.php';
+if(isset($_POST['submitpost'])) {
+  $recaptcha = new \ReCaptcha\ReCaptcha("6LcZ6rAaAAAAAHIr-CFaMjiKTwLiynIbMJS6HQqa");
+  $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
+  if ($resp->isSuccess()) {
+    var_dump('Captcha Valide');
+  } else {
+    $errors = $resp->getErrorCodes();
+    var_dump('Captcha Invalide');
+    var_dump($errors);
+  } 
+} else {
+  var_dump('Captcha non rempli');
+} 
+?>
 <html lang="fr">
   <head>
       <meta charset="UTF-8">
@@ -15,7 +31,16 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
       <title>R'BnB</title>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
+      
+      <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'localhost','127.0.0.1'
+        });
+      };
+      </script>
+
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script src="https://kit.fontawesome.com/3eb397d643.js" crossorigin="anonymous"></script>
   </head>
   
@@ -139,7 +164,7 @@
       
             <div class="col">
               <h4 class="mb-3">Vos informations :</h4>
-              <form class="needs-validation" novalidate="">
+              <form class="needs-validation" method="POST" novalidate="">
                 <div class="row g-3">
                   <div class="col-sm-6">
                     <label for="entrée" class="form-label">Date d'entrée</label>
@@ -181,7 +206,7 @@
                     </div>
                   </div>
 
-                  <div class="col-6">
+                  <div class="col-sm-6">
                     <label for="nbInvite" class="form-label">Nombre d'invité</label>
                     <select id="nbInvite" class="form-select">
                       <option>1</option>
@@ -192,11 +217,15 @@
                       <option>6</option>
                     </select>
                   </div>
-      
+                  <div class="g-recaptcha d-flex justify-content-center" data-sitekey="6LcZ6rAaAAAAAI25aILiCpaNqtSCYqhXphyl7nCt"></div>
                 </div>
                 <hr class="my-4">
-                <button class="w-100 btn btn-primary btn-lg" type="submit">Valider la demande</button>
+                <button class="w-100 btn btn-primary btn-lg" value="Valider" name="submitpost" type="submit">Valider la demande</button>
               </form>
+              <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+                  async defer>
+              </script>
+
             </div>
           </div>
       
