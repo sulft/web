@@ -1,20 +1,5 @@
 <!DOCTYPE html>
-<?php
-require_once 'recaptcha/autoload.php';
-if(isset($_POST['submitpost'])) {
-  $recaptcha = new \ReCaptcha\ReCaptcha("6LcZ6rAaAAAAAHIr-CFaMjiKTwLiynIbMJS6HQqa");
-  $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
-  if ($resp->isSuccess()) {
-    var_dump('Captcha Valide');
-  } else {
-    $errors = $resp->getErrorCodes();
-    var_dump('Captcha Invalide');
-    var_dump($errors);
-  } 
-} else {
-  var_dump('Captcha non rempli');
-} 
-?>
+
 <html lang="fr">
   <head>
       <meta charset="UTF-8">
@@ -32,15 +17,6 @@ if(isset($_POST['submitpost'])) {
       <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
       <title>R'BnB</title>
       
-      <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : 'localhost','127.0.0.1'
-        });
-      };
-      </script>
-
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script src="https://kit.fontawesome.com/3eb397d643.js" crossorigin="anonymous"></script>
   </head>
   
@@ -92,21 +68,21 @@ if(isset($_POST['submitpost'])) {
         
        <!-- ******************** Présentation ************************-->
       <div class="album pb-5 bg-light" id="Accueil">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row g-3">
             <div class="col-12 col-lg-6">
               <div class="row">
                   <div class="responsive responsive1 shadow-sm">
-                    <a href="photo/image1.jpeg" data-lightbox="mygallery"><img src="photo/image1.jpeg" width="300" height="200" alt=""></a>
+                    <a href="photo/image1.jpg" data-lightbox="mygallery"><img src="photo/simage1.jpg" alt=""></a>
                   </div>
                   <div class="responsive responsive1 shadow-sm">
-                    <a href="photo/image3.jpeg" data-lightbox="mygallery"><img src="photo/image3.jpeg" width="300" height="200" alt=""></a>
+                    <a href="photo/image2.jpg" data-lightbox="mygallery"><img src="photo/simage2.jpg" alt=""></a>
                   </div>
                   <div class=" responsive responsive1 shadow-sm">
-                    <a href="photo/image4.jpeg" data-lightbox="mygallery"><img src="photo/image4.jpeg" width="300" height="200" alt=""></a>
+                    <a href="photo/image3.jpg" data-lightbox="mygallery"><img src="photo/simage3.jpg" alt=""></a>
                   </div>
                   <div class=" responsive responsive1 shadow-sm">
-                    <a href="photo/image5.jpeg" data-lightbox="mygallery"><img src="photo/image5.jpeg" width="300" height="200" alt=""></a>
+                    <a href="photo/image4.jpg" data-lightbox="mygallery"><img src="photo/simage4.jpg" alt=""></a>
                   </div>
                 <a class="text-center pt-3" href="gallerie.html">Accéder à notre galerie</a>
               </div>
@@ -217,14 +193,11 @@ if(isset($_POST['submitpost'])) {
                       <option>6</option>
                     </select>
                   </div>
-                  <div class="g-recaptcha d-flex justify-content-center" data-sitekey="6LcZ6rAaAAAAAI25aILiCpaNqtSCYqhXphyl7nCt"></div>
+                  <div class="d-flex justify-content-center"></div>
                 </div>
                 <hr class="my-4">
                 <button class="w-100 btn btn-primary btn-lg" value="Valider" name="submitpost" type="submit">Valider la demande</button>
               </form>
-              <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-                  async defer>
-              </script>
 
             </div>
           </div>
