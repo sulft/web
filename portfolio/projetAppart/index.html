@@ -17,6 +17,7 @@
       <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
       <title>R'BnB</title>
       
+
       <script src="https://kit.fontawesome.com/3eb397d643.js" crossorigin="anonymous"></script>
   </head>
   
@@ -140,7 +141,7 @@
       
             <div class="col">
               <h4 class="mb-3">Vos informations :</h4>
-              <form class="needs-validation" method="POST" novalidate="">
+              <form class="needs-validation" id="form-wrap" method="POST" novalidate="">
                 <div class="row g-3">
                   <div class="col-sm-6">
                     <label for="entrée" class="form-label">Date d'entrée</label>
@@ -176,7 +177,7 @@
 
                   <div class="col-sm-6">
                     <label for="lastName" class="form-label">Téléphone</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                    <input type="text" class="form-control" id="number" placeholder="" value="" required="">
                     <div class="invalid-feedback">
                       Valid last name is required.
                     </div>
@@ -196,19 +197,16 @@
                   <div class="d-flex justify-content-center"></div>
                 </div>
                 <hr class="my-4">
-                <button class="w-100 btn btn-primary btn-lg" value="Valider" name="submitpost" type="submit">Valider la demande</button>
+                <button class="w-100 btn btn-primary btn-lg" id="button" value="Valider" name="submitpost" type="submit">Valider la demande</button>
               </form>
+
+              <div class="messages"></div>
 
             </div>
           </div>
       
         <footer class="my-5 pt-5 text-muted text-center text-small">
-          <p class="mb-1 text-dark">© 2017–2021 Company Name</p>
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Support</a></li>
-          </ul>
+          <p class="mb-1 text-dark">© 2021 Vilver Care</p>
         </footer>
       </div>
     </main>
@@ -221,5 +219,6 @@
       </div>
     </footer>
     
+    <script src="script.js"></script> <!-- ENVOIE MAIL A MATHURIN -->
   </body>
 </html>
