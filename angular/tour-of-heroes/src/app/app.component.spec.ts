@@ -10,22 +10,22 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('Doit crée le composant app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'tour-of-heroes'`, () => {
+  it(`Doit avoir comme titre 'Tour of Heroes'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('tour-of-heroes');
+    expect(app.titre).toEqual('Tour of Heroes');
   });
 
-  it('should render title', () => {
+  it('Doit afficher le titre', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('tour-of-heroes app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('Tour of Heroes');
   });
 });
