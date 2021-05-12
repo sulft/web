@@ -12,11 +12,11 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sum() {
+  sum( a,b) {
     //
     //
     //
-    return 100;
+    return a+b;
   }
 
 }
