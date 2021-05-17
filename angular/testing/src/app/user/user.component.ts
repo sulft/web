@@ -8,15 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class UserComponent implements OnInit {
 
   constructor() { }
-  componentName="user";
+  componentName="Composant fils";
   ngOnInit(): void {
-  }
-
-  sum( a,b) {
-    //
-    //
-    //
-    return a+b;
   }
 
 }

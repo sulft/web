@@ -19,32 +19,13 @@ describe('UserComponent', function() {
     fixture.detectChanges();
   });
 
+  it('should create', function() {
+    expect(component).toBeTruthy();
+  });
 
-  describe("mes tests", function() {
-    it("let's check amount", function() {
-      expect(100).toBe(100)
-    });
-    
-    it("let's check string", function() {
-      expect("test").toBe("test")
-    });
-
-    it('should create', function() {
-      expect(component).toBeTruthy();
-    });
-  
-    it('calculation', function() {
-      expect(component.sum(40,60)).toBe(100);
-    });
-  
-    it("test html element", function() {
-      const data=fixture.nativeElement;
-      expect(data.querySelector(".some span").textContent).toContain("User");
-    });
-
-    it("test html element 222", function() {
-      const data=fixture.nativeElement;
-      expect(data.querySelector("span").textContent);
+  describe('Un ensemble de test', function() {
+    it('calcul OK ?', function(){
+      expect(10+10).toBe(20);
     });
   });
 });
