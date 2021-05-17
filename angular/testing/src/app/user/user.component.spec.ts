@@ -24,8 +24,14 @@ describe('UserComponent', function() {
   });
 
   describe('Un ensemble de test', function() {
-    it('calcul OK ?', function(){
-      expect(10+10).toBe(20);
+    beforeEach(function(){
+      this.number=20;
+    })
+
+    it('calcul 20 == 30 ?', function(){
+      expect(this.number).not.toBe(30);
     });
+
   });
+
 });

@@ -12,4 +12,8 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  switch(changement:boolean) {
+    
+  }
 }
