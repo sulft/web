@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div>
+            <label>My username:</label>
+            <input [(ngModel)]='username' type="text" class="form-control">
+            <p class="text-center">{{ username }}</p>
+            <button [disabled]="username == ''" (click)="onResetUsername()" class="btn btn-danger w-100">Reset username</button>
+        </div>
+    </div>
+</div>
+
