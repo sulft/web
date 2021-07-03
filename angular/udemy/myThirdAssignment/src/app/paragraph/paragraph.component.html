@@ -1,0 +1,16 @@
+
+<div class="d-flex flex-column justify-content-center">
+    <button (click)="addElement()" class="btn btn-primary my-2">Display Details</button>
+    <p *ngIf='!hidden' class="text-center fw-bold">Oops !! I'm not hidden !</p>
+</div>
+
+<div class="d-flex justify-content-center">
+    <p>You have tried to log (number of times):</p>
+</div>
+
+<div class="d-flex flex-column justify-content-center">
+    <p class="d-flex justify-content-center" *ngFor="let item of index" [ngStyle]="{'background-color': changeBackgroundColor(item) }" [ngClass]="{ whiteColor : item > 4 }">
+        <li *ngIf='item === 1'>{{ item }} time </li>
+        <li *ngIf='item > 1'>{{ item }} times </li>
+    <p>
+</div>
