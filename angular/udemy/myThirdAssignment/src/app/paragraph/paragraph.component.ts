@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParagraphComponent implements OnInit {
 
-  index:number[]=[];
+  index:any[]=[];
   value:number = 0;
   hidden:boolean = true;
 
@@ -22,7 +22,7 @@ export class ParagraphComponent implements OnInit {
       this.hidden=false;
     }
     this.value++;
-    this.index.push(this.value);
+    this.index.push(new Date());
   }
 
   changeBackgroundColor(val:number) {

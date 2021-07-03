@@ -9,8 +9,8 @@
 </div>
 
 <div class="d-flex flex-column justify-content-center">
-    <p class="d-flex justify-content-center" *ngFor="let item of index" [ngStyle]="{'background-color': changeBackgroundColor(item) }" [ngClass]="{ whiteColor : item > 4 }">
-        <li *ngIf='item === 1'>{{ item }} time </li>
-        <li *ngIf='item > 1'>{{ item }} times </li>
+    <p class="d-flex justify-content-center" *ngFor="let date of index; let i = index" [ngStyle]="{'background-color': changeBackgroundColor(i+1) }" [ngClass]="{ whiteColor : i+1 > 4 }">
+        <li *ngIf='i === 0'>{{ i+1 }} time and the date is {{ date | date:'medium' }} </li>
+        <li *ngIf='i > 0'>{{ i+1 }} times and the date is {{date | date:'medium' }} </li>
     <p>
 </div>
