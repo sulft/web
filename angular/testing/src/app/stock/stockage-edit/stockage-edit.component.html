@@ -1,0 +1,19 @@
+<form class="row">
+    <div class="mb-2">
+        <label for="name" (mouseover)='input1 = true' (mouseout)='input1 = false' [ngStyle]="{'color': input1 == true ? 'red' : 'black' }" class="form-label">Nom de l'article:</label>
+        <input type="text" class="form-control" id="name">
+    </div>
+
+    <div>
+        <label for="number" (mouseover)='input2 = true' (mouseout)='input2 = false' [ngStyle]="{'color': input2 == true ? 'red' : 'black' }" class="form-label">Nombre d'article:</label>
+        <input type="number" class="form-control" min="1" max='10' id="number">
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-primary w-50" (click)="onClick()">Ajouter un article!</button>
+    </div>
+
+    <div *ngIf='clicked'>
+        <p class="text-center text-success mt-3">Vous avez ajouté un article!</p>
+    </div>
+</form>
