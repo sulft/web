@@ -11,10 +11,10 @@ import { StockageDisplayComponent } from './stock/stockage-display/stockage-disp
     AppComponent,
     StockComponent,
     StockageEditComponent,
-    StockageDisplayComponent
+    StockageDisplayComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

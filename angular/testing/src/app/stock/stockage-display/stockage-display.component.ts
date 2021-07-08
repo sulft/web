@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Item } from 'src/app/shared/model/item.model';
 
 
@@ -9,15 +9,12 @@ import { Item } from 'src/app/shared/model/item.model';
 })
 export class StockageDisplayComponent implements OnInit {
 
-  item:Item[] = [
-    new Item("Pantalon",3),
-    new Item("T-shirt",1),
-    new Item("Pull",6),
-  ];
+  @Input('element') item:Item;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.item)
   }
 
 

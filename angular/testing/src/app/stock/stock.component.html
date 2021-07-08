@@ -2,7 +2,7 @@
     <div class="col-sm-4 ">
         <app-stockage-edit></app-stockage-edit>
         <hr>
-        <app-stockage-display></app-stockage-display>
+        <app-stockage-display [element]="item" *ngFor='let item of items'></app-stockage-display>
     </div>
     <div class="col-sm-8">
     </div>
