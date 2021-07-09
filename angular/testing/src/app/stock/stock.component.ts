@@ -20,4 +20,13 @@ export class StockComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAddArticle(articleData:{articleName: string, articleNumber:number}) {
+    console.log(articleData)
+    if(articleData.articleName && articleData.articleNumber != 0) {
+      this.items.push(
+        new Item(articleData.articleName, articleData.articleNumber)
+      );
+    }
+  }
+
 }

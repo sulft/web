@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { StockComponent } from './stock/stock.component';
 import { StockageEditComponent } from './stock/stockage-edit/stockage-edit.component';
 import { StockageDisplayComponent } from './stock/stockage-display/stockage-display.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { StockageDisplayComponent } from './stock/stockage-display/stockage-disp
   ],
   imports: [
     BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

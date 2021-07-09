@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-4 ">
-        <app-stockage-edit></app-stockage-edit>
+        <app-stockage-edit (articleCreated)="onAddArticle($event)"></app-stockage-edit>
         <hr>
         <app-stockage-display [element]="item" *ngFor='let item of items'></app-stockage-display>
     </div>
