@@ -2,7 +2,11 @@
     <div class="col-sm-4 ">
         <app-stockage-edit (articleCreated)="onAddArticle($event)"></app-stockage-edit>
         <hr>
-        <app-stockage-display [element]="item" *ngFor='let item of items'></app-stockage-display>
+        <app-stockage-display *ngFor='let item of items'>
+            <ul>
+                <li>{{item.name}} ({{item.number}})</li>
+            </ul>
+        </app-stockage-display>
     </div>
     <div class="col-sm-8">
     </div>

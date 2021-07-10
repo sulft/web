@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Item } from 'src/app/shared/model/item.model';
+import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,12 +9,9 @@ import { Item } from 'src/app/shared/model/item.model';
 })
 export class StockageDisplayComponent implements OnInit {
 
-  @Input('element') item:Item;
-
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.item)
   }
 
 
