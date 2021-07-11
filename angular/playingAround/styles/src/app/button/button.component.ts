@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
+  numberOfClick:number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  addPlus():void {
+    this.numberOfClick++;
+  }
+
+  reset():void {
+    this.numberOfClick = 0;
+  }
 }

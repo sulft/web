@@ -1,0 +1,6 @@
+<div class="row">
+    <div class="col-xs-6">
+        <p [ngStyle]="{'color': checkClick() }"> Vous avez cliqué {{ numberOfClick }} fois.</p>
+        <p *ngIf="numberOfClick >= 5" class="text-center"> Arrêtez de cliquer ! </p>
+    </div>
+</div>
