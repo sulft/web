@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-reinitialiser',
@@ -8,8 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ReinitialiserComponent implements OnInit {
 
   @Input() compteur: number;
+  @Output() resetCompte = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  reset() {
+    this.compteur = 0;
+    this.resetCompte.emit(this.compteur);
   }
 }

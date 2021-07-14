@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'styles';
-  compteur: number = 0
+  compteur: number;
+
+  ngOnInit() {
+    this.compteur = 0;
+  }
+
+  onReset(num:number) {
+    this.compteur = num;
+  }
+
+  onAdd(num:number) {
+    this.compteur = num;
+  }
 }

@@ -1,4 +1,5 @@
 <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
-    <app-button [compteur]="compteur"></app-button>
-    <app-reinitialiser [compteur]="compteur"></app-reinitialiser>
+    <app-button class="mb-3" [compteur]="compteur" (addCompte)="onAdd($event)"></app-button>
+    <app-reinitialiser [compteur]="compteur" (resetCompte)="onReset($event)"></app-reinitialiser>
+    <p>{{compteur}}</p>
 </div>
