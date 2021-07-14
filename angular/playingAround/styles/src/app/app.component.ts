@@ -20,4 +20,14 @@ export class AppComponent {
   onAdd(num:number) {
     this.compteur = num;
   }
+
+  checkColor() {
+    if(this.compteur == 0) {
+      return "black";
+    } else if(this.compteur % 2 == 0) {
+      return "blue"
+    } else  {
+      return "red"
+    }
+  }
 }
