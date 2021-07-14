@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './button/button.component';
+import { ReinitialiserComponent } from './reinitialiser/reinitialiser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent
+    ButtonComponent,
+    ReinitialiserComponent
   ],
   imports: [
     BrowserModule
