@@ -25,9 +25,9 @@ export class AppComponent {
     if(this.compteur == 0) {
       return "black";
     } else if(this.compteur % 2 == 0) {
-      return "blue"
-    } else  {
-      return "red"
+      return "blue";
+    } else {
+      return "red";
     }
   }
 }
