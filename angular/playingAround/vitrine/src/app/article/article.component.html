@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-9">
             <app-edit-article [article1]="article" (articleChild)="ajoutArticle($event)" (choosedItem)="choosed($event)"></app-edit-article>
         </div>
-        <div class="col" *ngIf="articlePreview">
+        <div class="col-3" *ngIf="articlePreview">
             <app-preview-article [articlePreview]="articlePreview"></app-preview-article>
         </div>
     </div>
