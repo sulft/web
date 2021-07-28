@@ -12,6 +12,8 @@ export class ArticleComponent implements OnInit {
     {nom:"pantalon",nombre:12}
   ];
 
+  articlePreview:Article;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,5 +22,10 @@ export class ArticleComponent implements OnInit {
 
   ajoutArticle(monArticle:Article) {
     this.article.push(monArticle);
+  }
+
+  choosed(articleChoosed) {
+    this.articlePreview= articleChoosed
+    console.log(this.articlePreview);
   }
 }

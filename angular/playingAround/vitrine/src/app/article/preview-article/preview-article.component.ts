@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PreviewArticleComponent implements OnInit {
 
   @Input("article1") affichageArticle;
+  @Input() articlePreview;
 
   constructor() { }
 

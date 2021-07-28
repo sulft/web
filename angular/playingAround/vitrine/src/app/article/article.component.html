@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <app-edit-article [article1]="article" (articleChild)="ajoutArticle($event)"></app-edit-article>
+            <app-edit-article [article1]="article" (articleChild)="ajoutArticle($event)" (choosedItem)="choosed($event)"></app-edit-article>
         </div>
-        <div class="col">
-            <app-preview-article></app-preview-article>
+        <div class="col" *ngIf="articlePreview">
+            <app-preview-article [articlePreview]="articlePreview"></app-preview-article>
         </div>
     </div>
 </div>

@@ -10,6 +10,8 @@ export class EditArticleComponent implements OnInit {
 
   @Input() article1;
   @Output() articleChild = new EventEmitter<{nom:string, nombre:number}>();
+  @Output() choosedItem = new EventEmitter<{nom:string, nombre:number}>();
+
 
 
   constructor() { }
@@ -19,6 +21,10 @@ export class EditArticleComponent implements OnInit {
 
   ajoutArticle(article:Article) {
     this.articleChild.emit({nom: article.nom, nombre: article.nombre});
+  }
+
+  choosed(articleChoosed) {
+    this.choosedItem.emit({nom: articleChoosed.nom,nombre: articleChoosed.nombre})
   }
 
 }
