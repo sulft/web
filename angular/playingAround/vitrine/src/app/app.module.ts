@@ -7,6 +7,7 @@ import { EditArticleComponent } from './article/edit-article/edit-article.compon
 import { PreviewArticleComponent } from './article/preview-article/preview-article.component';
 import { ChoosingArticleComponent } from './article/edit-article/choosing-article/choosing-article.component';
 import { ManagingArticleComponent } from './article/edit-article/managing-article/managing-article.component';
+import { NewDirectiveDirective } from './myDirective/new-directive.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ManagingArticleComponent } from './article/edit-article/managing-articl
     EditArticleComponent,
     PreviewArticleComponent,
     ChoosingArticleComponent,
-    ManagingArticleComponent
+    ManagingArticleComponent,
+    NewDirectiveDirective
   ],
   imports: [
     BrowserModule
