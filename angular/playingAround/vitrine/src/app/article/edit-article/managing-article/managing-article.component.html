@@ -2,7 +2,7 @@
     <label appNewDirective for="nom" class="form-label">Nom de l'article</label>
     <input  #nom type="text" id="nom" class="form-control">
 
-    <label appNewDirective  for="nombre" class="form-label">Nombre d'article</label>
+    <label appNewDirective [defaultColor]="'yellow'" [newColor]="'red'"  for="nombre" class="form-label">Nombre d'article</label>
     <input #nombre type="number" id="nombre" class="form-control">
 
     <div class="btn-group my-3 d-flex justify-content-center" role="group" aria-label="Basic mixed styles example">

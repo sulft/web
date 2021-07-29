@@ -1,21 +1,34 @@
-import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive,
+   ElementRef, 
+   HostBinding, 
+   HostListener, 
+   Input, 
+   OnInit, 
+   Renderer2 
+} from '@angular/core';
 
 @Directive({
   selector: '[appNewDirective]'
 })
 export class NewDirectiveDirective implements OnInit {
   constructor(private elRef: ElementRef, private renderer:Renderer2) { }
+  @Input() defaultColor: string = "transparent";
+  @Input() newColor: string = "blue";
+  @HostBinding('style.backgroundColor') backgroundColor:string;
 
   ngOnInit() {
-    // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
+    this.backgroundColor = this.defaultColor;
   }
 
-  @HostListener('mouseenter') mouseover(eventData: Event) {
-    this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
-    console.log(eventData)
+  @HostListener('mouselener') mouseover(eventData: Event) {
+    // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
+    this.backgroundColor = this.newColor;
   }
 
   @HostListener('mouseleave') mouseleave(eventData: Event) {
-    this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'transparent');
+    // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'transparent');
+    this.backgroundColor = this.defaultColor;
   }
+
+
 }
