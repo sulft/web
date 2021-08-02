@@ -7,7 +7,8 @@ import { BoutonsComponent } from './minuteur/boutons/boutons.component';
 import { StopComponent } from './minuteur/boutons/stop/stop.component';
 import { ReprendreComponent } from './minuteur/boutons/reprendre/reprendre.component';
 import { InterrompreComponent } from './minuteur/boutons/interrompre/interrompre.component';
-import { DemarrerComponent } from './minuteur/boutons/demarrer/demarrer.component';
+import { ButtonDirectiveDirective } from './my-directive/button-directive.directive';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { DemarrerComponent } from './minuteur/boutons/demarrer/demarrer.componen
     StopComponent,
     ReprendreComponent,
     InterrompreComponent,
-    DemarrerComponent
+    ButtonDirectiveDirective
   ],
   imports: [
     BrowserModule

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boutons',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoutonsComponent implements OnInit {
 
+  @Output() stop = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  isStopped(value:string) {
+    this.stop.emit(value);
   }
 
 }
