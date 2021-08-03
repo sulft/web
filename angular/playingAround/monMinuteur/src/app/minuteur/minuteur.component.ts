@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class MinuteurComponent implements OnInit {
 
   temps: number;
+  retake: boolean = false;
+  nouveauTemps:number;
   seconde: number;
   state: string;
   validate: boolean = false;
@@ -18,31 +20,48 @@ export class MinuteurComponent implements OnInit {
 
   ngOnInit(): void {
     this.temps = 0;
+    this.nouveauTemps = 0;
+    this.state = ""
   }
 
   validation(value:number):void {
     this.validate = !this.validate;
-    if(this.validate == true) {
-      this.temps = value;
+    this.state = "valider"
+    this.temps = value;
+    if(this.retake == false) {
+      this.retake = true;
       this.timer();
+    } else {
+      console.log('ok');
+      setTimeout(this.timer(), 1000);
     }
+
+
+
   }
 
   isStopped(value:string) {
-    console.log(value)
+    this.state = value;
+    this.temps = 0;
     // si je renvoie "stop" dans la variable value en paramètre, le compte a rebours dois s'arrêter
   }
 
-  timer() {
+  timer():TimerHandler {
     this.ref = setInterval(() => {
-      if(this.temps > 0) {
-        this.temps =  this.temps - 1 ;
+      if(this.temps >= 0 && this.state == "valider") {
+        this.temps = this.temps - 1 ;
       }
-      else {
-        clearInterval(this.ref);
-      }
-
-    }, 1000);
-
+    });
+    if(this.temps > 0 && this.state == "stop") {
+      clearInterval(this.ref);
+      this.ref = undefined;
+    }
+    else if(this.temps == 0 && this.state == "valider") {
+      this.state = "stop";
+      this.ref = undefined;
+    }
+    else {
+      return
+    }
   }
 }
