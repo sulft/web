@@ -1,0 +1,9 @@
+<div class="bg-light border border-dark my-3 p-3" >
+    <div *ngFor="let item of tableauArticle">  
+            <div>
+                <a href="#" (click)="choosed(item)" class="fw-bold"> {{item.nom}} ({{item.nombre}}) </a>
+                <a href="#" class="float-end">&#10060;</a>
+                <a href="#" class="float-end me-1">&#9998;</a>
+            </div>
+    </div>
+</div>

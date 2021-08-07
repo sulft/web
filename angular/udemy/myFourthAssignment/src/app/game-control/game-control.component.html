@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-success w-100" [disabled]="disabled"  (click)="startGame()">Start the Game</button>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-danger w-100" [disabled]="!disabled" (click)="endGame()">End the Game</button>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center mt-3">{{ time }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-odd [aNumber]="item" *ngFor="let item of tableOfOddNumber"></app-odd>
+        </div>
+        <div class="col">
+            <app-even [aNumber]="item" *ngFor="let item of tableOfEvenNumber"></app-even>
+        </div>
+    </div>
+</div>
