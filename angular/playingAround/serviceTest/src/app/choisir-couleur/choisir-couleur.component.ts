@@ -19,4 +19,8 @@ export class ChoisirCouleurComponent implements OnInit {
     this.choix.couleur.emit(couleurChoisie)
   }
 
+  check(value) {
+    return true;
+  }
+
 }
