@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
-    <head><title>PHP</title></head>
-    <body>
+    <head><title>Chapitre PHP udemy</title></head> 
+    <body> 
         <?php 
             echo "Hello World";
             //commentaire sur une ligne
