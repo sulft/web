@@ -70,3 +70,25 @@
     echo  "<br><br>";
 
 ?>
+
+<?php 
+    /* EXERCICE */
+    //créer un tableau comportant l'id, le nom, le prenom et l'age d'un individu.
+    //Afficher l'age de la personne dans 50 ans.
+    //Sous la forme, Bonjour PRENOM NOM ! Dans 50 ans, vous aurez X ans.
+
+    echo 'EXERCICE <br>';
+
+    $personneA = array(
+        'id'        => 1,
+        'prenom'    => 'Terry',
+        'nom'       => 'VILVER',
+        'age'       => 23
+    );
+
+    $ageDans50Ans = $personneA['age'] + 50;
+
+    echo 'Bonjour ' . $personneA['prenom'] . ' ' . $personneA['nom'] . ' ! Dans 50 ans, vous aurez ' . $ageDans50Ans . ' ans.';
+
+?>
+
