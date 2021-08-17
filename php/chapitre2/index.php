@@ -47,4 +47,26 @@
 
     echo "<br>" . "Divisons par 5 : " . $resultat;
 
+    echo  "<br><br>";
+
+?>
+
+<?php 
+    /* LES TABLEAUX */
+
+    echo 'Les TABLEAUX <br>';
+
+    // $personneA = array( 
+    //     'nom'       => 'MADRID',
+    //     'prenom'    => 'Steve',
+    //     'age'       => 4,
+    //     'id'        => 1
+    // );
+
+    $personneA = array('Madrid','Terry',15,1);
+
+    echo "Bonjour " . $personneA[0] . ' ' . $personneA[1] . ' !';
+
+    echo  "<br><br>";
+
 ?>
