@@ -1,7 +1,11 @@
 <?php 
     //Création de formulaire
     if(isset($_POST['prenom']) && isset($_POST['nom'])) {
-        echo 'Bonjour ' . $_POST['prenom'] . ' ' . $_POST['nom'] . '!';
+
+        $prenom = htmlspecialchars($_POST['prenom']); //capture les données entré par l'utilisateur comme du texte
+        $nom = htmlspecialchars($_POST['nom']); 
+
+        echo 'Bonjour ' . $prenom . ' ' . $nom . '!';
     }
 
     echo '<form method="post" action="index.php">
