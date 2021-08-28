@@ -17,12 +17,22 @@
         die('Erreur : '. $e ->getMessage());
     }
 
-    //Ajouter des informations
-    
+    //Ajouter un métier
+    /*
+        $requete = $bdd -> exec("INSERT INT0 metier VALUES (id_users, metier) VALUES (1, 'écrivain')
+                                INSERT INT0 metier VALUES (id_users, metier) VALUES (2, 'développeur')
+                                INSERT INT0 metier VALUES (id_users, metier) VALUES (3, 'caissier')
+                                
+                                ");
+
+    */
+
+    //Ajouter des informations sur l'utilisateur
+    /*
     $requete = $bdd -> exec('   INSERT INTO users ( prenom, nom, seriePreferee )
                                 VALUES ( "Aurelie", "France", "Koh Lanta" )
                             ');
-
+    */
     
 
     //supprimer des informations
@@ -33,17 +43,48 @@
 
     $requete -> closeCursor();
     */
+
+    //LES JOINTURES INTERNES
+    /* 2 types :
+    WHERE et JOIN
+    */
+
     //Lire les informations
-    $requete = $bdd -> query('  SELECT * 
-                                FROM users
+    /* méthode WHERE
+    $requete = $bdd -> query('  SELECT nom, prenom, seriePreferee, metier
+                                FROM users, metier
+                                WHERE metier.id = users.id
                             ');
+    */
+
+    /* méthode JOIN */
+
+    $requete = $bdd -> query("  SELECT nom, prenom, seriePreferee, metier
+                                FROM users u
+                                INNER JOIN metier m
+                                ON m.id = u.id 
+
+    ");
+
+    //LES JOINTURES EXTERNES
+    /* 2 types :
+    LEFT et RIGHT
+    $requete = $bdd -> query("  SELECT nom, prenom, seriePreferee, metier
+                                FROM users u
+                                RIGHT JOIN metier m
+                                ON m.id = u.id 
     
+    ");
+    */
+    
+
     echo '<table border=5 cellpadding="3">
     <thead>
         <tr>
             <th>Nom</th>
             <th>Prenom</th>
             <th>Série préféré</th>
+            <th>Métier</th>
         </tr>
     </thead>';
 
@@ -55,6 +96,7 @@
             <td>' . $donnees['nom'] .'</td>
             <td>' . $donnees['prenom'] . '</td>
             <td>' . $donnees['seriePreferee'] . '</td>
+            <td>' . $donnees['metier'] . '</td>
         </tr>
         ';
     }
