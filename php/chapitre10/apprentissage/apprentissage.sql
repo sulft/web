@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 26 août 2021 à 17:31
+-- Généré le : sam. 28 août 2021 à 20:50
 -- Version du serveur : 10.4.20-MariaDB
--- Version de PHP : 8.0.9
+-- Version de PHP : 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `apprentissage`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `metier`
+--
+
+CREATE TABLE `metier` (
+  `id` int(11) NOT NULL,
+  `id_users` int(10) DEFAULT NULL,
+  `metier` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `metier`
+--
+
+INSERT INTO `metier` (`id`, `id_users`, `metier`) VALUES
+(1, 1, 'ecrivain'),
+(2, 2, 'développeur'),
+(3, 3, 'caissier'),
+(4, NULL, 'Président');
 
 -- --------------------------------------------------------
 
@@ -41,13 +63,17 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `prenom`, `nom`, `seriePreferee`) VALUES
 (1, 'Terry', 'Vilver', 'Game Of Thrones'),
 (2, 'Tommy', 'Dupont', 'Gossip Girl'),
-(3, 'John', 'Kennedy', 'middle series'),
-(5, 'Harry', 'Kendall', 'Les grands justiciers'),
-(13, 'Aurelie', 'France', 'Koh Lanta');
+(3, 'John', 'Kennedy', 'middle series');
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `metier`
+--
+ALTER TABLE `metier`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `users`
@@ -60,10 +86,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `metier`
+--
+ALTER TABLE `metier`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
