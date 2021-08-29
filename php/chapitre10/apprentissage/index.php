@@ -58,14 +58,15 @@
     */
 
     /* méthode JOIN */
-
+    /*
     $requete = $bdd -> query("  SELECT nom, prenom, seriePreferee, metier
                                 FROM users u
                                 INNER JOIN metier m
                                 ON m.id = u.id 
+                                WHERE prenom = \"Terry\"
 
     ");
-
+    */
     //LES JOINTURES EXTERNES
     /* 2 types :
     LEFT et RIGHT
@@ -76,6 +77,20 @@
     
     ");
     */
+    
+
+    //Sécuriser une reqûete
+    $p = "Terry";
+    $n = "Vilver";
+    $requete = $bdd -> prepare("  SELECT nom, prenom, seriePreferee, metier
+                                FROM users u
+                                INNER JOIN metier m
+                                ON m.id = u.id 
+                                WHERE prenom =  ? && nom = ?
+
+    ");
+
+    $requete -> execute([$p,$n]);
     
 
     echo '<table border=5 cellpadding="3">
