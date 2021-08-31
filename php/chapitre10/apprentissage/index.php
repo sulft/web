@@ -15,82 +15,14 @@
         echo 'Le serveur a été correctement initialisé!<br><br>';
     }  catch(Exception $e) {
         die('Erreur : '. $e ->getMessage());
-    }
+    } 
 
-    //Ajouter un métier
-    /*
-        $requete = $bdd -> exec("INSERT INT0 metier VALUES (id_users, metier) VALUES (1, 'écrivain')
-                                INSERT INT0 metier VALUES (id_users, metier) VALUES (2, 'développeur')
-                                INSERT INT0 metier VALUES (id_users, metier) VALUES (3, 'caissier')
-                                
-                                ");
-
-    */
-
-    //Ajouter des informations sur l'utilisateur
-    /*
-    $requete = $bdd -> exec('   INSERT INTO users ( prenom, nom, seriePreferee )
-                                VALUES ( "Aurelie", "France", "Koh Lanta" )
-                            ');
-    */
-    
-
-    //supprimer des informations
-    /* 
-    $requete = $bdd -> exec('  INSERT INTO users ( prenom, nom, seriePreferee )
-                                VALUES ( "Marc", "Pomme", "Koh Lanta" )
-                            ');
-
-    $requete -> closeCursor();
-    */
-
-    //LES JOINTURES INTERNES
-    /* 2 types :
-    WHERE et JOIN
-    */
-
-    //Lire les informations
-    /* méthode WHERE
-    $requete = $bdd -> query('  SELECT nom, prenom, seriePreferee, metier
-                                FROM users, metier
-                                WHERE metier.id = users.id
-                            ');
-    */
-
-    /* méthode JOIN */
-    /*
-    $requete = $bdd -> query("  SELECT nom, prenom, seriePreferee, metier
-                                FROM users u
-                                INNER JOIN metier m
-                                ON m.id = u.id 
-                                WHERE prenom = \"Terry\"
-
-    ");
-    */
-    //LES JOINTURES EXTERNES
-    /* 2 types :
-    LEFT et RIGHT
-    $requete = $bdd -> query("  SELECT nom, prenom, seriePreferee, metier
-                                FROM users u
-                                RIGHT JOIN metier m
-                                ON m.id = u.id 
-    
-    ");
-    */
-    
-
-    //Sécuriser une reqûete
-    $p = "Terry";
-    $n = "Vilver";
-    $requete = $bdd -> prepare("  SELECT nom, prenom, seriePreferee, metier
-                                FROM users u
-                                INNER JOIN metier m
-                                ON m.id = u.id 
-                                WHERE prenom =  ? && nom = ?
-
+    //Affiche les informations
+    $requete = $bdd -> prepare("SELECT nom, prenom, seriePreferee
+                                FROM users
     ");
 
-    $requete -> execute([$p,$n]);
+    $requete -> execute([]);
     
 
     echo '<table border=5 cellpadding="3">
@@ -99,7 +31,7 @@
             <th>Nom</th>
             <th>Prenom</th>
             <th>Série préféré</th>
-            <th>Métier</th>
+
         </tr>
     </thead>';
 
@@ -111,16 +43,28 @@
             <td>' . $donnees['nom'] .'</td>
             <td>' . $donnees['prenom'] . '</td>
             <td>' . $donnees['seriePreferee'] . '</td>
-            <td>' . $donnees['metier'] . '</td>
         </tr>
-        ';
+        '; //méthode de cryptage sha1 avec grain de sable
     }
 
     $requete -> closeCursor();
     echo '</tbody>';
 
     echo '</table>';
+    
+    //Ajoute un nouvel utilisateur
+    if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['serie'])) {
+        $p = $_POST['prenom'];
+        $n = $_POST['nom'];
+        $s = $_POST['serie'];
 
+        $requete = $bdd -> prepare('    INSERT INTO users (prenom, nom, seriePreferee)
+                                        VALUES (?,?,?)
+        ');
+
+        $requete -> execute([$p,$n,$s]);
+        $requete -> closeCursor();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -132,6 +76,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Ajouter un utilisateur</h1>
+    <form action="index.php" method="POST">
+        <table>
+            <tr>
+                <td><label for="prenom">Prénom</label></td>
+                <td><input type="text" name='prenom' id="prenom"></td>
+            </tr>
+            <tr>
+                <td><label for="nom">Nom</label></td>
+                <td><input type="text" name='nom' id="nom"></td>
+            </tr>
+            <tr>
+                <td><label for="serie">Série préférée</label></td>
+                <td><input type="text" name='serie' id="serie"></td>
+            </tr>
+        </table>
+        <button type="submit">Ajouter</button>
+    </form>
 </body>
 </html>
