@@ -17,13 +17,23 @@
         die('Erreur : '. $e ->getMessage());
     } 
 
+    //Ajoute un nouvel utilisateur
+    if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['serie'])) {
+        $p = $_POST['prenom'];
+        $n = $_POST['nom'];
+        $s = $_POST['serie'];
+
+        $requete = $bdd -> prepare('    INSERT INTO users (prenom, nom, seriePreferee)
+                                        VALUES (?,?,?)
+        ');
+
+        $requete -> execute([$p,$n,$s]);
+    }
+
     //Affiche les informations
-    $requete = $bdd -> prepare("SELECT nom, prenom, seriePreferee
+    $requete = $bdd -> query("SELECT nom, prenom, seriePreferee
                                 FROM users
     ");
-
-    $requete -> execute([]);
-    
 
     echo '<table border=5 cellpadding="3">
     <thead>
@@ -52,19 +62,7 @@
 
     echo '</table>';
     
-    //Ajoute un nouvel utilisateur
-    if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['serie'])) {
-        $p = $_POST['prenom'];
-        $n = $_POST['nom'];
-        $s = $_POST['serie'];
 
-        $requete = $bdd -> prepare('    INSERT INTO users (prenom, nom, seriePreferee)
-                                        VALUES (?,?,?)
-        ');
-
-        $requete -> execute([$p,$n,$s]);
-        $requete -> closeCursor();
-    }
 ?>
 
 <!DOCTYPE html>
