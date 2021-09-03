@@ -18,7 +18,7 @@
     } 
 
     //Ajoute un nouvel utilisateur
-    if(isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['serie'])) {
+    if(!empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['serie'])) {
         $p = $_POST['prenom'];
         $n = $_POST['nom'];
         $s = $_POST['serie'];
