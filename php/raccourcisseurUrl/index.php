@@ -29,8 +29,26 @@
                     </form>
                 </div>
             </div>
-            
+        </section>
 
+        <section id="brands">
+            <div class="container">
+                <h3>Ces marques nous font confiance</h3>
+                <img src="./pictures/1.png" alt=""  class='picture'>
+                <img src="./pictures/2.png" alt=""  class='picture'>
+                <img src="./pictures/3.png" alt=""  class='picture'>
+                <img src="./pictures/4.png" alt=""  class='picture'>
+            </div>
+        </section>
+
+        <section id='footer'>
+            <div class="container">
+                <div class="center">
+                    <img src="./pictures/logo2.png" alt="logo" id="logo">
+                </div>
+                <p>2018 bitly</p>
+                <p><span class="orange"> Contact </span> . <span class="orange"> A Propos </span></p>
+            </div>
         </section>
     </body>
 

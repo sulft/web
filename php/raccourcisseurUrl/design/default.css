@@ -26,6 +26,13 @@ h2 {
     font-weight: 200;
 }
 
+h3 {
+    margin: 0;
+    color: tomato;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
 input, button {
     border-radius: 3px;
     box-shadow: 5px 5px 5px 0 rgb(0, 0, 0, 0.4);
@@ -46,6 +53,11 @@ button {
     background-color: tomato;
 }
 
+p {
+    text-align: center;
+    font-weight: 600;
+}
+
 #logo {
     height: 50px;
 }
@@ -61,16 +73,42 @@ button {
     text-align: center;
 }
 
-.brand {
-    position: absolute;
-    background-color: red;
-    left: 0px;
+
+#brands {
+    text-align: center;
+    background-color: #eff7fc;
+    padding: 30px;
 }
+
+#footer {
+    background-color: #ffffff;
+}
+
+
+#footer #logo {
+    padding:10px;
+    height:50px;
+}
+
 
 .container { 
     width: 1100px;
     margin: 0 auto;
 }
+
+.picture {
+    height: 35px;
+    margin: 15px;
+}
+
+.orange {
+    color: tomato;
+}
+
+.center {
+    text-align: center;
+}
+
 
 
 
