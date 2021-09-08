@@ -2,6 +2,7 @@
     if(!empty($_POST['pseudo']))     {
         $pseudo = $_POST['pseudo'];
         setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
+         //ici le derniers champ active le http only protege contre les attaques
     }
 ?>
 
