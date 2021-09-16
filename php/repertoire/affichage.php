@@ -1,19 +1,6 @@
 <?php 
-    if(!empty($_POST['prenom']) ) {
-        $prenom = $_POST['prenom'];
-        if(!preg_match("/^[0-9a-zA-Z ]*$/",$prenom)) {
-            header('location: ./?error=true&message=Vous n\'avez pas rempli correctement ce champ');
-            exit();
-        }
-    }
-
-    if(!empty($_POST['nom']) ) {
-        $nom = $_POST['nom'];
-        if(!preg_match("/^[0-9a-zA-Z ]*$/",$nom)) {
-            header('location: ./?error=true&message=Vous n\'avez pas rempli correctement ce champ');
-            exit();
-        }
-    }
+    //fonctions permettant de checker les prenoms et les noms entrés
+    require_once 'check.php';
 
     if(!empty($_POST['email']) && empty($_POST['tel'])) {
         $email = $_POST['email'];
@@ -21,8 +8,15 @@
             header('location: ./?error=true&message=Vous n\'avez pas rempli correctement ce champ');
             exit();
         } else {
-            $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,email) VALUES (?,?,?)");
-            $que -> execute([$prenom,$nom,$email]);
+            if(!empty($_POST['prenom']) && !empty($_POST['nom'])) {
+                checkPrenom();
+                checkNom();
+                $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel) VALUES (?,?,?)");
+                $que -> execute([$prenom,$nom,$tel]);
+            } else {
+                header('location: ./?error=true&message=Vous n\'avez pas rempli tout les champs obligatoire');
+                exit();
+            }
         }
     }
 
@@ -32,8 +26,15 @@
             header('location: ./?error=true&message=Vous n\'avez pas rempli correctement ce champ');
             exit();       
         } else{
-            $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel) VALUES (?,?,?)");
-            $que -> execute([$prenom,$nom,$tel]);
+            if(!empty($_POST['prenom']) && !empty($_POST['nom'])) {
+                checkPrenom();
+                checkNom();
+                $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel) VALUES (?,?,?)");
+                $que -> execute([$prenom,$nom,$tel]);
+            } else {
+                header('location: ./?error=true&message=Vous n\'avez pas rempli tout les champs obligatoire');
+                exit();
+            }
         }
     }
 
@@ -48,7 +49,17 @@
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {  
             header('location: ./?error=true&message=Vous n\'avez pas rempli correctement ce champ');
             exit();
-        } 
+        }
+
+        if(!empty($_POST['prenom']) && !empty($_POST['nom'])) {
+            checkPrenom();
+            checkNom();
+            $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel,email) VALUES (?,?,?)");
+            $que -> execute([$prenom,$nom,$tel,$email]);
+        } else {
+            header('location: ./?error=true&message=Vous n\'avez pas rempli tout les champs obligatoire');
+            exit();
+        }
             
         $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel,email) VALUES (?,?,?,?)");
         $que -> execute([$prenom,$nom,$tel,$email]);
