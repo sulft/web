@@ -3,35 +3,15 @@
     $prenom = $email = $tel = $nom = "";
 
     //Connexion à la base de donnée
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=repertoire;charset=UTF8','root','');
-    } catch (Exception $e) {
-        echo "Connection failed: " . $e->getMessage();
-    }
+    require_once 'connect.php';
 
-    //check si tous les champs ont bien été complété
-    if(!empty($_POST['prenom']) && !empty($_POST['nom']) && (!empty($_POST['phone']) || !empty($_POST['mail'])) ) {
-        echo "Parfait";
-        $prenom = $_POST['prenom'];
-        if(preg_match("/^[0-9a-zA-Z ]*$/",$prenom)) {
-            echo "Parfait";
-            $nom = $_POST['nom'];
-            if(preg_match("/^[0-9a-zA-Z ]*$/",$nom)) {
-                echo "Parfait";
-                $email = $_POST['mail'];
-                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {  
-                    $tel = $_POST['tel'];
-                    echo "Parfait";
-                    if(preg_match ("/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/", $tel) ) {  
-                        $que = $bdd -> prepare("INSERT INTO contact (prenom,nom,tel,email) VALUES (?,?,?,?)");
-                        $que -> execute([$prenom,$nom,$tel,$email]);
-                    }  
-                }  
-            }
-        }
-    }
+    include "affichage.php";
 
+    //gestion de la pagination
+    include "pagination.php";
 
+    //Query qui supprime les éléments du tableaux
+    include "delete.php";
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +30,7 @@
         <h1 class="text-center">Bienvenu dans votre répertoire de contact</h1>
     </header>
 
-    <section class='container'>
+    <section class='container pb-3'>
         <div class="d-flex flew-row justify-content-center">
             <form method="POST" action="index.php" class='d-flex flex-column text-center'>
                     <div class="pt-2">
@@ -68,7 +48,7 @@
                     <div class="pt-2">
                         <label for="mail">Email</label>
                         <br>
-                        <input type="email" name="mail" id="mail">
+                        <input type="email" name="email" id="email">
                     </div>
 
                     <div class="pt-2">
@@ -84,27 +64,63 @@
         </div>
     </section>
 
-    <table>
-    <caption style="caption-side:top">Répertoire</caption>
-    <thead>
-        <tr>
-            <th colspan="">Prénom</th>
-            <th colspan="">Nom</th>
-            <th colspan="">Numéro de téléphone</th>
-            <th colspan="">Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <?php while($row = $que->fetch()) { ?>
-            <td><?php echo htmlspecialchars($row['prenom']); ?></td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-        </tr>
-        <?php } ?>
-    </tbody>
-    </table>
 
+    <section class='container'>
+        <div class="table-responsive">
+            <table border="3" style="width:60%" class="table table-striped table-hover table-bordered table-sm m-auto text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="">Prénom</th>
+                        <th colspan="">Nom</th>
+                        <th colspan="">Numéro de téléphone</th>
+                        <th colspan="">Email</th>
+                        <th colspan="">Supprimer ?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($contacts as $row) { ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($row['prenom']); ?></td>
+                        <td><?php echo htmlspecialchars($row['nom']); ?></td>
+                        <td><?php echo htmlspecialchars($row['tel']); ?></td>
+                        <td><?php echo htmlspecialchars($row['email']); ?></td>
+                        <td><a class="text-decoration-none" href="index.php?id=<?php echo $row['id'] . "&page=".$pageActuel; ?>">&#9986</a></td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class='container'>
+        <nav class="d-flex justify-content-center pt-1">
+            <ul class="pagination">
+                <!-- Lien vers la page précédente (désactivé si on se trouve sur la 1ère page) -->
+                <li class="page-item <?= ($pageActuel == 1) ? "disabled" : "" ?>">
+                    <a href="./?page=<?= $pageActuel - 1 ?>" class="page-link text-dark">Précédente</a>
+                </li>
+                <?php 
+                $links = "";
+                    if ($pages >= 1 && $pageActuel <= $pages) {
+                        $links .= "<a class=\"page-link text-dark\" href=\"./?page=1\">1</a>";
+                        $i = max(2, $pageActuel - 3);
+                        if ($i > 2)
+                            $links .= " ... ";
+                        for (; $i < min( $pageActuel + 5, $pages); $i++) {
+                            $links .= "<a class=\"page-link text-dark\" href=\"./?page={$i}\">{$i}</a>";
+                        }
+                        if ($i != $pages)
+                            $links .= " ... ";
+                        $links .= "<a class=\"page-link text-dark\" href=\"./?page={$pages}\">{$pages}</a>";
+                    echo $links;
+                    }
+                ?>
+                <!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
+                <li class="page-item <?= ($pageActuel == $pages) ? "disabled" : "" ?>">
+                <a href="./?page=<?= $pageActuel + 1 ?>" class="page-link text-dark">Suivante</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
 </body>
 </html>
