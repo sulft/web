@@ -19,10 +19,14 @@ class Tableau {
         String[][] couple = {{"John","Denis","Jean"},{"Anne","Marie","Jane"}};
         System.out.println(couple[0][1] + " est avec " + couple[1][2] + "\n");
 
+        /* Copie des éléments du tableau */
         String[] prenomsCopie = new String[4];
-        System.arraycopy(prenoms,0,prenomsCopie,0,4);
+        System.arraycopy(prenoms,1,prenomsCopie,0,3);
 
-        for(String prenom : prenomsCopie) {
+        String[] prenomsCopie2 = java.util.Arrays.copyOfRange(prenoms, 0, 4);
+
+
+        for(String prenom : prenomsCopie2) {
             System.out.println("prenom : " + prenom);
         }
 
