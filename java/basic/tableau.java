@@ -25,7 +25,10 @@ class Tableau {
         //copier des éléments d'un tableau à un autre tableau
         System.arraycopy(prenoms,0,prenomsCopie,0,4);
 
-        for(String prenom : prenomsCopie) {
+        String[] prenomsCopie2 = java.util.Arrays.copyOfRange(prenoms, 0, 4);
+
+
+        for(String prenom : prenomsCopie2) {
             System.out.println("prenom : " + prenom);
         }
 
