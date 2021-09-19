@@ -1,6 +1,6 @@
 class SwitchStatement {
     public static void main(String[] args) {
-        int month = 10;
+        int month = 13;
         String monthString;
 
         switch(month) {

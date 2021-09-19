@@ -32,9 +32,5 @@ class Tableau {
             System.out.println("prenom : " + prenom);
         }
 
-        System.out.println("Autre méthode de copie " + java.util.Arrays.copyOfRange(prenoms,0,3));
-
-
-
     }
 }
