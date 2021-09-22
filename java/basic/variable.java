@@ -1,5 +1,6 @@
 class Variable {
     public static void main(String[] args) {
+        // fghijhgjslghqljsghdlqsghlrfghjkeghjdlkfg
         int a = 1;
         double b = 1.1d;
         float c = 1.1f;
