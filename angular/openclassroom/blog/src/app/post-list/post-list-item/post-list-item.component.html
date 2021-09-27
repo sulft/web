@@ -1,0 +1,10 @@
+<div class="border p-3"  [ngClass]="{'list-group-item':true,
+                                    'list-group-item-success':post.loveIts>0,
+                                    'list-group-item-danger':post.loveIts<0}">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.create_at | date:'short' | uppercase }}</p>
+    <p>{{ post.content }}</p>
+    <p>Nombre de like : {{ post.loveIts }}</p>
+    <button class="btn btn-success me-2" (click)="like()">Love it!</button>
+    <button class="btn btn-danger" (click)="dislike()">Don't love it!</button>
+</div>
