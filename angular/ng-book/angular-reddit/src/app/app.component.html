@@ -1,0 +1,17 @@
+<section class="container">
+  <form class="border p-3 my-3">
+    <h3>Ajouter un lien</h3>
+    <div class="row mb-3">
+      <div class="col-12">
+        <label for="title">Titre: </label>
+        <input type="text" name="titre" id="titre" class="form-text w-100" #newTitre>
+      </div>
+      <div class="col-12 mt-3">
+        <label for="title">Lien: </label>
+        <input type="text" name="lien" id="lien" class="form-text w-100" #newLien>
+      </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)="AjoutArticle(newTitre,newLien)">Ajout d'un lien</button>
+  </form>
+</section>  
+  
