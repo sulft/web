@@ -13,5 +13,8 @@
     </div>
     <button type="button" class="btn btn-success" (click)="AjoutArticle(newTitre,newLien)">Ajout d'un lien</button>
   </form>
+
+  <app-article *ngFor="let foo of articles" [article]="foo"></app-article>
+  
 </section>  
   
