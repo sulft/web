@@ -1,0 +1,28 @@
+<div class="d-flex flex-row justify-content-center ">
+    <form class="bg-light p-5">
+        <div class="mb-1">
+            <label for="titre">Titre: </label>
+            <input type="text" id="titre" #titre>
+        </div>
+
+        <br>
+
+        <div class="mb-2">
+            <label for="description">Description: </label>
+            <br>
+            <textarea id="description" style="height: 100px" cols="33" #description></textarea>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-secondary"  (click)="ajouterUnToDo(titre,description);">
+                Ajouter une note
+            </button>
+        </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="my-3">
+        <app-list *ngFor="let list of sortedTodo(); let i=index" [list]="list"></app-list>
+    </div>
+</div>

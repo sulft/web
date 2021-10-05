@@ -11,10 +11,14 @@ export class AppComponent {
 
   constructor() {
     this.articles = [
-      new Article('Angular', 'http://angular.io', 3),
+      new Article('Angular', 'http://angular.io', 1),
       new Article('Fullstack', 'http://fullstack.io', 2),
-      new Article('Angular Homepage', 'http://angular.io', 1)
-    ]
+      new Article('Angular Homepage', 'http://angular.io', 3)
+    ];
+  }
+
+  sortedArticles(): Article[] {
+    return this.articles.sort((a:Article, b:Article) => b.votes - a.votes);
   }
 
   AjoutArticle(titre:HTMLInputElement,lien:HTMLInputElement) {

@@ -1,5 +1,5 @@
 <section class="container">
-  <form class="border p-3 my-3">
+  <form class="border border-dark p-3 my-3">
     <h3>Ajouter un lien</h3>
     <div class="row mb-3">
       <div class="col-12">
@@ -14,7 +14,7 @@
     <button type="button" class="btn btn-success" (click)="AjoutArticle(newTitre,newLien)">Ajout d'un lien</button>
   </form>
 
-  <app-article *ngFor="let foo of articles" [article]="foo"></app-article>
+  <app-article *ngFor="let foo of sortedArticles()" [article]="foo"></app-article>
   
 </section>  
   
