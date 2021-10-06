@@ -9,10 +9,10 @@ export class ToDos {
         titre:string,
         date:Date,
         description?:string) 
-        {
-            this.id = id;
-            this.titre = titre;
-            this.description = description || "";
-            this.date = date;
+    {
+        this.id = id;
+        this.titre = titre;
+        this.description = description || "";
+        this.date = date;
     }
 }
