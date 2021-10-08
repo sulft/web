@@ -1,0 +1,10 @@
+<h2>Demo form: sku</h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" [ngClass]="{'error':!myForm.valid && myForm.touched}">
+  <div class="mb-3">
+    <label for="skuInput" class="form-label">Sku</label>
+    <input type="text" class="form-control" id="skuInput" name="sku" placeholder="sku" [formControl]="myForm.controls['sku']">
+    <div *ngIf="!myForm.controls['sku'].valid && myForm.controls['sku'].touched" class="text-danger">Sku invalid!</div>
+    <div *ngIf="myForm.controls['sku'].hasError('champInvalide') && myForm.controls['sku'].touched">sku doit comment par 123</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
