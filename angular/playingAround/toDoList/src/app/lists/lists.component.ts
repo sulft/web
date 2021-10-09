@@ -23,7 +23,7 @@ export class ListsComponent implements OnInit {
     this.myForm = this.fb.group({
       'titre':['', Validators.compose([Validators.minLength(3), Validators.required])],
       'description':['']
-    })
+    });
   }
 
   sortedTodo() {

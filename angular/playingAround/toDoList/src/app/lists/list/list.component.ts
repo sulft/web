@@ -36,7 +36,6 @@ export class ListComponent implements OnInit {
     } else {
       this.list.description = todo.description;
       this.list.titre = todo.titre;
-      this.list.date = new Date();
       this.editing = false;
       this.onEdit.emit(this.list);
     }  
