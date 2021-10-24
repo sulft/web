@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="1">
+        <tr>
+            <th>Prénom</th>
+            <th>ages</th>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        let body = document.querySelector("body");
+
+        // Création du bouton
+        let but = document.createElement('button');
+        let tbody = document.querySelector("tbody");
+        but.textContent = "cliquez ici!";
+        body.appendChild(but);
+
+        
+
+        but.onclick = () => {
+            fetch('file.json')
+            .then((response) => {;return response.json()})
+            .then((data) => {
+                // création td pour le table
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+
+                tbody.appendChild(td1);
+                tbody.appendChild(td2);
+
+                data.names.forEach(element => {
+                    let name = document.createElement("tr");
+                    name.textContent = element;
+                    td1.appendChild(name);
+                });
+                data.age.forEach(element => {
+                    let age = document.createElement("tr");
+                    age.textContent = element;
+                    td2.appendChild(age);
+                });
+
+                but.disabled = true;
+            })
+            .catch((error) => console.log(error.message)); 
+        }
+    </script>
+</body>
+</html>
