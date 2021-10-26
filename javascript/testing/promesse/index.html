@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+
+    <script>
+        let promise = fetch("coffee.jpg"); //en attente
+
+        let promise2 = promise.then(response => {
+            if(!response.ok) {
+                throw new Error(`erreur HTTP ! statut : ${response.status}`);
+            } else {
+                return response.blob();
+            }
+        });
+
+        let promise3 = promise2.then(myBlob =>{
+            let objectURL = URL.createObjectURL(myBlob);
+            let image = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChild(image);
+        })
+
+        let errorCase = promise3.catch(e=>{
+            console.log('il y a eu un problème avec votre opération de récupération ' + e.message);
+        })
+    </script>
+  </body>
+</html>
