@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Person greeter app</title>
+  </head>
+  <body>
+    <button>
+      clique
+    </button>
+
+    <p id="demo"></p>
+    <script>
+
+      let but = document.querySelector("button");
+      let name = "Pierre";
+      let bool = true;
+      let createClock
+      let i = 0
+
+      but.onclick = function() {    
+        console.log(bool)
+        if(bool) {
+          createClock = setInterval(displayTime, 1000,i);
+          bool = false;
+        } else {
+          clearInterval(createClock);
+          document.getElementById('demo').textContent = 0;
+          i=0;
+          bool = true;
+        }
+      };
+      
+      function displayTime() {
+        document.getElementById('demo').textContent = i;
+        i++;
+      }
+
+      
+    </script>
+  </body>
+</html>

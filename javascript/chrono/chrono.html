@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple setInterval clock</title>
+    <style>
+    p {
+        font-family: sans-serif;
+    }
+
+    .center-div {
+        margin: 0 auto;
+        width: 100px; 
+    }
+
+    .width100 {
+        width:100%;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    </style>
+  </head>
+  <body>
+      <div class="box">
+        <button id="start">start</button>
+        <button id="reset">reset</button>
+        <button id="stop">stop</button>
+      </div>
+      
+    <p class="box clock"></p>
+    <script>
+        let start = document.querySelector("#start");
+        let stopIt = document.querySelector("#stop");
+        let reset = document.querySelector("#reset");
+        let stopTime;
+        let seconde = 0;
+
+      function displayTime() {
+        // secondes imputés
+        let heures = Math.floor(seconde/3600);
+        let minutes = Math.floor(seconde/60);
+        let secondes = Math.floor(seconde%60);
+
+        // calcul
+        let displayHeure = (heures <= 9) ? '0' + heures : heures;
+        let displayMinute = (minutes <= 9) ? '0' + minutes : minutes;
+        let displaySeconde = (secondes <= 9) ? '0' + secondes : secondes;  
+
+        document.querySelector('.clock').textContent = `${displayHeure}:${displayMinute}:${displaySeconde}`;
+
+        //compteur
+        seconde++
+      }
+
+      reset.onclick = () => {
+        clearInterval(stopTime);
+        seconde = 0;
+        displayTime();
+        start.disabled = false;
+      }
+
+      start.onclick = () => {
+        stopTime = setInterval(displayTime, 1000);
+        start.disabled = true;
+      }
+
+      stopIt.onclick = () => {
+        clearInterval(stopTime);
+        start.disabled = false;
+      }
+
+      displayTime();
+    </script>
+  </body>
+</html>
