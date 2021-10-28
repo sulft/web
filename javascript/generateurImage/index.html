@@ -19,11 +19,6 @@
         border-radius: 10px;
         border: 4px double #cccccc;
         color: #eeeeee;
-        text-align: center;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
         cursor: pointer;
     }
 
@@ -57,24 +52,33 @@
        but.addEventListener('click', () => {
         loadImage();
        });
+       but.addEventListener('dblclick', () => {
+
+       });
 
 
        let loadImage = () => {
+            let image = document.querySelector("#image");
+            image.setAttribute("src","loading.jpg");
+            image.setAttribute('class','');
+            image.setAttribute('width',600);
+            image.setAttribute('height',400);
+            bloc.appendChild(image);
            fetch('https://picsum.photos/300/300')
            .then( (response) => 
                 { 
-                    if(!response.ok) {
-                        throw new Error("Erreur HTTP : " + response.status)
-                    }
+                    if(!response.ok) 
+                        throw new Error("Erreur HTTP : " + response.status);
+                        
                     return response.url
                 } 
             )
            .then( (response) => 
                 {
-                    let image = document.querySelector("#image");
-                    image.setAttribute("src",response);
-                    image.setAttribute('class','styleImage')
-                    bloc.appendChild(image);
+                    let image2 = document.querySelector("#image");
+                    image2.setAttribute("src",response);
+                    image2.setAttribute('class','styleImage')
+                    bloc.appendChild(image2);
                 }
            )
            .catch(e => {
