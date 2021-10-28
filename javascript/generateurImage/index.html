@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur d'image</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    #createImage {
+        display: block;
+        margin: 0 auto;
+        background-color: black;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    #image {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .styleImage {
+        border: 4px double #000;
+    }
+
+</style>
+
+<body>
+    <article>
+        
+    </article>
+    <h1>
+        mon super générateur d'image aléatoire
+    </h1>
+
+    <div class="bloc">
+        <button id="createImage">Charger un image</button>
+        <img src="#" alt="" id="image">
+    </div>
+    
+   <script>
+       let but = document.querySelector("#createImage");
+       let bloc = document.querySelector(".bloc");
+       but.addEventListener('click', () => {
+        loadImage();
+       });
+
+
+       let loadImage = () => {
+           fetch('https://picsum.photos/300/300')
+           .then( (response) => 
+                { 
+                    if(!response.ok) {
+                        throw new Error("Erreur HTTP : " + response.status)
+                    }
+                    return response.url
+                } 
+            )
+           .then( (response) => 
+                {
+                    let image = document.querySelector("#image");
+                    image.setAttribute("src",response);
+                    image.setAttribute('class','styleImage')
+                    bloc.appendChild(image);
+                }
+           )
+           .catch(e => {
+                console.log("une erreu est survenu : " + e.message)
+           });
+       }
+
+   </script> 
+</body>
+</html>
