@@ -59,12 +59,11 @@
 
        let loadImage = () => {
             let image = document.querySelector("#image");
-            image.setAttribute("src","loading.jpg");
+            image.setAttribute("src","loading1.png");
             image.setAttribute('class','');
-            image.setAttribute('width',600);
-            image.setAttribute('height',400);
+
             bloc.appendChild(image);
-           fetch('https://picsum.photos/300/300')
+           fetch('https://picsum.photos/200/200')
            .then( (response) => 
                 { 
                     if(!response.ok) 
