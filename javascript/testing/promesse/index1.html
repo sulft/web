@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+class Personne {
+  constructor(prenom, nomFamille, age, genre, interets) {
+    this.nom = {
+      prenom,
+      nomFamille
+    };
+    this.age = age;
+    this.genre = genre;
+    this.interets = interets;
+  }
+
+  async salutation() {
+    return await Promise.resolve(`Bonjour ! Je suis ${this.nom.prenom}`);
+  };
+
+  aurevoir() {
+    console.log(`${this.nom.prenom} a quitté le bâtiment. À une prochaine fois !`);
+  };
+}
+
+let han = new Personne('Han', 'Solo', 25, 'homme', ['Contrebande']);
+    </script>
+</body>
+</html>
