@@ -6,17 +6,55 @@
     <title>Shopping list example</title>
     <style>
         h1, .app, ul {
-            text-align: center;
+          text-align: center;
+        }
+
+        .list {
+          width: 40%;
+          margin:0 auto;        
+        }
+
+        .styleList {
+          padding: 3px 0;
+          border-width: 1px;
+          border-style: outset;
+          border-color: #0688fa;
+          border-radius: 0px 40px 40px 40px;
         }
 
         ul {
-            list-style-position: inside;
+          padding: 3px 0;
+          list-style-position: inside;
         }
 
         li button {
-            font-size: 8px;
-            margin-left: 20px;
-            color: #666;
+          font-size: 8px;
+          margin-left: 20px;
+        }
+
+        button {
+          box-shadow:inset 0px -3px 7px 0px #29bbff;
+          background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+          background-color:#2dabf9;
+          border-radius:3px;
+          border:1px solid #0b0e07;
+          display:inline-block;
+          cursor:pointer;
+          color:#ffffff;
+          font-family:Arial;
+          font-size:15px;
+          padding:2px 23px;
+          text-decoration:none;
+          text-shadow:0px 1px 0px #263666;
+        }
+
+        button:hover {
+          background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+          background-color:#0688fa;
+        }
+        button:active {
+          position:relative;
+          top:1px;
         }
     </style>
   </head>
@@ -24,46 +62,65 @@
 
     <h1>Ma liste de course</h1>
 
-    <div class="app">
-      <label for="item">Entrer le nom d'un objet:</label>
-      <input type="text" name="item" id="item">
-      <button>Ajouter un objet</button>
+      <section>
+        <div class="app">
+          <label for="item">Entrer le nom d'un objet:</label>
+          <input type="text" name="item" id="item">
+          <button>Ajouter un objet</button>
+        </div>
+      </section>
+        
+
+    <div class='list'>
+      <ul>
+
+      </ul>
     </div>
-
-    <ul>
-
-    </ul>
-
     <script>
         let box = document.querySelector("ul");
         let inp = document.querySelector("input");
         let addBut = document.querySelector("button");
 
         addBut.addEventListener('click', function() {
-            let value = inp.value;
-            console.log(value);
+          let value
+
+          if(inp.value === "") {
+            return;
+          } else {
+            value = inp.value;
             inp.value = '';
+          }
 
-            let listElement = document.createElement("li");
-            let spanElement = document.createElement("span");
-            let deleteButton = document.createElement("button");
-            deleteButton.setAttribute("class","delete");
+          let listElement = document.createElement("li");
+          let spanElement = document.createElement("span");
+          let deleteButton = document.createElement("button");
+          deleteButton.setAttribute("class","delete");
 
-            listElement.appendChild(spanElement);
-            listElement.appendChild(deleteButton);
-            spanElement.textContent = value;
-            deleteButton.textContent = "Supprimer";
+          listElement.appendChild(spanElement);
+          listElement.appendChild(deleteButton);
+          spanElement.textContent = value;
+          deleteButton.textContent = "Supprimer";
 
-            box.appendChild(listElement);
-            
-            deleteButton.addEventListener('click',function(){
-                box.removeChild(listElement)
-            });
+          box.appendChild(listElement);
+          
+          deleteButton.addEventListener('click',function(){
+              box.removeChild(listElement);
+              empty();
+          });
 
-            inp.focus();
-        });
+          empty();
 
+          inp.focus();
+      });
 
+      function empty() {
+        if(box.children.length > 0) {
+          box.setAttribute('class','styleList');
+        } else {
+          box.className = "";
+        }
+      }
+      
 
     </script>
   </body>
