@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
 
+  idServer:number = 1;
+  statutServer:string = "actif"
+
   constructor() { }
 
   ngOnInit(): void {
