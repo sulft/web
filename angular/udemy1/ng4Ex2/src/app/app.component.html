@@ -1,0 +1,4 @@
+<label>Identifiant : </label>
+<input type="text" [(ngModel)]="identifiant">
+<p>{{ identifiant }}</p>
+<button [disabled]="!(identifiant != '')" (click)="onReset()">Réinitialiser</button>

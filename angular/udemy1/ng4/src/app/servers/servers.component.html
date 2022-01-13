@@ -1,7 +1,7 @@
 <label>Nom du serveur:</label>
 <!-- <input type="text" class="form-control" (input)="onAddServeurName($event)"> -->
 <input type="text" [(ngModel)]="nomServeur">
-<p>{{ nomServeur }}</p>
+<!-- <p>{{ nomServeur }}</p> -->
 <button class="btn btn-primary mb-3" [disabled]="!activerAjoutServeur" (click)="onCreateServer()">Ajouter un serveur</button>
 <!-- <p [innerText]="activerAjoutServeur"></p> -->
 <p>{{ statutCreationServeur }}</p>
