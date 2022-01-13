@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  activerAjoutServeur:boolean = true;
+
+  constructor() { 
+    setTimeout(() => { this.activerAjoutServeur = !this.activerAjoutServeur }, 2000);
+  }
 
   ngOnInit(): void {
   }
