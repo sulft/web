@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  activerAjoutServeur:boolean = true;
+  activerAjoutServeur:boolean = false;
+  statutCreationServeur:string = "Aucun serveur n'a été crée.";
+  nomServeur:string = "tt";
 
   constructor() { 
     setTimeout(() => { this.activerAjoutServeur = !this.activerAjoutServeur }, 2000);
@@ -14,5 +16,13 @@ export class ServersComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onCreateServer() {
+    this.statutCreationServeur = "Le serveur a été crée ! "
+  }
+
+  // onAddServeurName(event:Event) {
+  //   this.nomServeur = (<HTMLInputElement>event.target).value;
+  // }
 
 }
