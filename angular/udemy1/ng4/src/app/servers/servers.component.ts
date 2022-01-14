@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   activerAjoutServeur:boolean = false;
   statutCreationServeur:string = "Aucun serveur n'a été crée.";
   nomServeur:string = "serveur de test";
+  serveurCree:boolean = false;
 
   constructor() { 
     setTimeout(() => { this.activerAjoutServeur = !this.activerAjoutServeur }, 2000);
@@ -18,6 +19,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
+    this.serveurCree = true;
     this.statutCreationServeur = `Le serveur a été crée ! Le nom du serveur est ${this.nomServeur}.`;
   }
 
