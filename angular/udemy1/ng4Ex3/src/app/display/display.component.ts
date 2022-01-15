@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DisplayComponent implements OnInit {
 
   displaying:boolean = true;
-  myArray:number[] = [];
-  i:number = 0;
+  myArray:Date[] = [];
 
   constructor() { }
 
@@ -17,9 +16,8 @@ export class DisplayComponent implements OnInit {
   }
 
   onDisplay() {
-    this.i = ++(this.i);
     this.displaying = !this.displaying;
-    this.myArray.push(this.i);
+    this.myArray.push(new Date());
   }
 
 }
