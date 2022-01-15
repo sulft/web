@@ -1,0 +1,6 @@
+<div class="container">
+    <button class="btn btn-primary mt-3
+    " (click)="onDisplay()">afficher les détails</button>
+    <p *ngIf="displaying">le mot de passe est : 312912</p>
+    <p *ngFor="let i of myArray" [ngClass]="{whiteColor: i>5}" [ngStyle]="{ 'background-color' : i>5 ? 'blue' : ''}">{{i}}</p>
+</div>
