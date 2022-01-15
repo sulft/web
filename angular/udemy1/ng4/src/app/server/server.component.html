@@ -1,1 +1,1 @@
-<p>Le serveur avec l'ID {{ idServer }} est {{ statutServer }}. </p>
+<p [ngStyle]="{'background-color': getColor() }" [ngClass]='{online: statutServer === "online"}'>Le serveur avec l'ID {{ idServer }} est {{ statutServer }}. </p>

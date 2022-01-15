@@ -6,7 +6,10 @@
 <br>
 <button class="btn btn-primary mb-3" [disabled]="!activerAjoutServeur" (click)="onCreateServer()">Ajouter un serveur</button>
 <!-- <p [innerText]="activerAjoutServeur"></p> -->
-<p *ngIf="serveurCree">{{ statutCreationServeur }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<p *ngIf="serveurCree; else noServer">{{ statutCreationServeur }}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+
+<app-server *ngFor="let serveur of serveurs"></app-server>
 
