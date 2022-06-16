@@ -1,3 +1,6 @@
-<ul *ngFor="let message of mesMessages">
-    <li>{{ message.id }} : {{ message.message }}</li>
+<ul >
+    <!-- Passage de donnée du parent à l'enfant [] -->
+    <!-- Passage de donnée du enfant à parent () -->
+    <app-child *ngFor="let message of mesMessages" [message]="message" (onSend)="receivedData($event)"></app-child>
+    <p *ngIf="selectedTest.id != null;">test selectionné : {{ selectedTest.id }}</p>
 </ul>
