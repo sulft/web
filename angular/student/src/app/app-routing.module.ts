@@ -9,7 +9,7 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 const routes:Routes = [  
   {path: '', redirectTo : '/studentDetails', pathMatch : 'full'},  
   {path: 'studentList', component : StudentListComponent},  
-  {path: 'studentDetails/:name', component : StudentDetailsComponent},  
+  {path: 'studentDetails/:id/:name/:marks', component : StudentDetailsComponent},  
   {path: 'studentMarks', component : StudentMarksComponent},  
   {path: 'addStudent', component : StudentComponent},  
   {path: "**", component : NotFoundComponentComponent}  

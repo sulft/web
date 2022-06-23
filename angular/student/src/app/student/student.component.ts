@@ -14,7 +14,13 @@ export class StudentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  student : any = {  
+    id: "", 
+    name : "", 
+    marks : ""  
+  };  
+
   AddStudent(obj:any){  
-    this.router.navigate(['/studentDetails', obj]);  
+    this.router.navigate(['/studentDetails', obj.id, obj.name, obj.marks]);  
   }  
 }

@@ -8,13 +8,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StudentDetailsComponent implements OnInit {
 
-  studentName:string | null = "";  
+  student:any | null = {};  
 
   constructor(private route : ActivatedRoute) { }
 
   ngOnInit(): void {
-    let name = this.route.snapshot.paramMap.get('name');  
-    this.studentName = name;  
+    this.student.id = this.route.snapshot.paramMap.get('id');  
+    this.student.name = this.route.snapshot.paramMap.get('name');  
+    this.student.marks = this.route.snapshot.paramMap.get('marks');  
   }
 
 }
