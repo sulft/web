@@ -1,1 +1,8 @@
-<p>student-list works!</p>
+<h2>Student Details:</h2>    
+<div *ngFor="let stud of students">    
+    <a routerLink="/studentDetails/{{stud.id}}/{{stud.name}}/{{stud.marks}}"> Id : {{stud.id}}, Name : {{stud.name}} </a>    
+</div>   
+<br>  
+<div *ngIf="student.id">  
+    your current selection : Id - {{student.id}}, Name - {{student.name}}, Marks - {{student.marks}}  
+</div>  

@@ -7,7 +7,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
 
 const routes:Routes = [  
-  {path: '', redirectTo : '/studentDetails', pathMatch : 'full'},  
+  {path: '', redirectTo : '/studentList', pathMatch : 'full'},  
   {path: 'studentList', component : StudentListComponent},  
   {path: 'studentDetails/:id/:name/:marks', component : StudentDetailsComponent},  
   {path: 'studentMarks', component : StudentMarksComponent},  
