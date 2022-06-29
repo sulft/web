@@ -7,7 +7,7 @@ import { StockItemComponent } from './stock/stock-item/stock-item.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StockItemComponent
+    StockItemComponent,
   ],
   imports: [
     BrowserModule
