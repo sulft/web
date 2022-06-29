@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+}
+
+.quantity {
+    display: flex;
+    justify-content:center;
+    flex-direction:row
+}
+
+.button {
+    display: flex;
+    justify-content:center;
+    flex-direction:row
+}
+
+.button button {
+    width: 5%;
+}
+
+.onSale {
+    color:green;
+}
+
+.notSale {
+    color:red;
+}

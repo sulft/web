@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="product">
+        <div class="product-item">
+            <div style="text-align:center"> 
+                <img src="../../assets/images/Pantalon.jpg" alt="{{ product.name }}" height=200px>
+                <br>
+                {{ product.name }} 
+                <br>
+                <br>
+                <span [class]="product.onSale() ? 'onSale' : 'notSale'">{{ product.price }}$</span>  
+            </div>
+        </div>
+        <div class="quantity">              
+            <p>Quantité : {{ product.quantity }}</p>
+        </div>
+    </div>
+    <div class="button">
+        <button (click)="product.moreProduct()">+</button>
+        <button (click)="product.lessProduct()" [disabled]="this.product.quantity<1">-</button>
+    </div>
+    
+</div>
