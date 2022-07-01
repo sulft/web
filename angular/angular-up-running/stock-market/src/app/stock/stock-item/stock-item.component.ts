@@ -10,7 +10,8 @@ export class StockItemComponent implements OnInit {
 
 
   stock!:Stock
-  public stockClasses:any;
+   /* public stockClasses:any;*/
+   public stockStyles:any;
 
   constructor() { }
 
@@ -19,11 +20,15 @@ export class StockItemComponent implements OnInit {
     let diff = (this.stock.price / this.stock.previousPrice) - 1;
     console.log(diff);
     let largeChange = Math.abs(diff) > 0.05;
-    this.stockClasses = {
+    /*this.stockClasses = {
       "negative":!this.stock.isPositiveChange(),
       "positive":this.stock.isPositiveChange(),
       "large-change": largeChange,
       "small-change": !largeChange
+    }*/
+    this.stockStyles = {
+      "font-size": largeChange ? '1.2em' : '0.8em',
+      "color": this.stock.isPositiveChange() ? 'green' : 'red'
     }
   }
 
