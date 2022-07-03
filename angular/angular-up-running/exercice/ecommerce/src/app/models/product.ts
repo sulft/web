@@ -17,9 +17,4 @@ export class Product {
     lessProduct():void {
         this.quantity = this.quantity-1
     }
-
-    assignNumberQuantity(quantity:any):void {
-        console.log(quantity)
-        // this.quantity = quantity;
-    }
 }
