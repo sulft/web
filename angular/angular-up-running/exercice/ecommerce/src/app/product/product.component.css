@@ -25,3 +25,8 @@
 .notSale {
     color:red;
 }
+
+select {
+    display: block;
+    margin: 0 auto;
+}
