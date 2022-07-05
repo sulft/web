@@ -2,5 +2,13 @@
   <h1>
     Welcome to {{ title }}
   </h1>
-  <app-stock-item [stock]="stockObj"></app-stock-item>
+  <app-stock-item [stock]="stockObj" (toggleFavorite)="onToggleFavorite($event)">
+    <button (click)="testMethod()">With button 1</button>
+  </app-stock-item>
+  <app-stock-item [stock]="stockObj" (toggleFavorite)="onToggleFavorite($event)">
+    <p>No button here</p>
+  </app-stock-item><br><br>
+  <p>From App component</p>
+  <button (click)="changeStockObject()">change Object</button>
+  <button (click)="changeStockPrice()">change Price</button>
 </div>
