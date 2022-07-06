@@ -9,12 +9,4 @@ export class Product {
     onSale(): boolean {
         return this.price < this.previousprice;
     }
-
-    moreProduct():void {
-        this.quantity = this.quantity+1
-    }
-
-    lessProduct():void {
-        this.quantity = this.quantity-1
-    }
 }

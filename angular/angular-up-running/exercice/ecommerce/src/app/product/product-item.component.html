@@ -16,12 +16,7 @@
         </div>
     </div>
     <div class="button">
-        <button (click)="product.moreProduct()">+</button>
-        <button (click)="product.lessProduct()" *ngIf="!(product.quantity<1)">-</button>
-    </div>
-    <select>
-        <option value="">--Please choose an option--</option>
-        <option *ngFor="let value of quantity" value="{{ value }}"> {{ value }}</option>
-    </select>
-    
+        <button (click)="onMoreProduct(product)">+</button>
+        <button (click)="onLessProduct(product)" *ngIf="!(product.quantity<1)">-</button>
+    </div>   
 </div>
