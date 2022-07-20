@@ -3,32 +3,35 @@
 <!-- Ici le concept est que la logique est dans le template ! -->
 <div class="form-group">
 
-  <form (ngSubmit)="createPerson(name)" #personForm="ngForm"> <!-- Permet de regarder le formulaire et son controle de validité-->
+  <form (ngSubmit)="createPerson(personForm)" #personForm="ngForm"> <!-- Permet de regarder le formulaire et son controle de validité-->
 
-    <div class="person-sexe">
-      <select name="sexe" id="" [(ngModel)]="moi.sexe">
-        <option value="H">H</option>
-        <option value="F">F</option>
-      </select>
+    <div ngModelGroup="person">
+      <div class="person-sexe">
+        <select name="sexe" id="" ngModel required>
+          <option value="H">H</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+
+      <div class="person-age">
+        <input type="number" placeholder="age de la personne" #age="ngModel" min="0" max="110" name="age" ngModel required>
+      </div>
+
+      <div class="person-name">
+        <input type="text" placeholder="nom de la personne" #name="ngModel" name="name" ngModel minlength="3" required> <!-- Permet de checker la validé de l'input  -->
+        <div class="error" *ngIf="name.errors?.required || name.errors?.minlength">Nom manquant ou nombre de caractère insuffisant !</div>
+      </div>
+
+      <div class="person-description">
+        <textarea name="description" placeholder="description de la personne" #description="ngModel" ngModel minlength="3" required></textarea>
+        <div class="error" *ngIf="description.errors?.required || description.errors?.minlength">Description manquante ou nombre de caractère insuffisant !</div>
+      </div>
+
+      <br>
+
+      <button type="submit" [disabled]="!personForm.valid">Submit</button>        
     </div>
-
-    <div class="person-age">
-      <input type="number" placeholder="age de la personne" #age="ngModel" min="0" max="110" name="age" [(ngModel)]="moi.age" >
-    </div>
-
-    <div class="person-name">
-      <input type="text" placeholder="nom de la personne" #name="ngModel" name="name" [(ngModel)]="moi.name" minlength="3" required> <!-- Permet de checker la validé de l'input -->
-      <div class="error" *ngIf="name.errors?.required || name.errors?.minlength">Nom manquant ou nombre de caractère insuffisant !</div>
-    </div>
-
-    <div class="person-description">
-      <textarea name="description" placeholder="description de la personne" #description="ngModel" [(ngModel)]="moi.description" minlength="3" required></textarea>
-      <div class="error" *ngIf="description.errors?.required || description.errors?.minlength">Description manquante ou nombre de caractère insuffisant !</div>
-    </div>
-
-    <br>
-
-    <button type="submit" [disabled]="!personForm.valid">Submit</button>
+      
 
   </form>
 

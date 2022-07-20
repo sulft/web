@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   moi:Person;
 
   ngOnInit() {
-    this.moi = new Person( "H", "Terry", 25, "description");
+    this.moi = new Person( "", "", 0, "");
   }
 
   reset() {
@@ -22,7 +22,13 @@ export class AppComponent implements OnInit {
     this.moi.sexe = "";
   }
 
-  createPerson(val) {
-    console.log(val.errors)
+  createPerson(personForm) {
+    console.log(personForm.value);
+    if(personForm.valid) {
+      this.moi = personForm.value.person;
+      console.log(this.moi);
+    } else {
+      console.error('Form non valide')
+    }
   }
 }
