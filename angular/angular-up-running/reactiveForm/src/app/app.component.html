@@ -1,0 +1,17 @@
+<h1>Bienvenu sur {{ title }} </h1>
+<div class="form-group">
+  <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <div class="name">
+      <input type="text" formControlName="namePerson">
+    </div>
+    <div class="age">
+      <input type="number" formControlName="agePerson">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+    
+  <div> {{ personForm.value | json }} </div>
+  <div> {{ personForm.status | json }} </div>
+  
+</div>
