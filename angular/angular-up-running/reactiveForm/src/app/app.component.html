@@ -2,13 +2,19 @@
 <div class="form-group">
   <form [formGroup]="personForm" (ngSubmit)="onSubmit()">
     <div class="name">
-      <input type="text" formControlName="namePerson">
+      <input type="text" formControlName="name">
+      <div *ngIf="name.invalid && (name.dirty ||name.touched)">name required.</div>
     </div>
     <div class="age">
-      <input type="number" formControlName="agePerson">
+      <input type="number" formControlName="age">
+      <div *ngIf="age.invalid && (age.dirty || age.touched)">age required.</div>
     </div>
 
     <button type="submit">Submit</button>
+    <button (click)="resetForm()" type="button">Reset</button>
+    <button (click)="loadStockFromServer()" type="button">Simulate Stoack Load</button>
+    <button (click)="patchPersonForm()" type="button">Patch Stock Form</button>
+
   </form>
     
   <div> {{ personForm.value | json }} </div>
