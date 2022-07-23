@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder, FormArray } from '@angular/forms';
 import { Person } from 'src/assets/models/person';
 
 @Component({
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
   get name() { return this.personForm.get('name') }
   get age() { return this.personForm.get('age') }
+  get favorite() { return this.personForm.get('favorite') as FormArray }
 
   person:Person
   
@@ -24,7 +25,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.personForm = this.fb.group({
       name: ["", Validators.required],
-      age: [0, [Validators.required, Validators.min(0), Validators.max(120)]]
+      age: [0, [Validators.required, Validators.min(0), Validators.max(120)]],
+      favorite: this.fb.array([])
     });
     this.person = new Person("test",24);
   }
@@ -33,20 +35,16 @@ export class AppComponent implements OnInit {
     this.personForm.reset();
   }
 
-  loadStockFromServer() {
-    this.person = new Person("Terry",24);
-    let PersonFormModel = Object.assign({},this.person);
-    console.log(PersonFormModel);
-    /* delete PersonFormModel.address; Si des attributs sont des constantes inutiles de le copier
-     dans un objet une instance qui le possède dejà */
-    this.personForm.setValue(PersonFormModel);
-    /* ICI on attribue au form les valeurs ci dessus */
+  addFavorite() {
+    const favorite:FormGroup = this.fb.group({
+      color:['',Validators.required],
+      film:['',Validators.required]
+    })
+    this.favorite.push(favorite);
   }
 
-  patchPersonForm() {
-    this.person = new Person("Terry",24);
-    this.personForm.patchValue(this.person);
-    console.log(this.person)
+  removeFavorite(index:number) {
+    this.favorite.removeAt(index)
   }
 
   onSubmit() {
