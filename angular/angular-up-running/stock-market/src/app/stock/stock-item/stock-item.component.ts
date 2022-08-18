@@ -23,8 +23,4 @@ export class StockItemComponent implements OnInit {
   onToggleFavorite(event:any) {
     this.toggleFavorite.emit(this.stock);
   }
-
-  changeStockPrice() {
-    this.stock.price += 5;
-  }
 }

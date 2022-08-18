@@ -4,11 +4,8 @@
         <h4> {{ stock.code }}</h4>
     </div>
     <div class="price" >$ {{ stock.price }}</div>
-    <ng-content></ng-content>
 
-    <!-- <button (click)="onToggleFavorite($event)" *ngIf="!this.stock.favorite">Add to favorite</button>
-    <button (click)="changeStockPrice()">change Price</button> -->
-
+    <button (click)="onToggleFavorite($event)" *ngIf="!this.stock.favorite">Add to favorite</button>
 
 </div>
 
