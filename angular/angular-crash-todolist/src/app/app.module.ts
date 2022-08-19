@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core'; 
 import { BrowserModule } from '@angular/platform-browser'; /* Permet de démarrer l'application sur les navigateurs */ 
 import { AppComponent } from './app.component';
+import { TodosComponent } from './components/todos/todos.component';
 
 @NgModule({
   /* Comprends les composants crée */ declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent
   ],
   /* importer les modules */ imports: [
     BrowserModule
