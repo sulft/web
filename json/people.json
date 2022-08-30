@@ -1,0 +1,24 @@
+{
+    "people" : [
+        {
+            "name":"Jean",
+            "age":22
+        },
+        {
+            "name":"Paul",
+            "age":36
+        },
+        {
+            "name":"Amelie",
+            "age":22
+        },
+        {
+            "name":"Rick",
+            "age":56
+        },
+        {
+            "name":"Pane",
+            "age":42
+        }
+    ]
+}
