@@ -1,0 +1,21 @@
+<h1>Bienvenu sur notre application météo</h1>
+<mat-icon class="icon-display">wb_sunny</mat-icon>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Choisissez la ville </label>
+    
+            <br><br>
+    
+            <select [(ngModel)]="myCity" name="myCity">
+                <option>--</option>
+                <option *ngFor="let city of cities" value="{{city}}"required value="{{city}}">{{city}}</option>
+            </select>
+        </p>
+    
+        <p>
+            <button type="submit" [disabled]="!myForm.valid">Envoyer</button>
+        </p>
+    </form>
+</div>
+
