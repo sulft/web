@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
 
 //créons notre propre stateless Widget
 class BasicsPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) { //Décrit dans quel contexte est crée l'interface utilisateur taille,couleur, etc ...
     var size = MediaQuery.of(context).size; //permet de récupérer la taille de notre écran
