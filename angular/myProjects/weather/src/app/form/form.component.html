@@ -1,20 +1,26 @@
-<h1>Bienvenu sur notre application météo</h1>
-<mat-icon class="icon-display">wb_sunny</mat-icon>
-<div>
+<div class="center-h center-el vertical-center">
+    <h1>Bienvenu sur notre application météo</h1>
+
+    <mat-icon class="icon-display ">wb_sunny</mat-icon>
     <form #myForm="ngForm" (ngSubmit)="onSubmit()">
         <p>
             <label>Choisissez la ville </label>
     
             <br><br>
-    
-            <select [(ngModel)]="myCity" name="myCity">
-                <option>--</option>
-                <option *ngFor="let city of cities" value="{{city}}"required value="{{city}}">{{city}}</option>
-            </select>
+            
+            <mat-form-field appearance="fill">
+                <mat-label>Ville</mat-label>
+                <mat-select [(ngModel)]="myCity" name="myCity">
+                  <mat-option *ngFor="let city of cities" value="{{city}}"required value="{{city}}">
+                    {{city}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            
         </p>
-    
+
         <p>
-            <button type="submit" [disabled]="!myForm.valid">Envoyer</button>
+            <button type="submit" [disabled]="!myForm.valid" mat-raised-button>Envoyer</button>
         </p>
     </form>
 </div>

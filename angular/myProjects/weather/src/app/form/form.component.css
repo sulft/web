@@ -1,5 +1,19 @@
 .icon-display {
-    padding-left: 10px;
-    transform: scale(2);
+    transform: scale(3);
     color: rgb(214, 151, 4);
+    padding: 2% 0%;
+}
+
+.center-el {
+    text-align: center;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }

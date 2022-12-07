@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { WeatherService } from 'src/services/weather.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-form',
@@ -14,15 +11,17 @@ interface Food {
 
 export class FormComponent {
 
-  cities:String[] = ["Paris","New York","Rome"]
-  myCity?:String;
+  constructor(
+    private service: WeatherService,
+    private route: ActivatedRoute,
+    private router: Router
+  ){}
+
+  cities:string[] = ["Paris","New York","Rome"]
+  myCity:string = "";
 
   onSubmit() {
-
+    this.service.setQuery(this.myCity);
+    this.router.navigate(['detail']);
   }
-
-  func(value:any) {
-    console.log(value);
-  }
-
 }

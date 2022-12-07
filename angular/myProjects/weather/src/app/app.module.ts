@@ -8,13 +8,16 @@ import { FormComponent } from './form/form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
+// Angular material module
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button';
 
-
-
-
+// Service
+import { WeatherService } from 'src/services/weather.service';
 
 
 @NgModule({
@@ -32,9 +35,11 @@ import { MatIconModule } from '@angular/material/icon'
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
