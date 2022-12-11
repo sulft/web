@@ -75,3 +75,11 @@ Text simple(String text) {
     textAlign: TextAlign.right,
   );
 }
+
+Icon monIcone() {
+  return Icon(
+    Icons.house,
+    size: 30,
+    color: Colors.white
+  );
+}
