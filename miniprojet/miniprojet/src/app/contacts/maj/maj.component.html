@@ -1,0 +1,28 @@
+<div class="container center-vertically">
+    <h1 class="center-text">Mise à jour d'un contact</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>prenom</mat-label>
+              <input matInput formControlName='prenom'>
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>nom</mat-label>
+              <input matInput formControlName='nom'>
+            </mat-form-field></td>
+          </tr>
+        </table>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Ex. pat@example.com" formControlName='email'>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>description</mat-label>
+            <textarea matInput formControlName='description'></textarea>
+        </mat-form-field>
+        <div class="center">
+            <button mat-stroked-button type="submit" [disabled]="contactForm.valid === false">Mettre à jour</button>
+        </div>
+    </form>
+</div>
