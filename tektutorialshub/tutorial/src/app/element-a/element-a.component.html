@@ -1,0 +1,19 @@
+<div>
+    <h2>One way data binding</h2>
+    <h3>Composant vers vue</h3>
+    <!-- Interpolation -->
+    <p>Bonjour {{ prenom }} {{ nom }} ! </p>
+
+    <!-- property binding -->
+    <button [disabled]="isDisabled">I am disabled</button>
+
+    <h3>Vue vers Composant</h3>
+    <!-- Event binding -->
+    <button (click)="affiche()">clique ici</button>
+
+    <h2>Two way databinding</h2>
+    <h3>Dans les deux sens</h3>
+    <!-- ngModel -->
+    <input type="text" [(ngModel)]="texte" name="texte">
+    <p>{{ texte }}</p>
+</div>

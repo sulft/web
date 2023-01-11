@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<h2>Bind to an element property</h2>
+<p style.color="{{giveMeRed}}">C'est rouge</p>
+
+<h2>Use a template reference variable</h2>
+<label>Enter Your Name </label>
+<input (keyup)="0" #name> <!-- lancement du change detection pour mettre à jour le component a chaque entrée de caractère-->
+<p>Welcome {{name.value}} </p>
+
+<h2>NgNonBindable</h2>
+<p>Evaluate: {{variable}}</p>
+<p ngNonBindable>Do not evaluate: {{variable}}</p>
+
+<h2>pipes</h2>
+<p>uppercase pipe = {{ title | uppercase }}</p>
+<p>lowercase pipe = {{ title | lowercase }}</p>
+

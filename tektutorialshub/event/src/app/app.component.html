@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+<h2>Example 1</h2>
+<button (click)="clickMe(); clickCount1 = clickCount">cliquez ici</button>
+<p>Vous avez cliqué {{ clickCount }} fois</p>
+<p>Vous avez cliqué {{ clickCount1 }} fois</p>
+
+<input (input)="handleInput($event)">
+<p>You have entered {{value}}</p>
+
+<h2>Template Reference Variable</h2>
+<input #el (input)="handleInput1(el)">
+<p>You have entered {{val}}</p>
