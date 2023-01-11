@@ -1,0 +1,74 @@
+<h1> {{ title }}</h1>
+
+<h2>example for a list</h2>
+<ul>
+  <li *ngFor="let item of movies">
+    {{ item.title }} - {{ item.director }} 
+  </li>
+</ul>
+
+<h2>example for a table</h2>
+<div class='panel panel-primary'>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies; let i = index; let o = odd; let e = even; let f = first" [ngClass]="{first: f,odd:o, even:e}">
+                        <td>{{(i+1)}}</td>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<br><br>
+
+<div class='card'>
+  <div class='card-header'>
+    <p>Nested Array</p>
+  </div>
+ 
+  <div class='table-responsive'>
+    <table class='table table-bordered table-sm '>
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Mail ID</th>
+          <th>Skills</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees;">
+          <td>{{employee.name}}</td>
+          <td>{{employee.email}}</td>
+          <td>
+            <table class='table table-sm '>
+              <tbody>
+                <tr *ngFor="let skill of employee.skills;">
+                  <td>{{skill.skill}}</td>
+                  <td>{{skill.exp}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+ 
