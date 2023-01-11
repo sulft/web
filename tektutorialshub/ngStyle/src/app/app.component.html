@@ -1,0 +1,7 @@
+<label>Nombre</label>
+<input type="text" [(ngModel)]="val" name="val">
+
+<label>Couleur</label>
+<input type="text" [(ngModel)]="couleur" name="val">
+
+<p [ngStyle]="{'font-size.px':val, 'color':couleur}">Je suis un texte</p>
