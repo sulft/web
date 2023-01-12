@@ -1,0 +1,16 @@
+<h1> {{ title }}</h1>
+
+<app-child1 [count]="counter" (countChanged)="onCounter($event)"></app-child1>
+<p>Parent component counter : {{ counter }}</p>
+
+<app-child2 #child2></app-child2>
+<p>parent counter get from the value of child2 counter : {{ child2.count }}</p>
+<button (click)="child2.incremente()">+</button>
+<button (click)="child2.decremente()">-</button>
+
+
+<h1>{{title}}</h1>
+<p> current count is {{child3?.count}} </p>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">decrement</button>
+<app-child3></app-child3>
