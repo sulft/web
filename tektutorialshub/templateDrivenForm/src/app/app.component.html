@@ -1,0 +1,40 @@
+<form #myForm='ngForm' (ngSubmit)="onSubmit(myForm.value)">
+  <p>  
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" ngModel>
+  </p>
+
+  <p>
+    <label for="nom">nom</label>
+    <input type="text" name="nom" ngModel>
+  </p>
+
+  <p>
+    <label for="age">Age</label>
+    <input type="number" name="age" ngModel>
+  </p>
+
+  <p>
+    <label for="country">Pays</label>
+    <select name="country" ngModel>
+      <option *ngFor="let item of contries" value="{{item.id}}" >{{ item.name }}</option>
+    </select>
+  </p>
+
+  <div ngModelGroup="adresse">
+    <label for="ville">Ville</label>
+    <input type="text" name="ville" ngModel>
+    <label for="rue">Rue</label>
+    <input type="text" name="rue" ngModel>
+    <label for="code">Code postal</label>
+    <input type="text" name="code" ngModel>
+  </div>
+
+  <button type="submit">Soumettre</button>
+</form>
+
+<pre>
+  {{ myForm.value | json}} 
+</pre>
+<pre>{{ myForm.valid }}</pre>
+<pre>Submitted : {{ myForm.submitted  }} </pre>
