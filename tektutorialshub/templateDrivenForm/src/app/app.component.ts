@@ -34,3 +34,16 @@ export class Country {
   name?:string;
 }
 
+
+export class Contact1 {
+  prenom?:string;
+  nom?:string;
+  age?:number;
+  pays?:string;
+  addresse?: {
+    ville:string;
+    rue:string;
+    code:string
+  }
+}
+
