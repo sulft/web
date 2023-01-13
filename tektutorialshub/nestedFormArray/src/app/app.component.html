@@ -1,0 +1,40 @@
+<form [formGroup]="etudiantForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="etudiant">
+    <div *ngFor="let etu of etudiants.controls; let etuI = index">
+      <div formGroupName="{{etuI}}">
+        {{ etuI }}
+        <p>
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" formControlName="nom">
+        </p>
+        <p>
+          <label for="prenom">Prenom</label>
+          <input type="text" name="prenom" formControlName="prenom">
+        </p>
+
+        <button (click)="ajoutSpecialite(etuI)">add spe</button>
+
+        <div formArrayName="specialite">
+          <div *ngFor="let etu of specialites(etuI).controls; let speI = index">
+            <div formGroupName="{{speI}}">
+              <p>
+                <label for="nomSpe">Nom de la spe :</label>
+                <input type="text" name="nomSpe" formControlName="nomSpe">
+              </p>
+              <p>
+                <label for="annee">Année</label>
+                <input type="text" name="annee" formControlName="annee">
+              </p>
+            </div>
+            <button (click)="removeSpecialite(speI)">Suppression Spécialité</button>
+          </div>
+        </div>
+      </div>
+      <button (click)="removeEtudiant(etuI)">Suppression etudiant</button>
+    </div>
+  </div>
+  <br><br>
+  <button type="submit">submit</button>
+</form>
+<br>
+<button (click)="ajoutEtudiant()">Ajout etudiant</button>
