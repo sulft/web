@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'customValidator';
 
   myForm = new FormGroup({
-    numVal:new FormControl('',[gte])
+    numVal:new FormControl('',[gte(12)])
   })
 
   get numVal() { return this.myForm.get("numVal") }

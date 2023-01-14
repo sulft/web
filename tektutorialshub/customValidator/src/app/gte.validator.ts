@@ -1,15 +1,18 @@
-import { AbstractControl, ValidationErrors } from '@angular/forms'
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms'
 
-export function gte(control: AbstractControl): ValidationErrors | null {
-    const v = control.value;
+export function gte(val: number): ValidatorFn {
 
-    if (isNaN(v)) {
-        return { 'gte': true, 'requiredValue': 10 }
-    }      
-   
-    if (v <= 10) {
-        return { 'gte': true, 'requiredValue': 10 }
-    } 
-    return null
+    return (control: AbstractControl): ValidationErrors | null => {
+        const v = control.value;
+        if (isNaN(v)) {
+            return { 'gte': true, 'requiredValue': val }
+        }      
+       
+        if (v <= 10) {
+            return { 'gte': true, 'requiredValue': val }
+        } 
+        return null
+    }
+    
 }
 
