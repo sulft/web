@@ -18,6 +18,9 @@ import { ProductGuardService } from './product-guard.service';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductViewComponent } from './product-view/product-view.component';
 
 
 
@@ -31,14 +34,17 @@ import { AuthService } from './auth.service';
     ProductDetailComponent,
     ProductOverviewComponent,
     ProductSpecComponent,
-    LoginComponent
+    LoginComponent,
+    ProductAddComponent,
+    ProductEditComponent,
+    ProductViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ProductGuardService, AuthGuardService, AuthService],
+  providers: [ProductService, AuthGuardService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
