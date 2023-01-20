@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -13,7 +13,9 @@ import { AuthService } from '../auth.service';
   templateUrl: './connexion.component.html',
   styleUrls: ['./connexion.component.css'],
 })
-export class ConnexionComponent {
+export class ConnexionComponent implements OnInit {
+
+
   get identifiant() {
     return this.connectForm.get('identifiant');
   }
@@ -31,6 +33,12 @@ export class ConnexionComponent {
     private serv: AuthService,
     private router: Router
   ) {}
+
+    ngOnInit(): void {
+      const arr = ["1","2","3"];
+      console.log(arr);
+      console.log(arr.map(a=>parseInt(a,10)))
+    }
 
   submitForm() {
     this.serv
