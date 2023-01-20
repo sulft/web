@@ -1,0 +1,23 @@
+<table *ngIf="films.length>0">
+    <thead>
+        <tr>
+            <th>Nom du film</th>
+            <th>Réalisateur</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of films; let i = index">
+            <td> {{ item.nom }}</td>
+            <td> {{ item.realisateur }}</td>
+            <td> {{ item.description }}</td>
+            <td>
+                <button [routerLink]="['/detail',(i)]">detail</button>
+                <button (click)="supprimer(i)">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <router-outlet></router-outlet> -->

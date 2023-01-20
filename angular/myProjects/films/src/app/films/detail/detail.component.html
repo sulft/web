@@ -1,0 +1,19 @@
+<div class="mt-5 mb-3">
+    <label>Nom du film :</label>
+    <p>{{ film.nom }}</p>
+
+    <br>
+
+    <label>Réalisateur :</label>
+    <p>{{ film.realisateur }}</p>
+
+    <br>
+
+    <label>Description : </label>
+    <p class="description">{{ film.description }}</p>
+</div>
+
+<div>
+    <button>Editer</button>
+    <button (click)="supprimer(id)">Supprimer</button>
+</div>

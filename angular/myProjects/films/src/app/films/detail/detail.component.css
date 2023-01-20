@@ -1,0 +1,13 @@
+div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    font-weight: 700;
+}
+
+.description {
+    text-align: justify;
+}

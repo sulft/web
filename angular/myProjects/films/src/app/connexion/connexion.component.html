@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="connectForm" (ngSubmit)="submitForm()" novalidate class="row g-3 m-3">
+    <div class="col-md-12">
+      <label for="id" class="form-label">Identifiant</label>
+      <input type="text" class="form-control" id="id" formControlName="identifiant"/>
+    </div>
+    <div class="col-md-12">
+      <label for="mdp" class="form-label">Mot de passe</label>
+      <input type="password" class="form-control" id="mdp" formControlName="mdp"/>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!connectForm.valid">Se connecter</button>
+  </form>
+</div>
