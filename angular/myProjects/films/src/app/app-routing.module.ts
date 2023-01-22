@@ -5,18 +5,23 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailComponent } from './films/detail/detail.component';
 import { FilmsComponent } from './films/films.component';
+import { ModificationComponent } from './films/modification/modification.component';
 
 const routes: Routes = [
-  { path:'connexion', component: ConnexionComponent },
-  { path:'films', component: FilmsComponent, canActivate: [AuthGuard] },
-  { path:'detail/:id', component: DetailComponent },
-  { path:'contact', component: ContactComponent },
-  { path: '', redirectTo: 'connexion', pathMatch: 'full' }
-
+  { path: 'connexion', component: ConnexionComponent },
+  {
+    path: 'modification/:id',
+    component: ModificationComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'films', component: FilmsComponent, canActivate: [AuthGuard] },
+  { path: 'detail/:id', component: DetailComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent },
+  { path: '', redirectTo: 'connexion', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

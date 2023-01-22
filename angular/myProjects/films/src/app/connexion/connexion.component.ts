@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
@@ -14,7 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./connexion.component.css'],
 })
 export class ConnexionComponent implements OnInit {
-
+  connectForm: FormGroup;
 
   get identifiant() {
     return this.connectForm.get('identifiant');
@@ -23,10 +18,6 @@ export class ConnexionComponent implements OnInit {
   get password() {
     return this.connectForm.get('mdp');
   }
-  connectForm = this.fb.group({
-    identifiant: ['', Validators.required],
-    mdp: ['', Validators.required],
-  });
 
   constructor(
     private fb: FormBuilder,
@@ -34,11 +25,12 @@ export class ConnexionComponent implements OnInit {
     private router: Router
   ) {}
 
-    ngOnInit(): void {
-      const arr = ["1","2","3"];
-      console.log(arr);
-      console.log(arr.map(a=>parseInt(a,10)))
-    }
+  ngOnInit(): void {
+    this.connectForm = this.fb.group({
+      identifiant: ['', Validators.required],
+      mdp: ['', Validators.required],
+    });
+  }
 
   submitForm() {
     this.serv

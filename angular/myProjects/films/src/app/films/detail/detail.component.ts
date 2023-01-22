@@ -27,9 +27,11 @@ export class DetailComponent implements OnInit {
     });
   }
 
+  
+
   supprimer(index: number) {
-    this.filmservice.supprimerFilm(index).subscribe((films) => {
-      this.router.navigate(['../'])
+    this.filmservice.supprimerFilm(index).subscribe(() => {
+      this.router.navigate(['/films'])
     });
   }
 }

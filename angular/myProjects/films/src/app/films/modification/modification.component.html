@@ -1,1 +1,34 @@
-<p>modification works!</p>
+<form
+  [formGroup]="filmForm"
+  (ngSubmit)="submit()"
+  class="row g-3 m-3"
+  novalidate
+>
+  <div class="col-md-12">
+    <label for="nom" class="form-label">Nom du film</label>
+    <input type="text" class="form-control" id="nom" formControlName="nom" />
+  </div>
+  <div class="col-md-12">
+    <label for="realisateur" class="form-label">Réalisateur</label>
+    <input
+      type="text"
+      class="form-control"
+      id="realisateur"
+      formControlName="realisateur"
+    />
+  </div>
+  <div class="col-md-12">
+    <label for="description" class="form-label">Description</label>
+    <textarea
+      class="form-control"
+      id="description"
+      rows="3"
+      formControlName="description"
+    ></textarea>
+  </div>
+  <button type="submit" [disabled]="!filmForm.valid">Modifier</button>
+  <button type="button" [routerLink]="['/detail', id]">
+    Retour à la fiche du film
+  </button>
+  <button type="button" [routerLink]="['/films']">Retour à l'accueil</button>
+</form>

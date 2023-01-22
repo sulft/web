@@ -45,12 +45,17 @@ export class FilmsService {
     return of(this.films);
   }
 
-  getFilm(id:number): Observable<Film> {
+  getFilm(id: number): Observable<Film> {
     return of(this.films[id]);
   }
 
-  supprimerFilm(index:number):Observable<Film[]> {
-    this.films.splice(index,1);
+  editFilm(film: Film, id: number): Observable<void> {
+    this.films.splice(id, 1, film);
+    return of();
+  }
+
+  supprimerFilm(index: number): Observable<Film[]> {
+    this.films.splice(index, 1);
     return of(this.films);
   }
 }

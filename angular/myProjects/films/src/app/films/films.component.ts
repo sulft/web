@@ -9,16 +9,18 @@ import { FilmsService } from '../films.service';
 })
 export class FilmsComponent implements OnInit {
   films: Film[];
+  flag:boolean;
 
   constructor(private filmservice: FilmsService) {}
 
   ngOnInit(): void {
+    this.flag = false;
     this.filmservice.getFilms().subscribe((films) => {
       this.films = films;
     });
   }
 
   supprimer(index: number) {
-    this.filmservice.supprimerFilm(index).subscribe((films) => {});
+    this.filmservice.supprimerFilm(index).subscribe();
   }
 }

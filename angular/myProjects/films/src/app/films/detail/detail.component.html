@@ -14,6 +14,7 @@
 </div>
 
 <div>
-    <button>Editer</button>
+    <button [routerLink]="['/modification',id]">Editer</button>
     <button (click)="supprimer(id)">Supprimer</button>
+    <button [routerLink]="['/films']">Retour</button>
 </div>
