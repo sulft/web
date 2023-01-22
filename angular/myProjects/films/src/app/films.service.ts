@@ -41,7 +41,14 @@ export class FilmsService {
     ];
   }
 
+  addFilm(film:Film): Observable<void> {
+    film.id = this.films.length+1;
+    this.films.unshift(film)
+    return of()
+  }
+
   getFilms(): Observable<Film[]> {
+    this.films.sort((a,b) => {return b.id - a.id}) 
     return of(this.films);
   }
 
