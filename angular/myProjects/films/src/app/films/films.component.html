@@ -1,5 +1,7 @@
 <div class="container">
-  <button style="float: right;" [routerLink]="['/ajouter']">Ajouter un film</button>
+  <button style="float: right" [routerLink]="['/ajouter']">
+    Ajouter un film
+  </button>
   <table *ngIf="films.length > 0" class="table table-hover table-bordered">
     <thead class="table-light">
       <tr class="text-center">
@@ -10,7 +12,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of films; let i = index" [routerLink]="['/detail', i]">
+      <tr
+        *ngFor="let item of films; let i = index"
+        [routerLink]="['/detail', i]"
+      >
         <td>{{ item.nom }}</td>
         <td>{{ item.realisateur }}</td>
         <td>{{ item.description }}</td>
@@ -22,6 +27,5 @@
     </tbody>
   </table>
 </div>
-
 
 <!-- <router-outlet></router-outlet> -->
