@@ -10,7 +10,7 @@ export interface IDeactivateComponent {
 @Injectable({
   providedIn: 'root'
 })
-export class DeactivateGuard implements CanDeactivate<RegisterComponent> {
+export class DeactivateGuard implements CanDeactivate<IDeactivateComponent> {
   canDeactivate(
     component: IDeactivateComponent,
     currentRoute: ActivatedRouteSnapshot,
