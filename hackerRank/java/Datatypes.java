@@ -1,8 +1,10 @@
 import java.util.*;
+import java.lang.*;
 
 public class Datatypes {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Range<Integer> myRange = Range.between(-9223372036854775808L,9223372036854775807L);
 
         Number n = sc.nextLong();
         boolean longTag = false;
@@ -12,7 +14,7 @@ public class Datatypes {
 
         long intData = 5;  
 
-        if((int)n >= -9223372036854775808L && (int)n <= 9223372036854775807L) {
+        if(myRange.contains(n)) {
             longTag = true;
         }
         if((int)n >= -2147483648 && (int)n <= 2147483647) {
