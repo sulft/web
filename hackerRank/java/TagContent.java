@@ -3,26 +3,43 @@ import java.util.*;
 
 public class TagContent {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         
-        String test = "<test>tesefet tegfz rfzf</test>";
-        String regex = "<(\\w+)>[\\w\s]+</(\\w+)>";
+
+
+        int num = sc.nextInt();
+        sc.nextLine();
+        int total = 0;
+
+
+        if(num>0 && num<101) {
+            while(num-- > 0) {
+                String text = sc.nextLine();
+                total += text.length();
+                System.out.println(total);
+                if(text.length()<10001 && total <1000001) {
+                    regex(text);
+                }
+            }
+        }
+
+    }
+
+    public static void regex(String text) {
+        String regex = "<([\\w+\s*]+)>[\\w\s]+</(\\1)>";
         Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(test);
+        Matcher m = p.matcher(text);
         Boolean b = m.find();
 
-        int num = 0;
         if(b) {
-                System.out.println(m.group(1));
-                System.out.println(m.group(2));
+            text = m.group(0);
+            text = text.replaceAll(m.group(1),"");
+            text = text.replaceAll("<>","");
+            text = text.replaceAll("</>","");
 
-            if(m.group(1) != m.group(2)) {
-                System.out.println("None");
-            } else {
-                test = test.replaceAll(m.group(1),"");
-                System.out.println(test);
-            } 
+            System.out.println(text);
         } else {
-            System.out.println("no");
+            System.out.println("None");
         }
     }
 }
