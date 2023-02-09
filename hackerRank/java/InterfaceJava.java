@@ -11,7 +11,7 @@ public class InterfaceJava {
         int number = sc.nextInt();
 
         MyCalculator calculator = new MyCalculator();
-        System.out.println("I implemented: " + calculator.getClass().getInterfaces().getName());
+        System.out.println("I implemented: " + calculator.getClass().getInterfaces()[0].getName());
         System.out.println(calculator.divisor_sum(number));
     } 
 }
