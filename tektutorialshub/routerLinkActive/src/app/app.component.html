@@ -1,0 +1,10 @@
+
+<li><a [routerLink]="['home']" routerLinkActive="active">Home</a></li>
+<li><a [routerLink]="['product']" [routerLinkActive]="['active', 'home']" [routerLinkActiveOptions]="{exact:
+  true}">Product</a></li>
+<li><a [routerLink]="['/product/detail']" [routerLinkActive]="['active']">detail</a></li>
+<li><a [routerLink]="['/product/exception']" [routerLinkActive]="['active', 'home']">Exception</a></li>
+
+
+
+<router-outlet></router-outlet>
