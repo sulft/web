@@ -1,0 +1,10 @@
+<h1>My weather App</h1>
+<mat-form-field appearance="fill">
+  <mat-label>City weather</mat-label>
+  <mat-select [(ngModel)]="selectedValue" name="city">
+    <mat-option *ngFor="let city of cities" [value]="city.value">
+      {{city.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<router-outlet></router-outlet>
