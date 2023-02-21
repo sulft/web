@@ -8,14 +8,14 @@ import { FormsModule } from '@angular/forms';
 
 // angular material module
 import { MatSelectModule } from '@angular/material/select';
-import { WeatherComponent } from './weather/weather.component';
 import { MatCardModule } from '@angular/material/card';
 
 // angular flex layout
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent],
+  declarations: [AppComponent, WeatherDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
