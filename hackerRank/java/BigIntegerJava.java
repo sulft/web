@@ -17,14 +17,12 @@ public class BigIntegerJava {
                 BigInteger num1 = new BigInteger(a,10);
                 BigInteger num2 = new BigInteger(b,10);
 
-                BigInteger total = num1 + num2;
+                BigInteger total = num1.add(num2);
                 System.out.println(total);
 
-                total = num1 * num2;
+                total = num1.multiply(num2);
                 System.out.println(total);
-
             }
         }
-
     }
 }
