@@ -13,8 +13,13 @@ import { Component } from '@angular/core';
       <div class="footer">
         <ng-content select="footer"></ng-content>
       </div>
+      <ng-content select="app-fancy-btn"></ng-content>
+      <ng-content></ng-content>
     </div>
   `,
-  styles: [],
+  styles: [
+    `.card { min-width: 280px;  margin: 5px;  float:left  } 
+    .header { color: blue}`,
+  ],
 })
 export class CardComponent {}
