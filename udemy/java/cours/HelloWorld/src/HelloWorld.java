@@ -1,10 +1,8 @@
 public class HelloWorld {
     public static void main(String[] args) {
-      int nb1 = 5;
-      int nb2;
-      nb2 = nb1--;
+      String begin = "Voici mon age ";
+      int age = 24;
+      System.out.println(begin + (age+1));
 
-      System.out.println(nb1);
-      System.out.println(nb2);
     }
 }
