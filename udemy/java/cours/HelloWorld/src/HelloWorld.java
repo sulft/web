@@ -1,8 +1,6 @@
 public class HelloWorld {
     public static void main(String[] args) {
-      String begin = "Voici mon age ";
       int age = 24;
-      System.out.println(begin + (age+1));
-
+      System.out.printf("Voici mon age %d et je suis très jeune.",age);
     }
 }
