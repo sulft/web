@@ -1,16 +1,16 @@
 public class HelloUniverse {
   public static void main(String... args) {
-    int nbPlanete;
+    int nbPlanetes;
     String maChaine;
 
     maChaine = "Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : ";
-    nbPlanete = 9;
+    nbPlanetes = 8;
     System.out.println(maChaine);
-    System.out.println(nbPlanete);
+    System.out.println(nbPlanetes);
 
     maChaine = "Il y a quelques années cependant, elles étaient au nombre de : ";
-    nbPlanete = 8;
+    nbPlanetes++;
     System.out.println(maChaine);
-    System.out.print(nbPlanete);
+    System.out.print(nbPlanetes);
   }
 }
