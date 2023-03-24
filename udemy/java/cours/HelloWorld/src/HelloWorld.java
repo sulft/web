@@ -1,20 +1,20 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // utilisation d'un type objet
+        String maChaine;
+        maChaine = "Hello World!";
+        System.out.println(maChaine);
 
-        // déclaration
+        // Declaration de variable de type primitif
         float prixEssence = 1.23f;
         char initialPrenom;
         boolean majeur;
         int anneeDeNaissance;
 
-        // affectation
+        // Affectation
         initialPrenom = 'T';
         anneeDeNaissance = 1998;
         anneeDeNaissance = 1998;
         majeur = true;
-
-
-
     }
 }
