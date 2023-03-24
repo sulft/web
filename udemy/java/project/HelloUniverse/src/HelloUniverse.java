@@ -5,12 +5,10 @@ public class HelloUniverse {
 
     maChaine = "Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : ";
     nbPlanetes = 8;
-    System.out.println(maChaine);
-    System.out.println(nbPlanetes);
+    System.out.println(maChaine + nbPlanetes);
 
     maChaine = "Il y a quelques années cependant, elles étaient au nombre de : ";
     nbPlanetes++;
-    System.out.println(maChaine);
-    System.out.print(nbPlanetes);
+    System.out.print(maChaine + nbPlanetes);
   }
 }
