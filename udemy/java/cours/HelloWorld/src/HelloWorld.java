@@ -1,16 +1,33 @@
 public class HelloWorld {
     public static void main(String[] args) {
-      int age = 24;
-      System.out.printf("Mon age est %d ans ",age);
+      String mois;
 
-      if(age >= 30){
-        System.out.print("et je fais plus jeune.\n");
-      } else if(age < 10){
-        System.out.print("bravo à toi de commencer si jeune.\n");
-      } else if(age == 25){
-        System.out.print("et je suis en pleine forme.\n");
-      } else {
-        System.out.println("et je suis fière de mon âge.");
+      mois = "Décembre";
+
+      switch(mois) {
+        case "Janvier":
+        case "Février":
+        case "Mars":
+          System.out.print("C'est l'hiver.");
+          break;
+        case "Avril":
+        case "Mai":
+        case "Juin":
+          System.out.print("C'est le printemps.");
+          break;
+        case "Juillet":
+        case "Aout":
+        case "Septembre":
+          System.out.print("C'est l'été.");
+          break;
+        case "Octobre":
+        case "Novembre":
+        case "Décembre":
+          System.out.print("C'est l'automne.");
+          break;
+        default:
+          System.out.println("Ce mois n'existe pas.");
+          break;
       }
 
     }
