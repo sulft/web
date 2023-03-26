@@ -1,19 +1,10 @@
 public class HelloWorld {
     public static void main(String[] args) {
-      boolean jeContinue = true;
-      int nb = 1;
-      while (jeContinue) {
-        System.out.println("Hello World!");
-        nb++;
-        if (nb == 5) {
-          continue;
-        } // ce qui est après le if est ignoré
-        System.out.print("nb ne vaut pas 5");
+      Car carOfTerry = new Car();
+      carOfTerry.automatic = true;
+      carOfTerry.color = "rouge";
+      carOfTerry.nbDoor = 5;
 
-        if (nb == 10) {
-          break;
-        }
-      }
-
+      System.out.println("La voiture est " + carOfTerry.color + " et dispose de " + carOfTerry.nbDoor + " portes.");
     }
 }
