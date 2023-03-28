@@ -6,6 +6,8 @@ public class HelloUniverse {
     planet.name = "Jupiter";
     planet.material = "Gazeuse";
 
-    System.out.printf("%s est une planète %s avec un diamètre de %d kilomètres.",planet.name, planet.material,planet.kilometers);
+    Planet newPlanet = new Planet();
+
+    System.out.printf("%s est une planète %s avec un diamètre de %d kilomètres.",newPlanet.name, newPlanet.material,newPlanet.kilometers);
   }
 }
