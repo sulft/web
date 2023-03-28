@@ -3,11 +3,11 @@ public class Planet {
   String material;
   long kilometers;
 
-  void spin() {
-    System.out.println("Je suis la planète " + this.name + " et je tourne autour de mon étoile");
+  int spin(int angle) {
+    return angle/360;
   }
 
-  void revolution() {
-    System.out.println("je suis la planète " + this.name + " et je tourne sur moi-même. ");
+  int revolution(int angle) {
+    return angle/360;
   }
 }

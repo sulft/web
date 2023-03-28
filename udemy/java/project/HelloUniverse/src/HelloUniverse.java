@@ -34,8 +34,16 @@ public class HelloUniverse {
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    neptune.spin();
-    mars.revolution();
+    int revolution;
+    revolution = neptune.revolution(-3542);
+    System.out.println(neptune.name + " a effectué " + revolution + " tours complets autour de son étoile.");
+
+    int spin;
+    spin = mars.spin(-684);
+    System.out.println(mars.name + " a effectué " + spin + " tours complets sur elle-même.");
+
+    spin = venus.spin(1250);
+    System.out.println(venus.name + " a effectué " + spin + " tours complets sur elle-même.");
 
 
   }
