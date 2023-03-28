@@ -3,4 +3,8 @@ public class Car {
    boolean automatic;
    String color;
 
+   void Klaxonner() {
+     System.out.print("Tutut!!!");
+   }
+
 }

@@ -6,5 +6,7 @@ public class HelloWorld {
       carOfTerry.nbDoor = 5;
 
       System.out.println("La voiture est " + carOfTerry.color + " et dispose de " + carOfTerry.nbDoor + " portes.");
+
+      carOfTerry.Klaxonner();
     }
 }
