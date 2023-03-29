@@ -1,6 +1,7 @@
 public class HelloWorld {
     public static void main(String[] args) {
       Car carOfTerry = new Car();
+      Car carOfJean = new Car();
       carOfTerry.automatic = true;
       carOfTerry.color = "rouge";
       carOfTerry.nbDoor = 5;
@@ -9,15 +10,11 @@ public class HelloWorld {
 
       carOfTerry.Klaxonner();
 
-      int nouveauRapport = carOfTerry.passerRapport(true);
-      nouveauRapport = carOfTerry.passerRapport(true);
-      nouveauRapport = carOfTerry.passerRapport(true);
-      nouveauRapport = carOfTerry.passerRapport(false);
+      String chaine1 = new String("test");
+      String chaine2 = new String("test");
 
-
-      System.out.println("Le nouveau rapport est : " + nouveauRapport);
-
-      carOfTerry.tourner("gauche",50);
+      boolean bool = chaine1 == chaine2;
+      System.out.println(bool);
     }
 
 }
