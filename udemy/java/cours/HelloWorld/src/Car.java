@@ -4,6 +4,7 @@ public class Car {
    boolean automatic;
    String color;
    int rapportCourant;
+   Moteur moteur;
    void Klaxonner() {
      System.out.println("Tutut!!!");
    }
