@@ -1,6 +1,6 @@
 public class Car {
    byte nbDoor;
-   int vitesseCourante = 30;
+   int vitesse = 30;
    boolean automatic;
    String color;
    int rapportCourant;
@@ -8,22 +8,22 @@ public class Car {
      System.out.println("Tutut!!!");
    }
    int accélérer() {
-     int vitesse = 100;
-     System.out.println("J'accélère à " + vitesse + "km/h");
-     return vitesse;
+     int vitesseVoiture = 100;
+     System.out.println("J'accélère à " + vitesseVoiture + "km/h");
+     return vitesseVoiture;
    }
 
-    int accélérer(int vitesseEnPlus) {
-      System.out.println("J'accélère à " + (vitesseEnPlus + this.vitesseCourante) + "km/h");
-      return vitesseEnPlus + this.vitesseCourante;
+    int accélérer(int vitesse) {
+      System.out.println("J'accélère à " + (vitesse + this.vitesse) + "km/h");
+      return vitesse + this.vitesse;
     }
    int passerRapport(boolean augmenter) {
       if(augmenter) {
-        rapportCourant++;
+        this.rapportCourant++;
       } else {
-        rapportCourant--;
+        this.rapportCourant--;
       }
-      return rapportCourant;
+      return this.rapportCourant;
    }
 
    void tourner(String droiteOuGauche, int angle) {
