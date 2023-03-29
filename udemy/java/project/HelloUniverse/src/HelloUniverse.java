@@ -34,16 +34,10 @@ public class HelloUniverse {
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    int revolution;
-    revolution = neptune.revolution(-3542);
-    System.out.println(neptune.name + " a effectué " + revolution + " tours complets autour de son étoile.");
+    mars.welcomeSpaceship(8);
+    mars.welcomeSpaceship("FREGATE");
 
-    int spin;
-    spin = mars.spin(-684);
-    System.out.println(mars.name + " a effectué " + spin + " tours complets sur elle-même.");
-
-    spin = venus.spin(1250);
-    System.out.println(venus.name + " a effectué " + spin + " tours complets sur elle-même.");
+    System.out.printf("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de %d.", mars.totalVisitors);
 
 
   }
