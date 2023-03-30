@@ -1,0 +1,18 @@
+<form class="transparent-border" (submit)="addArticle(name,description)">
+    <label for="name">
+        Titre de l'article : 
+        <input type="text" [(ngModel)]="name" name="name" id="name">
+    </label>
+
+    <br>
+    <br>
+
+    <label for="description">Description de l'article : 
+        <input type="text" [(ngModel)]="description" name="description" id="description">
+    </label>
+
+    <br>
+    <br>
+
+    <button class="gray-button" type="submit">Ajouter</button>
+</form>

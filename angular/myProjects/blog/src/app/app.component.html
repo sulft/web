@@ -1,0 +1,7 @@
+<h1>Mon Blog</h1>
+<router-outlet></router-outlet>
+<br>
+<a *ngIf="currentRoute == '/home'" [routerLink]="['article']"><button class="gray-button">Ajouter un article</button></a>
+<a *ngIf="currentRoute == '/article' || ''" [routerLink]="['home']"><button class="gray-button">Liste des article</button></a>
+
+

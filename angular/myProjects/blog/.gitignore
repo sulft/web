@@ -1,0 +1,41 @@
+# IDE files
+.vscode
+.idea
+*.iml
+
+# Compiled output
+/dist
+/node_modules
+
+# Logs and databases
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.sqlite
+
+# Dependency directories
+**/bower_components
+**/node_modules
+**/jspm_packages
+
+# macOS metadata
+.DS_Store
+
+# Angular CLI configuration files
+.angular-cli.json
+.angular-config.json
+
+# Unit test configuration files
+karma.conf.js
+protractor.conf.js
+
+# Environment variables
+.env
+.env.*
+You can customize this file to suit your project's specific needs, such as adding or removing files and directories based on your project's dependencies and build configuration.
+
+
+
+
+
