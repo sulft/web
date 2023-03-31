@@ -3,6 +3,7 @@ public class Planet {
   String material;
   long kilometers;
   int totalVisitors = 0;
+  Atmosphere atmosphere;
 
   int spin(int angle) {
     return angle/360;

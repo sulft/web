@@ -29,16 +29,23 @@ public class HelloUniverse {
     uranus.name = "Uranus";
     uranus.kilometers = 51118;
     uranus.material = "Gazeuse";
+    uranus.atmosphere = new Atmosphere();
+    uranus.atmosphere.hydrogene = 83;
+    uranus.atmosphere.helium = 15;
+    uranus.atmosphere.methane = 2.5f;
     Planet neptune = new Planet();
     neptune.name = "Neptune";
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    mars.welcomeSpaceship(8);
-    mars.welcomeSpaceship("FREGATE");
-
-    System.out.printf("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de %d.", mars.totalVisitors);
-
+    System.out.println("L'atmosphère de Uranus est composée:");
+    System.out.println("A " + uranus.atmosphere.hydrogene + "% d'hydrogène");
+    System.out.println("A " + uranus.atmosphere.argon + "% d'argon");
+    System.out.println("A " + uranus.atmosphere.co2 + "% de dioxyde de carbone");
+    System.out.println("A " + uranus.atmosphere.azote + "% d'azote");
+    System.out.println("A " + uranus.atmosphere.helium + "% d'hélium");
+    System.out.println("A " + uranus.atmosphere.methane + "% de méthane");
+    System.out.print("A " + uranus.atmosphere.sodium + "% de sodium");
 
   }
 }
