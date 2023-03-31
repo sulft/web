@@ -34,4 +34,13 @@ public class Car {
   void tourner(boolean droiteOuGauche, int angle) {
     System.out.println("la tourner va tourner à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
   }
+
+  City transporter(Passenger passenger, City cityDeparture) {
+    System.out.println("je transporte un passager qui s'appelle " + passenger.name + " " + passenger.lastName);
+    System.out.println("Le passager est parti de la ville de " + cityDeparture.name);
+
+    City cityDestination = new City();
+    cityDestination.name = "Wellington";
+    return cityDestination;
+  }
 }
