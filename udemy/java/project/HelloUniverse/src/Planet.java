@@ -4,6 +4,7 @@ public class Planet {
   long kilometers;
   int totalVisitors = 0;
   Atmosphere atmosphere;
+  Spaceship spaceship;
 
   int spin(int angle) {
     return angle/360;
@@ -13,17 +14,17 @@ public class Planet {
     return angle/360;
   }
 
-  void welcomeSpaceship(int newVisitors) {
-    this.totalVisitors += newVisitors;
-  }
-
-  void welcomeSpaceship(String str) {
-    if(str.equals("CHASSEUR")) {
-      this.totalVisitors += 3;
-    } else if(str.equals("FREGATE")) {
-      this.totalVisitors += 12;
-    } else if(str.equals("CROISEUR")) {
-      this.totalVisitors += 50;
+  public Spaceship docking(Spaceship spaceship) {
+    if(this.spaceship == null) {
+      System.out.println("Aucun vaisseau ne s'en va");
+    } else {
+      System.out.println("Un vaisseau de type " + this.spaceship.type + " doit s'en aller");
     }
+    this.totalVisitors += spaceship.nbPassenger;
+
+    Spaceship lastSpaceship = this.spaceship;
+    this.spaceship = spaceship;
+
+    return lastSpaceship;
   }
 }
