@@ -6,6 +6,10 @@ public class Car {
    int rapportCourant;
    Moteur moteur;
    static int nbRoues = 4;
+
+   Car() {
+     System.out.println("Une voiture est en cours de construction");
+   }
    static void Klaxonner() {
      System.out.println("Tutut!!!");
    }

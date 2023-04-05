@@ -1,7 +1,6 @@
 public class HelloWorld {
     public static void main(String[] args) {
       Car carOfTerry = new Car();
-      Car carOfJohn = new Car();
       carOfTerry.color = "rouge";
       carOfTerry.nbDoor = 5;
 
