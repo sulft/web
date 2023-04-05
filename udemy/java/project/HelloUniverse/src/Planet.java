@@ -5,6 +5,7 @@ public class Planet {
   int totalVisitors = 0;
   Atmosphere atmosphere;
   Spaceship spaceship;
+  static String form = "spherical";
 
   int spin(int angle) {
     return angle/360;

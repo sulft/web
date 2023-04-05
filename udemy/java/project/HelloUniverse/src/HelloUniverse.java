@@ -38,17 +38,8 @@ public class HelloUniverse {
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    Spaceship firstSpaceship = new Spaceship();
-    firstSpaceship.type = "Frégate";
-    firstSpaceship.nbPassenger = 9;
-    mars.docking(firstSpaceship);
-
-    Spaceship secondSpaceship = new Spaceship();
-    secondSpaceship.type = "Frégate";
-    secondSpaceship.nbPassenger = 42;
-    mars.docking(secondSpaceship);
-
-    System.out.print("Le nombre d'humains ayant déjà séjourné sur " + mars.name + " est actuellement de "+ mars.totalVisitors +".");
+    System.out.println("La forme d'une planète est : " + Planet.form);
+    System.out.println("La forme de " + mars.name + " est : " + mars.form);
 
   }
 }
