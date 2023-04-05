@@ -5,6 +5,7 @@ public class Car {
    String color;
    int rapportCourant;
    Moteur moteur;
+   static int nbRoues = 4;
    void Klaxonner() {
      System.out.println("Tutut!!!");
    }
