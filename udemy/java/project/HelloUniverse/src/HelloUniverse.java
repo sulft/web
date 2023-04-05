@@ -38,8 +38,9 @@ public class HelloUniverse {
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    System.out.println("La forme d'une planète est : " + Planet.form);
-    System.out.println("La forme de " + mars.name + " est : " + mars.form);
+    System.out.println(Planet.expansion(10.5));
+    System.out.println(Planet.expansion(14.2));
+
 
   }
 }
