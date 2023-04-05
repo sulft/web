@@ -17,7 +17,6 @@ public class HelloWorld {
       City city = new City();
       city.name = "Aukland";
 
-
       System.out.println("Nombre de cylindre de la voiture de Terry : " + carOfTerry.moteur.nbCylindres);
       System.out.println("Carburation cylindre de la voiture de Terry : " + carOfTerry.moteur.carburation);
       City destination = carOfTerry.transporter(passenger, city);
@@ -25,10 +24,7 @@ public class HelloWorld {
       System.out.println("le nombre de roue de la voiture de Terry est : " + carOfTerry.nbRoues);
       System.out.println("le nombre de roue de la voiture de John est : " + Car.nbRoues);
 
-        Car.nbRoues = 5;
-
-      System.out.println("le nombre de roue de la voiture de Terry est : " + carOfTerry.nbRoues);
-      System.out.println("le nombre de roue de la voiture de John est : " + Car.nbRoues);
+      Car.Klaxonner();
 
     }
 

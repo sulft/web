@@ -6,7 +6,7 @@ public class Car {
    int rapportCourant;
    Moteur moteur;
    static int nbRoues = 4;
-   void Klaxonner() {
+   static void Klaxonner() {
      System.out.println("Tutut!!!");
    }
    int accélérer() {
@@ -28,12 +28,18 @@ public class Car {
       return this.rapportCourant;
    }
 
-   void tourner(String droiteOuGauche, int angle) {
+   static void tourner(String droiteOuGauche, int angle) {
      System.out.println("la tourner va tourner à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
    }
 
-  void tourner(boolean droiteOuGauche, int angle) {
-    System.out.println("la tourner va tourner à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
+  void tourner(boolean droite, int angle) {
+    String droiteOuGauche = null;
+    if(droite) {
+      droiteOuGauche = "droite";
+    } else {
+      droiteOuGauche = "gauche";
+    }
+    System.out.println("les "+ nbRoues + " roues de la voiture tournent à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
   }
 
   City transporter(Passenger passenger, City cityDeparture) {
