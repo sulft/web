@@ -1,11 +1,13 @@
 <div class="product-container" [class]="product.onSale ? 'positive' : 'negative'">
     <div class="name"> {{ product.name }}</div>
     <div class="price"> ${{ product.price }}</div>
+    <div class="image">
+        <img [src]="product.image" alt="pants" [width]="50">
+    </div>
     Quantity :
     <div class="quantity"> {{ quantity }} </div>
     <div class="buttons">
         <button (click)="add()">+</button>
         <button (click)="remove()" [disabled]="quantity < 1">-</button>
     </div>
-
 </div>

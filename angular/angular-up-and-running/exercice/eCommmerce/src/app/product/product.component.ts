@@ -11,7 +11,7 @@ export class ProductComponent {
   quantity: number;
 
   ngOnInit() {
-    this.product = new Product('Pants', 25, '/src/assets/images/');
+    this.product = new Product('Pants', 25, 'assets/images/pants.jpeg');
     this.quantity = 0;
     this.product.onSale = true;
   }
