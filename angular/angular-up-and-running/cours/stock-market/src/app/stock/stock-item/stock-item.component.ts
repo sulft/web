@@ -27,4 +27,8 @@ export class StockItemComponent {
     console.log(event);
     this.stocks[index].favorite = !this.stocks[index].favorite
   }
+
+  trackStockByCode(index:number, stock:Stock):string {
+    return stock.code;
+  }
 }
