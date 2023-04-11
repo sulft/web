@@ -11,11 +11,11 @@
 
   <label for="quantity">Quantity:</label>
   <select name="quantity">
-    <option *ngFor="let num of quantity; index as i" value="{{ i }}">{{ i }}</option>
+    <option *ngFor="let num of quantity; index as i" value="{{ i }}">
+      {{ i }}
+    </option>
   </select>
-  <div class="quantity">
-      Quantity : {{ product.quantity }}
-  </div>
+  <div class="quantity">Quantity : {{ product.quantity }}</div>
   <div class="buttons">
     <button (click)="add(i)">+</button>
     <button (click)="remove(i)" *ngIf="this.product.quantity > 0">-</button>

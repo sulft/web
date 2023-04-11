@@ -13,12 +13,11 @@ export class ProductComponent {
 
   ngOnInit() {
     this.products = [
-      new Product('Pants', 25, 'assets/images/pants.png'),
-      new Product('Skirt', 10, 'assets/images/skirt.png'),
-      new Product('Hat', 12, 'assets/images/hat.png'),
+      new Product('Pants', 25, 'assets/images/pants.png', false),
+      new Product('Skirt', 10, 'assets/images/skirt.png', false),
+      new Product('Hat', 12, 'assets/images/hat.png', true),
     ];
     this.quantity = Array(21);
-    this.products[2].onSale = true;
   }
 
   add(index: number): void {
