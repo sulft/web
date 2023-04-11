@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -10,7 +10,6 @@ import { Product } from '../model/product';
     (onRemove)="remove($event)"
   ></app-product>`,
   styleUrls: ['./product-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent {
   products: Array<Product>;
