@@ -1,6 +1,5 @@
 <div
   class="product-container"
-  *ngFor="let product of products; index as i"
   [ngClass]="product.onSale ? 'positive' : 'negative'"
 >
   <div class="name">{{ product.name }}</div>
@@ -17,7 +16,9 @@
   </select>
   <div class="quantity">Quantity : {{ product.quantity }}</div>
   <div class="buttons">
-    <button (click)="add(i)">+</button>
-    <button (click)="remove(i)" *ngIf="this.product.quantity > 0">-</button>
+    <button (click)="add(product.productId)">+</button>
+    <button (click)="remove(product.productId)" *ngIf="product.quantity > 0">
+      -
+    </button>
   </div>
 </div>
