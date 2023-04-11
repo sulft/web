@@ -18,3 +18,15 @@
 .negative {
   color: red;
 }
+
+.large-change {
+  font-size: 1.5em;
+}
+
+.small-change {
+  font-size: 0.8em;
+}
+
+.o-item {
+  font-size: 10px; 
+}
