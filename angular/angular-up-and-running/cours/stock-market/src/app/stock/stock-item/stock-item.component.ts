@@ -1,34 +1,29 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { Stock } from 'src/app/model/stock';
 
 @Component({
   selector: 'app-stock-item',
   templateUrl: './stock-item.component.html',
   styleUrls: ['./stock-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StockItemComponent {
-  stocks: Stock[];
+  @Input() stock: Stock;
+  @Output() toggleFavorite: EventEmitter<Stock> = new EventEmitter<Stock>();
 
-  ngOnInit() {
-    this.stocks= [
-      new Stock('Test Stock Company', 'TSC', 85, 80),
-      new Stock('Second Stock Company', 'SSC', 10, 20),
-      new Stock('Last Stock Company', 'LSC', 876, 765),
-    ]
+  ngOnInit() {}
 
-    // En utilisant ngStyle
-    // this.stockStyles = {
-    //   "color" : this.stock.isPositiveChange() ? "green" : "red",
-    //   "font-size" : largeChange ? "1.5em" : "0.8em"
-    // }
+  onToggleFavorite(event: any): void {
+    this.toggleFavorite.emit(this.stock);
   }
 
-  toggleFavorite(event: any, index:number): void {
-    console.log(event);
-    this.stocks[index].favorite = !this.stocks[index].favorite
-  }
-
-  trackStockByCode(index:number, stock:Stock):string {
-    return stock.code;
+  changeStockPrice(): void {
+    this.stock.price += 5;
   }
 }

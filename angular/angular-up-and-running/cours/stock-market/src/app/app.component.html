@@ -2,5 +2,11 @@
   <h1>
       Welcome to {{ title }}
   </h1>
-  <app-stock-item></app-stock-item>
+  <app-stock-item *ngFor="let stock of stocks; even as e; trackBy: trackStockByCode" [stock]="stock" (toggleFavorite)="onToggleFavorite($event)">
+    <button *ngIf="e; else elseBlock" (click)="testMethod()">button 1</button>
+    <ng-template #elseBlock>
+      No button for you
+    </ng-template>
+    
+  </app-stock-item>
 </div>
