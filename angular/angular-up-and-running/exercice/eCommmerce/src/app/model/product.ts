@@ -1,5 +1,6 @@
 export class Product {
     onSale : boolean = false;
+    quantity : number = 0;
     name : string;
     price : number;
     image : string;

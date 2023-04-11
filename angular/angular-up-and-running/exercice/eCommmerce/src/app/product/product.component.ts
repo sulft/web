@@ -8,19 +8,24 @@ import { Product } from '../model/product';
 })
 export class ProductComponent {
   product: Product;
-  quantity: number;
+  products: Array<Product>;
+  quantity: number[];
 
   ngOnInit() {
-    this.product = new Product('Pants', 25, 'assets/images/pants.jpeg');
-    this.quantity = 0;
-    this.product.onSale = true;
+    this.products = [
+      new Product('Pants', 25, 'assets/images/pants.png'),
+      new Product('Skirt', 10, 'assets/images/skirt.png'),
+      new Product('Hat', 12, 'assets/images/hat.png'),
+    ];
+    this.quantity = Array(21);
+    this.products[2].onSale = true;
   }
 
-  add(): void {
-    this.quantity++;
+  add(index: number): void {
+    this.products[index].quantity++;
   }
 
-  remove(): void {
-    this.quantity--;
+  remove(index: number): void {
+    this.products[index].quantity--;
   }
 }

@@ -1,13 +1,23 @@
-<div class="product-container" [class]="product.onSale ? 'positive' : 'negative'">
-    <div class="name"> {{ product.name }}</div>
-    <div class="price"> ${{ product.price }}</div>
-    <div class="image">
-        <img [src]="product.image" alt="pants" [width]="50">
-    </div>
-    Quantity :
-    <div class="quantity"> {{ quantity }} </div>
-    <div class="buttons">
-        <button (click)="add()">+</button>
-        <button (click)="remove()" [disabled]="quantity < 1">-</button>
-    </div>
+<div
+  class="product-container"
+  *ngFor="let product of products; index as i"
+  [ngClass]="product.onSale ? 'positive' : 'negative'"
+>
+  <div class="name">{{ product.name }}</div>
+  <div class="price">${{ product.price }}</div>
+  <div class="image">
+    <img [src]="product.image" alt="pants" [width]="50" />
+  </div>
+
+  <label for="quantity">Quantity:</label>
+  <select name="quantity">
+    <option *ngFor="let num of quantity; index as i" value="{{ i }}">{{ i }}</option>
+  </select>
+  <div class="quantity">
+      Quantity : {{ product.quantity }}
+  </div>
+  <div class="buttons">
+    <button (click)="add(i)">+</button>
+    <button (click)="remove(i)" *ngIf="this.product.quantity > 0">-</button>
+  </div>
 </div>
