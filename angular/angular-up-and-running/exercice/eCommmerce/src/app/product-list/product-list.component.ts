@@ -30,5 +30,6 @@ export class ProductListComponent {
   remove(index: number): void {
     let i = this.products.findIndex((a) => a.productId === index);
     this.products[i].quantity--;
+
   }
 }
