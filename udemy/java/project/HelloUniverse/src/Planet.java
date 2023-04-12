@@ -6,6 +6,7 @@ public class Planet {
   Atmosphere atmosphere;
   Spaceship spaceship;
   static String form = "spherical";
+  static int discoveredPlanet = 0;
 
   int spin(int angle) {
     return angle/360;
@@ -15,6 +16,9 @@ public class Planet {
     return angle/360;
   }
 
+  Planet() {
+    discoveredPlanet++;
+  }
   public Spaceship docking(Spaceship spaceship) {
     if(this.spaceship == null) {
       System.out.println("Aucun vaisseau ne s'en va");

@@ -38,9 +38,6 @@ public class HelloUniverse {
     neptune.kilometers = 49532;
     neptune.material = "Gazeuse";
 
-    System.out.println(Planet.expansion(10.5));
-    System.out.println(Planet.expansion(14.2));
-
-
+    System.out.println(Planet.discoveredPlanet);
   }
 }
