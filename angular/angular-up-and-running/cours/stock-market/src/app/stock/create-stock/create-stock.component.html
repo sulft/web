@@ -1,0 +1,100 @@
+<h2>Create stock form</h2>
+
+<div class="form-group">
+  <form (ngSubmit)="createStock()">
+    <div class="stock-name">
+      <input
+        type="text"
+        placeholder="Stock Name"
+        name="stock-name"
+        [(ngModel)]="stock.name"
+      />
+    </div>
+    <div class="stock-code">
+      <input
+        type="text"
+        placeholder="Stock Code"
+        name="stock-code"
+        [(ngModel)]="stock.code"
+      />
+    </div>
+    <div class="stock-price">
+      <input
+        type="number"
+        placeholder="Stock price"
+        name="stock-price"
+        [ngModel]="stock.price"
+        (ngModelChange)="setStockPrice($event)"
+      />
+    </div>
+
+    <div class="stock-exchange">
+      <div>
+        <label for="NYSE">
+          <input
+            type="radio"
+            name="NYSE"
+            [(ngModel)]="stock.exchange"
+            id="NYSE"
+            value="NYSE"
+          />
+          NYSE
+        </label>
+      </div>
+      <div>
+        <label for="NASDAQ">
+          <input
+            type="radio"
+            name="NASDAQ"
+            [(ngModel)]="stock.exchange"
+            id="NASDAQ"
+            value="NASDAQ"
+          />
+          NASDAQ
+        </label>
+      </div>
+      <div>
+        <label for="OTHER">
+          <input
+            type="radio"
+            name="OTHER"
+            [(ngModel)]="stock.exchange"
+            id="OTHER"
+            value="OTHER"
+          />
+          OTHER
+        </label>
+      </div>
+      <!-- dropdown version -->
+      <!-- <div class="stock-exchange2">
+        <select [(ngModel)]="stock.exchange" name="exhange">
+          <option
+            *ngFor="let item of ['NYSE', 'NASDAQ', 'OTHER']"
+            [value]="item"
+          >
+            {{ item }}
+          </option>
+        </select>
+      </div> -->
+    </div>
+
+    <div class="stock-confirm">
+      <div>
+        <label for="confirmed">
+          <input
+            type="checkbox"
+            name="confirm"
+            id="confirmed"
+            [(ngModel)]="confirmed"
+          />
+          I confirmed that the information provided above is accurate !
+        </label>
+      </div>
+    </div>
+    <div class="submit">
+      <button type="submit" [disabled]="!confirmed">Submit</button>
+    </div>
+  </form>
+</div>
+
+<h4>Stock is {{ stock | json }}</h4>
