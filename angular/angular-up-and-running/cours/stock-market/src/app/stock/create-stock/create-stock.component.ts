@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Stock } from 'src/app/model/stock';
 
 @Component({
@@ -11,7 +12,7 @@ export class CreateStockComponent {
   confirmed:boolean;
 
   ngOnInit() {
-    this.stock = new Stock("test", '', 0, 0, "NASDAQ");
+    this.stock = new Stock("", "", 0, 0, "NASDAQ");
   }
 
   setStockPrice(price:number) {
@@ -19,7 +20,12 @@ export class CreateStockComponent {
     this.stock.previousPrice = price;
   }
 
-  createStock() {
-    console.log(this.stock);
+  createStock(stockForm:NgForm) {
+    console.log("Stock form ", stockForm);
+    if(stockForm.valid) {
+      console.log("creating stock ", this.stock);
+    } else {
+      console.error("Stock form is in an invalid state.")
+    }
   }
 }

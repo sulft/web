@@ -1,32 +1,71 @@
 <h2>Create stock form</h2>
 
 <div class="form-group">
-  <form (ngSubmit)="createStock()">
+  <form #stockForm="ngForm" (ngSubmit)="createStock(stockForm)">
     <div class="stock-name">
       <input
         type="text"
         required
         placeholder="Stock Name"
+        #stockName="ngModel"
         name="stock-name"
         [(ngModel)]="stock.name"
+        minlength="3"
+        required
       />
     </div>
+    <div *ngIf="stockName.dirty && stockName.invalid">
+      <div
+        class="name-error"
+        *ngIf="stockName.errors && stockName.errors?.['required']"
+      >
+        Stock name is mandatory
+      </div>
+      <div
+        class="name-error"
+        *ngIf="stockName.errors && stockName.errors?.['minlength']"
+      >
+        Stock name must have more than 3 characters.
+      </div>
+    </div>
+
     <div class="stock-code">
       <input
         type="text"
         placeholder="Stock Code"
+        #stockCode="ngModel"
         name="stock-code"
         [(ngModel)]="stock.code"
+        required
       />
     </div>
+    <div *ngIf="stockCode.dirty && stockCode.invalid">
+      <div
+        class="code-error"
+        *ngIf="stockCode.errors && stockCode.errors?.['required']"
+      >
+        Stock code is mandatory
+      </div>
+    </div>
+
     <div class="stock-price">
       <input
         type="number"
         placeholder="Stock price"
         name="stock-price"
+        #stockPrice="ngModel"
         [ngModel]="stock.price"
         (ngModelChange)="setStockPrice($event)"
+        min="2"
       />
+    </div>
+    <div *ngIf="stockPrice.dirty && stockPrice.invalid">
+      <div
+        class="code-error"
+        *ngIf="stockPrice.errors && stockPrice.errors?.['min']"
+      >
+        Stock price must be higher than 2
+      </div>
     </div>
 
     <div class="stock-exchange">
@@ -35,6 +74,7 @@
           <input
             type="radio"
             name="NYSE"
+            #stockExhange="ngModel"
             [(ngModel)]="stock.exchange"
             id="NYSE"
             value="NYSE"
@@ -47,6 +87,7 @@
           <input
             type="radio"
             name="NASDAQ"
+            #stockExhange="ngModel"
             [(ngModel)]="stock.exchange"
             id="NASDAQ"
             value="NASDAQ"
@@ -59,6 +100,7 @@
           <input
             type="radio"
             name="OTHER"
+            #stockExhange="ngModel"
             [(ngModel)]="stock.exchange"
             id="OTHER"
             value="OTHER"
@@ -77,6 +119,12 @@
           </option>
         </select>
       </div> -->
+      <div
+        class="exchange-error"
+        *ngIf="stockExhange.errors && stockExhange.errors?.['required']"
+      >
+        Stock exchange is mandatory
+      </div>
     </div>
 
     <div class="stock-confirm">
@@ -86,7 +134,9 @@
             type="checkbox"
             name="confirm"
             id="confirmed"
+            #stockConfirmed="ngModel"
             [(ngModel)]="confirmed"
+            required
           />
           I confirmed that the information provided above is accurate !
         </label>
