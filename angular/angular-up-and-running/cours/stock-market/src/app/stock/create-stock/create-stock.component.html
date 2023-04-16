@@ -2,148 +2,58 @@
 
 <div class="form-group">
   <form #stockForm="ngForm" (ngSubmit)="createStock(stockForm)">
-    <div class="stock-name">
-      <input
-        type="text"
-        required
-        placeholder="Stock Name"
-        #stockName="ngModel"
-        name="stock-name"
-        [(ngModel)]="stock.name"
-        minlength="3"
-        required
-      />
-    </div>
-    <div *ngIf="stockName.dirty && stockName.invalid">
-      <div
-        class="name-error"
-        *ngIf="stockName.errors && stockName.errors?.['required']"
-      >
-        Stock name is mandatory
+    <div ngModelGroup="stock">
+      <div class="stock-name">
+        <input
+          type="text"
+          required
+          placeholder="Stock Name"
+  
+          name="name"
+          ngModel
+          minlength="3"
+          required
+        />
       </div>
-      <div
-        class="name-error"
-        *ngIf="stockName.errors && stockName.errors?.['minlength']"
-      >
-        Stock name must have more than 3 characters.
+      <div class="stock-code">
+        <input
+          type="text"
+          placeholder="Stock Code"
+          name="code"
+          ngModel
+          required
+        />
       </div>
-    </div>
-
-    <div class="stock-code">
-      <input
-        type="text"
-        placeholder="Stock Code"
-        #stockCode="ngModel"
-        name="stock-code"
-        [(ngModel)]="stock.code"
-        required
-      />
-    </div>
-    <div *ngIf="stockCode.dirty && stockCode.invalid">
-      <div
-        class="code-error"
-        *ngIf="stockCode.errors && stockCode.errors?.['required']"
-      >
-        Stock code is mandatory
+  
+      <div class="stock-price">
+        <input
+          type="number"
+          placeholder="Stock price"
+          name="price"
+          ngModel
+          ngModelChange="setStockPrice($event)"
+          min="2"
+        />
+      </div>  
+  
+      <div class="stock-exchange" name="stock-exchange">
+        <!-- dropdown version -->
+        <div class="stock-exchange2">
+          <select ngModel name="exhange">
+            <option
+              *ngFor="let item of exchanges"
+              [value]="item"
+            >
+              {{ item }}
+            </option>
+          </select>
+        </div>
+  
       </div>
-    </div>
-
-    <div class="stock-price">
-      <input
-        type="number"
-        placeholder="Stock price"
-        name="stock-price"
-        #stockPrice="ngModel"
-        [ngModel]="stock.price"
-        (ngModelChange)="setStockPrice($event)"
-        min="2"
-      />
-    </div>
-    <div *ngIf="stockPrice.dirty && stockPrice.invalid">
-      <div
-        class="code-error"
-        *ngIf="stockPrice.errors && stockPrice.errors?.['min']"
-      >
-        Stock price must be higher than 2
+  
+      <div class="submit">
+        <button type="submit">Submit</button>
       </div>
-    </div>
-
-    <div class="stock-exchange">
-      <div>
-        <label for="NYSE">
-          <input
-            type="radio"
-            name="NYSE"
-            #stockExhange="ngModel"
-            [(ngModel)]="stock.exchange"
-            id="NYSE"
-            value="NYSE"
-          />
-          NYSE
-        </label>
-      </div>
-      <div>
-        <label for="NASDAQ">
-          <input
-            type="radio"
-            name="NASDAQ"
-            #stockExhange="ngModel"
-            [(ngModel)]="stock.exchange"
-            id="NASDAQ"
-            value="NASDAQ"
-          />
-          NASDAQ
-        </label>
-      </div>
-      <div>
-        <label for="OTHER">
-          <input
-            type="radio"
-            name="OTHER"
-            #stockExhange="ngModel"
-            [(ngModel)]="stock.exchange"
-            id="OTHER"
-            value="OTHER"
-          />
-          OTHER
-        </label>
-      </div>
-      <!-- dropdown version -->
-      <!-- <div class="stock-exchange2">
-        <select [(ngModel)]="stock.exchange" name="exhange">
-          <option
-            *ngFor="let item of ['NYSE', 'NASDAQ', 'OTHER']"
-            [value]="item"
-          >
-            {{ item }}
-          </option>
-        </select>
-      </div> -->
-      <div
-        class="exchange-error"
-        *ngIf="stockExhange.errors && stockExhange.errors?.['required']"
-      >
-        Stock exchange is mandatory
-      </div>
-    </div>
-
-    <div class="stock-confirm">
-      <div>
-        <label for="confirmed">
-          <input
-            type="checkbox"
-            name="confirm"
-            id="confirmed"
-            #stockConfirmed="ngModel"
-            [(ngModel)]="confirmed"
-            required
-          />
-          I confirmed that the information provided above is accurate !
-        </label>
-      </div>
-    </div>
-    <div class="submit">
-      <button type="submit" [disabled]="!confirmed">Submit</button>
     </div>
   </form>
 </div>

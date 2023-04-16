@@ -10,19 +10,17 @@ import { Stock } from 'src/app/model/stock';
 export class CreateStockComponent {
   stock:Stock;
   confirmed:boolean;
+  exchanges: String[]=["NYSE","NASDAQ","OTHER"];
 
   ngOnInit() {
     this.stock = new Stock("", "", 0, 0, "NASDAQ");
   }
 
-  setStockPrice(price:number) {
-    this.stock.price = price;
-    this.stock.previousPrice = price;
-  }
-
   createStock(stockForm:NgForm) {
     console.log("Stock form ", stockForm);
     if(stockForm.valid) {
+      console.log(stockForm.value.stock);
+      this.stock = stockForm.value.stock;
       console.log("creating stock ", this.stock);
     } else {
       console.error("Stock form is in an invalid state.")
