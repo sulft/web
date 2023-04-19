@@ -1,0 +1,21 @@
+<form #productForm="ngForm" (ngSubmit)="submitForm(productForm)">
+    <div ngModelGroup>
+        <div class="name">
+            Name :
+            <input type="text" name="name" ngModel required>
+        </div>
+        <div class="price">
+            Price :
+            <input type="number" name="price" ngModel required>
+        </div>
+        <div class="url">
+            Image Url :
+            <input type="text" name="url" ngModel required>
+        </div>
+        <div class="sale">
+            On sale ?
+            <input type="checkbox" name="sale" ngModel required>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>
