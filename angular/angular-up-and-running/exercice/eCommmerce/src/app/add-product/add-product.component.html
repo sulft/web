@@ -1,21 +1,39 @@
 <form #productForm="ngForm" (ngSubmit)="submitForm(productForm)">
-    <div ngModelGroup>
-        <div class="name">
-            Name :
-            <input type="text" name="name" ngModel required>
-        </div>
-        <div class="price">
-            Price :
-            <input type="number" name="price" ngModel required>
-        </div>
-        <div class="url">
-            Image Url :
-            <input type="text" name="url" ngModel required>
-        </div>
-        <div class="sale">
-            On sale ?
-            <input type="checkbox" name="sale" ngModel required>
-        </div>
+  <div ngModelGroup>
+    <div class="name">
+      Name :
+      <input type="text" name="name" #name="ngModel" minlength="3" ngModel required/>
     </div>
-    <button type="submit">Submit</button>
+    <div *ngIf="name.dirty && name.invalid">
+        <div *ngIf="name.errors.required">Product name is required</div>
+        <div *ngIf="name.errors.minlength">Product name min length is {{ name.errors.minlength.requiredLength }}</div>
+    </div>
+    <div class="price">
+      Price :
+      <input type="number" name="price" #price="ngModel" min="0.1" ngModel required />
+    </div>
+    <div *ngIf="price.dirty && price.invalid">
+        <div *ngIf="price.errors.min">Price must be positive or different to 0</div>
+    </div>
+    <div class="url">
+      Image Url :
+      <input
+        type="text"
+        name="url"
+        #url="ngModel"
+        ngModel
+        pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$"
+        required
+      />
+    </div>
+    <div *ngIf="url.dirty && url.invalid">
+        <div *ngIf="url.errors.pattern">Url must respect pattern</div>
+    </div>
+
+    <div class="sale">
+      On sale ?
+      <input type="checkbox" name="sale" #sale="ngModel" ngModel/>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
 </form>
