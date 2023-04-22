@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {
   FormBuilder,
+  FormControl,
+  FormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -10,14 +12,23 @@ import {
   styleUrls: ['./create-stock.component.css'],
 })
 export class CreateStockComponent {
-  public stockForm = this.fb.group({
-    name: [null, Validators.required],
-    code: [null, [Validators.required, Validators.minLength(2)]],
-    price: [null, [Validators.required, Validators.min(0)]],
-  });
+  public stockForm:FormGroup;
 
   constructor(private fb: FormBuilder) {}
-  onSubmit() {
+
+  ngOnInit() {
+    this.createForm();
+  }
+
+  onSubmit(): void {
     console.log('name Control value', this.stockForm.value);
+  }
+
+  createForm(): void {
+    this.stockForm = this.fb.group({
+      name: ["", Validators.required],
+      code: ["", [Validators.required, Validators.minLength(2)]],
+      price: ["", [Validators.required, Validators.min(0)]],
+    });
   }
 }
