@@ -12,7 +12,7 @@ import {
   styleUrls: ['./create-stock.component.css'],
 })
 export class CreateStockComponent {
-  public stockForm:FormGroup;
+  stockForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
@@ -26,9 +26,9 @@ export class CreateStockComponent {
 
   createForm(): void {
     this.stockForm = this.fb.group({
-      name: ["", Validators.required],
-      code: ["", [Validators.required, Validators.minLength(2)]],
-      price: ["", [Validators.required, Validators.min(0)]],
+      name: ['', Validators.required],
+      code: ['', [Validators.required, Validators.minLength(2)]],
+      price: ['', [Validators.required, Validators.min(0)]],
     });
   }
 }
