@@ -1,6 +1,18 @@
 <h2>Create stock form</h2>
-
+<!-- RF -->
 <div class="form-group">
+  <div class="stock-name">
+    <input type="text" placeholder="Stock name" name="StockName" [formControl]="nameControl">
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+</div>
+
+<p>Form control value : {{ nameControl.value | json }}</p>
+<p>Form control status : {{ nameControl.status | json }}</p>
+
+
+<!-- TDF -->
+<!-- <div class="form-group">
   <form #stockForm="ngForm" (ngSubmit)="createStock(stockForm)">
     <div ngModelGroup="stock">
       <div class="stock-name">
@@ -29,15 +41,15 @@
         <input
           type="number"
           placeholder="Stock price"
-          name="price"
+          name="price"               
           ngModel
           ngModelChange="setStockPrice($event)"
           min="2"
         />
       </div>  
   
-      <div class="stock-exchange" name="stock-exchange">
-        <!-- dropdown version -->
+      <div class="sètock-exchange" name="stock-exchange">
+        dropdown version
         <div class="stock-exchange2">
           <select ngModel name="exhange">
             <option
@@ -57,5 +69,4 @@
     </div>
   </form>
 </div>
-
-<h4>Stock is {{ stock | json }}</h4>
+<h4>Stock is {{ stock | json }}</h4> -->
