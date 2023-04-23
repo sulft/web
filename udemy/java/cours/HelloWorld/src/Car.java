@@ -1,49 +1,69 @@
 public class Car {
-   byte nbDoor;
-   int vitesse = 30;
-   boolean automatic;
-   String color;
-   int rapportCourant;
-   Moteur moteur;
-   static int nbRoues = 4;
+  static int nbRoues = 4;
+  byte nbPorte;
+  int vitesse = 30;
+  boolean automatic;
+  String couleur;
+  int rapportCourant;
+  Moteur moteur;
 
-   Car() {
-     System.out.println("Une voiture est en cours de construction");
-   }
-   static void Klaxonner() {
-     System.out.println("Tutut!!!");
-   }
-   int accélérer() {
-     int vitesseVoiture = 100;
-     System.out.println("J'accélère à " + vitesseVoiture + "km/h");
-     return vitesseVoiture;
-   }
+  Car() {
+    System.out.println("Une voiture est en cours de construction");
+  }
 
-    int accélérer(int vitesse) {
-      System.out.println("J'accélère à " + (vitesse + this.vitesse) + "km/h");
-      return vitesse + this.vitesse;
+  Car(String couleur) {
+    this.couleur = couleur;
+    System.out.println("Une voiture est construite avec sa couleur.");
+  }
+
+  Car(byte nbPorte) {
+    this.nbPorte = nbPorte;
+    System.out.println("Une voiture est construite avec son nombre de porte.");
+  }
+
+  Car(String couleur, byte nbPorte) {
+    this.nbPorte = nbPorte;
+    this.couleur = couleur;
+    System.out.println("Une voiture est construite avec son nombre de porte.");
+  }
+
+  static void Klaxonner() {
+    System.out.println("Tutut!!!");
+  }
+
+  static void tourner(String droiteOuGauche, int angle) {
+    System.out.println("la tourner va tourner à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
+  }
+
+  int accélérer() {
+    int vitesseVoiture = 100;
+    System.out.println("J'accélère à " + vitesseVoiture + "km/h");
+    return vitesseVoiture;
+  }
+
+  int accélérer(int vitesse) {
+    System.out.println("J'accélère à " + (vitesse + this.vitesse) + "km/h");
+    return vitesse + this.vitesse;
+  }
+
+  int passerRapport(boolean augmenter) {
+    if (augmenter) {
+      this.rapportCourant++;
+    } else {
+      this.rapportCourant--;
     }
-   int passerRapport(boolean augmenter) {
-      if(augmenter) {
-        this.rapportCourant++;
-      } else {
-        this.rapportCourant--;
-      }
-      return this.rapportCourant;
-   }
+    return this.rapportCourant;
+  }
 
-   static void tourner(String droiteOuGauche, int angle) {
-     System.out.println("la tourner va tourner à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
-   }
 
   void tourner(boolean droite, int angle) {
     String droiteOuGauche = null;
-    if(droite) {
+    if (droite) {
       droiteOuGauche = "droite";
     } else {
       droiteOuGauche = "gauche";
     }
-    System.out.println("les "+ nbRoues + " roues de la voiture tournent à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
+    System.out.println("les " + nbRoues + " roues de la voiture tournent à " + droiteOuGauche + " avec un angle de " + angle + " degrés");
   }
 
   City transporter(Passenger passenger, City cityDeparture) {
