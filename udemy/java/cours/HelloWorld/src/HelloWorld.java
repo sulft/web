@@ -1,6 +1,8 @@
 public class HelloWorld {
   public static void main(String[] args) {
     Car carOfTerry = new Car((String) "rouge", (byte) 5);
+    carOfTerry.vitesse = 40;
+    carOfTerry.accélérer(60);
     System.out.println("carOfTerry couleur = " + carOfTerry.couleur + "\ncarOfTerry nbPorte = " + carOfTerry.nbPorte);
 
     Moteur moteur = new Moteur();
@@ -23,7 +25,7 @@ public class HelloWorld {
     System.out.println("le nombre de roue de la voiture de John est : " + Car.nbRoues);
 
     Car.Klaxonner();
-
+    
   }
 
 }
