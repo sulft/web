@@ -25,7 +25,7 @@ public class HelloWorld {
     System.out.println("le nombre de roue de la voiture de John est : " + Car.nbRoues);
 
     Car.Klaxonner();
-    
+
   }
 
 }
