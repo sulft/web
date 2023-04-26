@@ -14,6 +14,11 @@ import {
 export class CreateStockComponent {
   stockForm: FormGroup;
 
+  get name() { return this.stockForm.get('name') }
+  get code() { return this.stockForm.get('code') }
+  get price() { return this.stockForm.get('price') }
+
+
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
@@ -25,7 +30,7 @@ export class CreateStockComponent {
   }
 
   createForm(): void {
-    this.stockForm = this.fb.group({
+    this.stockForm = this.fb.group({     
       name: ['', Validators.required],
       code: ['', [Validators.required, Validators.minLength(2)]],
       price: ['', [Validators.required, Validators.min(0)]],

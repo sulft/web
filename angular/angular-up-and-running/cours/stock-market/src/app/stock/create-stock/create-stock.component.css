@@ -6,6 +6,6 @@
     background-color: pink;
 }
 
-.name-error, .code-error, .exchange-error {
+.error {
     color: red;
 }
